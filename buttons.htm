@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>How to make sexy buttons with CSS</title>
+		<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+		<meta name="description" content="This tutorial will teach you how to create pretty looking textual buttons (with alternate <em>pressed</em> state) using CSS. Dynamic buttons save you heaps of time otherwise spent creating graphics and will basically make you a happier person at the end of the day." />
+		<meta name="keywords" content="css,stylesheets,sliding doors,dynamic,buttons,javascript,webdesign" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<h1>How to make sexy buttons with CSS</h1>
+			<div class="light small" id="author">
+				by Alex Griffioen &ndash;
+				<a href="http://www.gonutshell.com/">Nutshell</a> /
+				<a href="http://www.onstuimig.nl/">Onstuimig</a>
+			</div>
+			<p id="intro">
+				This tutorial will teach you how to create pretty looking textual buttons (with alternate <em>pressed</em> state)
+				using CSS. Dynamic buttons save you heaps of time otherwise spent creating graphics and will basically make you
+				a happier person at the end of the day. Here's what you'll get:
+			</p>
+			<div class="clear" style="margin-bottom: 26px;">
+				<a class="button" href="#" onclick="this.blur(); return false;"><span>Bring world peace</span></a>
+				<a class="button" href="#" onclick="this.blur(); return false;"><span>Launch nukes</span></a>
+				<div style="float: right; margin-top: 5px;">
+					<script type="text/javascript">
+						digg_url = 'http://www.oscaralexander.com/tutorials/how-to-make-sexy-buttons-with-css.html';
+						digg_skin = 'compact';
+						digg_title = 'How to make sexy buttons with CSS';
+						digg_topic = 'design';
+					</script>
+					<script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script>
+				</div>
+			</div>
+			<h2>Sliding doors</h2>
+			<p>
+				Since we want our buttons to be &uuml;ber-flexible, we'll have to make the background image expand with the size of the button's text.
+				For that, we'll use the beloved <a href="http://alistapart.com/articles/slidingdoors/" target="_blank"><em>sliding doors</em> technique</a>;
+				two complementing images creating the illusion of a single, stretching image.
+			</p>
+			<p>
+				Our button will be a basic <span class="code">&lt;a&gt;</span> tag with a nested <span class="code">&lt;span&gt;</span>, each
+				containing a different slice of the background image. Here's what the HTML looks like:
+			</p>
+			<p class="code" style="padding: 6px;">
+				&lt;a class="button" href="#"&gt;&lt;span&gt;Bring world peace&lt;/span&gt;&lt;/a&gt;
+			</p>
+			<p>
+				Nothing out of the ordinary, right? Next, we need to come up with a crisp design for our button in both normal and pressed state.
+				Here's what I'm thinking:
+			</p>
+			<div class="clear light small" style="margin-bottom: 6px;">
+				<div class="left" style="width: 160px;">Normal</div>
+				<div class="left">Pressed</div>
+			</div>
+			<img alt="Button design" src="img/button-design.gif" style="margin-bottom: 20px;" />
+			<p>
+				We will include both states in a single image. To switch between normal and pressed state, we'll simply shift the background
+				image vertically, revealing the alternate button state. This CSS based approach allows us to perform the switch without
+				the need for any JavaScript trickery. Let's merge these two and apply the sliding doors cut. The part of the image that will
+				accomodate the button text will be set to a reasonable 300px. The height we'll set to 24px.
+			</p>
+			<div class="clear light small" style="margin-bottom: 6px;">
+				<div class="left" style="width: 310px;">SPAN</div>
+				<div class="left">A</div>
+			</div>
+			<div class="clear light small" style="margin-bottom: 20px;">
+				<div class="left" style="width: 310px;"><img alt="" src="img/bg_button_span.gif" /></div>
+				<div class="left"><img alt="" src="img/bg_button_a.gif" /></div>
+			</div>
+			<h2>Styling the button</h2>
+			<p>
+				Finally, we need a fair bit of CSS to bring all this together. Since we might want to line up several buttons horizontally,
+				I decided to <em>float</em> them by default. (Floating them also makes the buttons wrap nicely.)
+			</p>
+			<p class="code" style="padding: 6px;">
+				.clear { <span class="comment">/* generic container (i.e. div) for floating buttons */</span><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;overflow: hidden;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br />
+				}<br />
+				<br />
+				a.button {<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;background: transparent url('bg_button_a.gif') no-repeat scroll top right;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;color: #444;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;display: block;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;float: left;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;font: normal 12px arial, sans-serif;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;height: 24px;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;margin-right: 6px;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;padding-right: 18px; <span class="comment">/* sliding doors padding */</span><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br />
+				}<br />
+				<br />
+				a.button span {<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;background: transparent url('bg_button_span.gif') no-repeat;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;display: block;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;line-height: 14px;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;padding: 5px 0 5px 18px;<br />
+				}
+			</p>
+			<p class="note">
+				<em>Note:</em> Make sure the span's vertical padding (5 + 5) and line-height (14) amount to the total height
+				of the button (24). Using a different padding, means setting a different height.
+			</p>
+			<p>
+				We now have a pretty looking button, but it doesn't exactly give us much visual feedback when we press it. So let's add
+				that finishing touch of CSS:
+			</p>
+			<p class="code" style="padding: 6px;">
+				a.button:active {<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;background-position: bottom right;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;color: #000;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;outline: none; <span class="comment">/* hide dotted outline in Firefox */</span><br />
+				}<br />
+				<br />
+				a.button:active span {<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;background-position: bottom left;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;padding: 6px 0 4px 18px; <span class="comment">/* push text down 1px */</span><br />
+				}
+			</p>
+			<p>
+				All done! Go ahead. Click 'em!
+			</p>
+			<div class="clear" style="margin-bottom: 26px;">
+				<a class="button" href="#" onclick="this.blur(); return false;"><span>Save</span></a>
+				<a class="button" href="#" onclick="this.blur(); return false;"><span>Cancel</span></a>
+			</div>
+			<h2>One extra measure for IE</h2>
+			<p>
+				Although hardly catastrophic, IE does <em>not</em> return the button to its normal state whenever it's released. To force
+				such behaviour, we need to add a tiny bit of JavaScript to the <span class="code">&lt;a&gt;</span> tag:
+			</p>
+			<p class="code" style="padding: 6px;">
+				&lt;a class="button" href="#" onclick="this.blur();"&gt; &hellip; &lt;/a&gt;
+			</p>
+			<p>
+				To submit forms with this type of button, simply add more calls to the button's <span class="code">onclick</span> event.
+			</p>
+			<h2>Feedback welcome!</h2>
+			<p>
+				Hopefully you enjoyed this tutorial and can't wait to implement your new kick-ass buttons now. If you have any questions
+				or suggestions, <em>do</em> let me know at <a href="mailto:info@oscaralexander.com">info@oscaralexander.com</a>. Also, if you end
+				up using this technique anywhere, I'd love to see it in action!<br />
+				<br />
+				Cheers!<br />
+				<br />
+				&ndash; Alex
+			</p>
+			<a href="http://www.panic.com/coda/" target="_blank"><img alt="Alex loves Coda. Get it now!" src="img/get-coda.gif" style="float: right; position: relative; top: -37px;" /></a>
+		</div>
+		<script type="text/javascript">
+			var sc_project=2524591; 
+			var sc_invisible=0; 
+			var sc_partition=24; 
+			var sc_security="7c94918b"; 
+		</script>
+		<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+		<noscript><a href="http://www.statcounter.com/" target="_blank"><img src="http://c25.statcounter.com/counter.php?sc_project=2524591&amp;java=0&amp;security=7c94918b&amp;invisible=0" alt="blog stats" border="0"></a></noscript>
+	</body>
+</html>
