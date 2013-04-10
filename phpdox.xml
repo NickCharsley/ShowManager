@@ -2,7 +2,7 @@
 <!--  This is a skeleton phpDox config file - Check http://phpDox.de for latest version and more info -->
 
 <phpdox xmlns="http://phpdox.de/config">
-	<project name="Ski" source="." workdir="build/phpdox">
+	<project name="ShowManager" source="." workdir="build/phpdox">
 		<collector publiconly="false">
 			<include mask="*.php" />
 		</collector>

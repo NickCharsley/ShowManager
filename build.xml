@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="Ski" default="build">
+<project name="ShowManager" default="build">
 	
-	<property name="src"  location="C:\Users\nick\workspace\ShowManager"/> 
-	<property name="test" location="C:\Users\nick\workspace\ShowManager\test"/>
+	<property name="src"  location="."/> 
+	<property name="test" location="test"/>
 
 	<target name="build" depends="prepare,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpunit,phpcb"/>
 
@@ -47,12 +47,6 @@
 			<arg value="-l" />
 
 			<fileset dir="${src}">
-				<include name="**/*.php" />
-				<exclude name="**/test/*"/>
-				<modified />
-			</fileset>
-
-			<fileset dir="${test}">
 				<include name="**/*.php" />
 				<modified />
 			</fileset>
@@ -110,7 +104,7 @@
 	</target>
 
 	<target name="phpcs-ci" description="Find coding standard violations using PHP_CodeSniffer creating a log file for the continuous integration server">
-		<exec executable="phpcs.bat">
+		<exec executable="phpcs.bat" output="nul">
 			<arg value="--report=checkstyle" />
 			<arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
 			<arg value="--standard=PEAR" />
@@ -136,7 +130,7 @@
 	</target>
 
 	<target name="phpunit" description="Run unit tests with PHPUnit">
-		<exec executable="phpunit.bat" failonerror="true"/>
+		<exec executable="phpunit.bat" dir="test" failonerror="true"/>
 	</target>
 
 	<target name="phpcb" description="Aggregate tool output with PHP_CodeBrowser">

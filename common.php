@@ -31,6 +31,8 @@ $time_start=microtime(true);
 		$system=$_SERVER["SERVER_NAME"];
 	else
 		$system='';
+	
+	$compname=strtolower(getenv("COMPUTERNAME"));
 
 	global $web;
 
@@ -38,24 +40,24 @@ $time_start=microtime(true);
 	if ($system=='localhost' OR $system=='doug') {
 		$root="http://localhost/workspace/ShowManager";
 		$ips=";";
-		if (strtolower($_ENV["COMPUTERNAME"])=="doug"){
+		if ($compname=="doug"){
 			$do_ini='do_doug.ini';
-		} elseif (strtolower($_ENV["COMPUTERNAME"])=="hptouch"){
+		} elseif ($compname=="hptouch"){
 			$do_ini='do_hptouch.ini';
-		} elseif (strtolower($_ENV["COMPUTERNAME"])=="phil3"){
+		} elseif ($compname=="phil3"){
 			$do_ini='do_phil3.ini';
 			$root="http://localhost/ShowManager";
-		} elseif (strtolower($_ENV["COMPUTERNAME"])=="sooty-laptop"){
+		} elseif ($compname=="sooty-laptop"){
 			$do_ini='do_sooty-laptop.ini';
 			$root="http://localhost/show";
-		} elseif (strtolower($_ENV["COMPUTERNAME"])=="toshiba"){
+		} elseif ($compname=="toshiba"){
 			$do_ini='do_toshiba.ini';
 			$root="http://localhost/ShowManager";
-		} elseif (strtolower($_ENV["COMPUTERNAME"])=="nick-xps"){
+		} elseif ($compname=="nick-xps"){
 			$do_ini='nick-xps.ini';
 			$root="http://localhost/workspace/ShowManager";
 		} else {
-			print("Computer name".$_ENV["COMPUTERNAME"]."<br/>\n");
+			phpinfo();
 			die("System = $system");
 			$do_ini='do.ini';
 		}
