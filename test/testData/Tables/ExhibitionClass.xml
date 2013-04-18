@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+	<table name="ExhibitionClass">
+		<column>ID</column>
+		<column>ExhibitionID</column>
+		<column>ExhibitionSectionID</column>
+		<column>ClassNumber</column>
+		<column>ClassID</column>
+	</table>		
+</dataset>

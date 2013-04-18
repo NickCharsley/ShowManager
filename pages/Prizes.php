@@ -10,7 +10,7 @@
  */
  if (!defined("__COMMON__"))
  	include_once('common.php');
- trigger_error("Enter", E_USER_NOTICE);
+ error_log("Enter", E_USER_NOTICE);
 //************************************************
 if (class_exists('gtk',false)) {
 	//TODO:any gtk specific code for Prizes.php goes here
@@ -51,7 +51,7 @@ if (class_exists('gtk',false)) {
 				print $prize->Name;
 			print "</td>\n";
 			print "<td>\n";
-				print "£".$prize->Prize;
+				print "ï¿½".$prize->Prize;
 			print "</td>\n";
 			print "<td>\n";
 				print $prize->EditLink();
@@ -78,5 +78,5 @@ if (class_exists('gtk',false)) {
 if (str_replace("/","\\",__FILE__)==str_replace("/","\\",$_SERVER["SCRIPT_FILENAME"])){
 }
 //************************************************
-trigger_error("Exit", E_USER_NOTICE);
+error_log("Exit", E_USER_NOTICE);
 ?>

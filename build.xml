@@ -37,9 +37,12 @@
 		<mkdir dir="${basedir}/build/api"/>
 		<mkdir dir="${basedir}/build/code-browser"/>
 		<mkdir dir="${basedir}/build/coverage"/>
+		<mkdir dir="${basedir}/build/graph"/>
 		<mkdir dir="${basedir}/build/logs"/>
 		<mkdir dir="${basedir}/build/pdepend"/>
 		<mkdir dir="${basedir}/build/phpdox"/>
+		<mkdir dir="${basedir}/build/todo"/>
+
 	</target>
 
 	<target name="lint" description="Perform syntax check of sourcecode files">

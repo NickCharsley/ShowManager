@@ -10,7 +10,7 @@
  */
  if (!defined("__COMMON__"))
  	include_once('common.php');
- trigger_error("Enter", E_USER_NOTICE);
+ error_log("Enter", E_USER_NOTICE);
 //************************************************
 include_once("ExhibitionClass.php");
 
@@ -177,7 +177,7 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 				print "</tr>\n";
 			}
 		}
-		print "<tr><td colspan='2'>Prize Money: </td><td>£".$exhibitor->Prize."</td></tr>\n";
+		print "<tr><td colspan='2'>Prize Money: </td><td>ï¿½".$exhibitor->Prize."</td></tr>\n";
 		print "<tr><td colspan='5'><hr/></td></tr>\n";
 //		print "</table>\n";
 	}

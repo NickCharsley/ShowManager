@@ -1,0 +1,2 @@
+php_value auto_prepend_file "C:\xampp\php\pear\PHPUnit\Extensions\SeleniumCommon\prepend.php"
+php_value auto_append_file "C:\xampp\php\pear\PHPUnit\Extensions\SeleniumCommon\append.php"

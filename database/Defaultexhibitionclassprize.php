@@ -4,21 +4,18 @@
  */
 require_once 'DB/DataObject.php';
 
-class doDefaultexhibitionclassprize extends DB_DataObject 
+class doDefaultexhibitionclassprize extends dbRoot 
 {
     ###START_AUTOCODE
     /* the code below is auto generated do not remove the above tag */
 
-    public $__table = 'defaultexhibitionclassprize';    // table name
-    public $ID;                              // int(4)   not_null
-    public $ExhibitionClassID;               // int(4)   not_null
-    public $PrizeID;                         // int(4)   not_null
-    public $Prize;                           // decimal(10,2)  
-    public $Points;                          // int(4)  
-    public $ExhibitionExhibitorID;           // int(4)  
-
-    /* Static get */
-    function staticGet($k,$v=NULL) { return DB_DataObject::staticGet('doDefaultexhibitionclassprize',$k,$v); }
+    protected $__table = 'defaultexhibitionclassprize';    // table name
+    protected $ID;                              // int(4)   not_null
+    protected $ExhibitionClassID;               // int(4)   not_null
+    protected $PrizeID;                         // int(4)   not_null
+    protected $Prize;                           // decimal(10,2)  
+    protected $Points;                          // int(4)  
+    protected $ExhibitionExhibitorID;           // int(4)  
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE

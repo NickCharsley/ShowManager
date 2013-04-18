@@ -23,7 +23,7 @@
 		<whitelist addUncoveredFilesFromWhitelist="true">
 			<directory suffix=".php">..</directory>
 			<exclude>
-				<directory>test</directory>
+				<directory>../test</directory>
 			</exclude>
 		</whitelist>
 	</filter>
@@ -34,6 +34,9 @@
 		<var name="DB_PASSWD" value="sas0527" />
 		<var name="DB_DBNAME" value="test_showmanager" />
 		<var name="DB_SYNCNAME" value="showmanager" />
-		<var name="DB_DEBUG" value="0"/>       
+		<var name="DB_DEBUG" value="0"/>
+		<var name="TESTMODE" value="test"/>
+		<ini name="xdebug.coverage_enable" value="On"/>
+		
 	</php>
 </phpunit>

@@ -4,18 +4,15 @@
  */
 require_once 'DB/DataObject.php';
 
-class doDefaultexhibitiontrophyclass extends DB_DataObject 
+class doDefaultexhibitiontrophyclass extends dbRoot 
 {
     ###START_AUTOCODE
     /* the code below is auto generated do not remove the above tag */
 
-    public $__table = 'defaultexhibitiontrophyclass';    // table name
-    public $id;                              // int(4)   not_null
-    public $trophyid;                        // int(4)  
-    public $exhibitionclassid;               // int(4)  
-
-    /* Static get */
-    function staticGet($k,$v=NULL) { return DB_DataObject::staticGet('doDefaultexhibitiontrophyclass',$k,$v); }
+    protected $__table = 'defaultexhibitiontrophyclass';    // table name
+    protected $id;                              // int(4)   not_null
+    protected $trophyid;                        // int(4)  
+    protected $exhibitionclassid;               // int(4)  
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE

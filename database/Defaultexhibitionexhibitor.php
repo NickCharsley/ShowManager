@@ -4,19 +4,16 @@
  */
 require_once 'DB/DataObject.php';
 
-class doDefaultexhibitionexhibitor extends DB_DataObject 
+class doDefaultexhibitionexhibitor extends dbRoot 
 {
     ###START_AUTOCODE
     /* the code below is auto generated do not remove the above tag */
 
-    public $__table = 'defaultexhibitionexhibitor';    // table name
-    public $ID;                              // int(4)   not_null
-    public $ExhibitionID;                    // int(4)   not_null default_7
-    public $ExhibitorNumber;                 // int(4)   not_null
-    public $ExhibitorID;                     // int(4)   not_null
-
-    /* Static get */
-    function staticGet($k,$v=NULL) { return DB_DataObject::staticGet('doDefaultexhibitionexhibitor',$k,$v); }
+    protected $__table = 'defaultexhibitionexhibitor';    // table name
+    protected $ID;                              // int(4)   not_null
+    protected $ExhibitionID;                    // int(4)   not_null default_7
+    protected $ExhibitorNumber;                 // int(4)   not_null
+    protected $ExhibitorID;                     // int(4)   not_null
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE

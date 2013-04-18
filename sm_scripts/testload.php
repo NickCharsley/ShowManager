@@ -10,7 +10,7 @@
  */
  if (!defined("__COMMON__"))
  	include_once('common.php');
- trigger_error("Enter", E_USER_NOTICE);
+ error_log("Enter", E_USER_NOTICE);
 //************************************************
 include_once("utils.php");
 
@@ -36,5 +36,5 @@ function showLoad(){
 	showLoad();
 
 //************************************************
-trigger_error("Exit", E_USER_NOTICE);
+error_log("Exit", E_USER_NOTICE);
 ?>

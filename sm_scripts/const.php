@@ -10,7 +10,7 @@
  */
  if (!defined("__COMMON__"))
  	include_once('common.php');
- trigger_error("Enter", E_USER_NOTICE);
+ error_log("Enter", E_USER_NOTICE);
 //************************************************
 
 
@@ -20,5 +20,5 @@ if (strpos($_SERVER['SCRIPT_NAME'],"const.php")>0){
 	phpinfo();
 }
 //************************************************
-trigger_error("Exit", E_USER_NOTICE);
+error_log("Exit", E_USER_NOTICE);
 ?>

@@ -1,4 +1,7 @@
 <?php
+/**
+ * @codeCoverageIgnore
+ */
 /*
  * File common.php
  * Created on Sep 17, 2006 by N.A.Charsley
@@ -9,8 +12,8 @@
  *
  */
  if (!defined("__COMMON__"))
- 	include_once('../common.php');
- trigger_error("Enter", E_USER_NOTICE);
+ 	include_once('../ons_common.php');
+ error_log("Enter", E_USER_NOTICE);
 //************************************************
 
 //DONE: It's just a stub file'
@@ -21,5 +24,5 @@ if (strpos($_SERVER['SCRIPT_NAME'],"common.php")>0){
 	phpinfo();	
 }
 //************************************************
-trigger_error("Exit", E_USER_NOTICE);
+error_log("Exit", E_USER_NOTICE);
 ?>

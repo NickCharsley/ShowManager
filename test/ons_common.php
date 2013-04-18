@@ -8,6 +8,7 @@
  * Copyright 2006 ONS
  *
  */
+
  define("__COMMON__",1);
  //ob_start("ob_gzhandler");
  
@@ -144,6 +145,7 @@
 \************************************************************/    
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
     include_once "script/utils.php";
+    include_once "sm_scripts/utils.php";
 	krumo::disable() ;
     ini_set('error_log',$root_path."/test/php_error.log");
     ini_set('max_execution_time',30000);
@@ -204,7 +206,10 @@
         if ($debug) print_pre($db);
 
     }
-	else if ($debug) print("Missing ".buildpath($root_path,"database",$do_ini)."?");
+	else {
+		print("Missing ".buildpath($root_path,"database",$do_ini)."?");
+		dieHere();
+	}
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
         
   //** Eclipse Debug Code **************************

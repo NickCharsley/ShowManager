@@ -1,0 +1,16 @@
+<IfModule alias_module>
+    Alias /workspace "C:/Users/nick/workspace"
+    <Directory "C:/Users/nick/workspace">
+        Options +Indexes
+        <IfModule autoindex_color_module>
+            DirectoryIndexTextColor  "#000000"
+            DirectoryIndexBGColor "#f8e8a0"
+            DirectoryIndexLinkColor "#bb3902"
+            DirectoryIndexVLinkColor "#bb3902"
+            DirectoryIndexALinkColor "#bb3902"
+        </IfModule>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+</IfModule>

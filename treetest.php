@@ -10,7 +10,7 @@
  */
  if (!defined("__COMMON__"))
  	include_once('common.php');
- trigger_error("Enter", E_USER_NOTICE);
+ error_log("Enter", E_USER_NOTICE);
 //************************************************
 
 
@@ -46,5 +46,5 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 	phpinfo();
 }
 //************************************************
-trigger_error("Exit", E_USER_NOTICE);
+error_log("Exit", E_USER_NOTICE);
 ?>

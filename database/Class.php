@@ -2,20 +2,17 @@
 /**
  * Table Definition for class
  */
-require_once 'DB/DataObject.php';
+require_once 'dbRoot.php';
 
-class doClass extends DB_DataObject 
+class doClass extends dbRoot 
 {
     ###START_AUTOCODE
     /* the code below is auto generated do not remove the above tag */
 
-    public $__table = 'class';               // table name
-    public $ID;                              // int(4)  primary_key not_null
-    public $Name;                            // varchar(255)  unique_key not_null
-    public $Description;                     // varchar(255)  unique_key
-
-    /* Static get */
-    function staticGet($k,$v=NULL) { return DB_DataObject::staticGet('doClass',$k,$v); }
+    protected $__table = 'class';               // table name
+    protected $ID;                              // int(4)  primary_key not_null
+    protected $Name;                            // varchar(255)  unique_key not_null
+    protected $Description;                     // varchar(255)  unique_key
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
@@ -27,6 +24,7 @@ class doClass extends DB_DataObject
     	return AddButton("Edit","?action=edit&id=".$this->ID);
     }
 }
+
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 	include_once("common.php");
 

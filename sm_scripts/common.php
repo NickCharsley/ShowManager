@@ -1,4 +1,7 @@
 <?php
+/**
+ * @codeCoverageIgnore
+ */
 /*
  * File common.php 
  * 
@@ -11,7 +14,4 @@
  */
  if (!defined("__COMMON__"))
  	include_once('../common.php');
- trigger_error("Enter", E_USER_NOTICE);
- 
- trigger_error("Exit", E_USER_NOTICE);
 ?>

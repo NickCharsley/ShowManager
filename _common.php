@@ -8,12 +8,14 @@
  * Copyright 2006 ONS
  *
  */
- define("__COMMON__",1);
+
+
+define("__COMMON__",1);
  //ob_start("ob_gzhandler");
 
- error_reporting(E_ALL ^ E_DEPRECATED  ^ E_NOTICE ^ E_USER_NOTICE);
-
- trigger_error("Enter", E_USER_NOTICE);
+ error_reporting(E_ALL ^ E_DEPRECATED  ^ E_NOTICE ^ E_USER_NOTICE ^ E_STRICT);  
+ 
+ error_log("Enter", E_USER_NOTICE);
 /************************************************************\
 *	Comon Utils
 \************************************************************/
@@ -37,7 +39,7 @@ $time_start=microtime(true);
 	global $web;
 
 	$root_path=dirname(__FILE__);
-	if ($system=='localhost' OR $system=='doug') {
+	if ($system=='localhost' OR $system=='doug' OR $system=='nick-xps') {
 		$root="http://localhost/workspace/ShowManager";
 		$ips=";";
 		if ($compname=="doug"){
@@ -54,7 +56,7 @@ $time_start=microtime(true);
 			$do_ini='do_toshiba.ini';
 			$root="http://localhost/ShowManager";
 		} elseif ($compname=="nick-xps"){
-			$do_ini='nick-xps.ini';
+			$do_ini='do_nick-xps.ini';
 			$root="http://localhost/workspace/ShowManager";
 		} else {
 			phpinfo();
@@ -63,7 +65,7 @@ $time_start=microtime(true);
 		}
 		$web=true;
 
-		ini_set('error_log',"$root_path/php_error.log");
+		ini_set('error_log',"$root_path/test/php_error.log");
 	} else	if ($system=='hptouch') {
 		$ips=";";
 		$do_ini='do_hptouch.ini';
@@ -126,5 +128,5 @@ $time_start=microtime(true);
 //Check defaults
 
 //************************************************
-trigger_error("Exit", E_USER_NOTICE);
+error_log("Exit", E_USER_NOTICE);
 ?>

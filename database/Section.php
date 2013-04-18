@@ -2,20 +2,17 @@
 /**
  * Table Definition for section
  */
-require_once 'DB/DataObject.php';
+require_once 'dbRoot.php';
 
-class doSection extends DB_DataObject 
+class doSection extends dbRoot 
 {
     ###START_AUTOCODE
     /* the code below is auto generated do not remove the above tag */
 
-    public $__table = 'section';             // table name
-    public $ID;                              // int(4)  primary_key not_null
-    public $Name;                            // varchar(255)  unique_key not_null
-    public $Description;                     // varchar(255)  
-
-    /* Static get */
-    function staticGet($k,$v=NULL) { return DB_DataObject::staticGet('doSection',$k,$v); }
+    protected $__table = 'section';             // table name
+    protected $ID;                              // int(4)  primary_key not_null
+    protected $Name;                            // varchar(255)  unique_key not_null
+    protected $Description;                     // varchar(255)  
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE

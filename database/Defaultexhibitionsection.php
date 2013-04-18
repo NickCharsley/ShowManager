@@ -4,18 +4,15 @@
  */
 require_once 'DB/DataObject.php';
 
-class doDefaultexhibitionsection extends DB_DataObject 
+class doDefaultexhibitionsection extends dbRoot 
 {
     ###START_AUTOCODE
     /* the code below is auto generated do not remove the above tag */
 
-    public $__table = 'defaultexhibitionsection';    // table name
-    public $ID;                              // int(4)   not_null
-    public $SectionNumber;                   // int(4)   not_null
-    public $Name;                            // varchar(255)   not_null
-
-    /* Static get */
-    function staticGet($k,$v=NULL) { return DB_DataObject::staticGet('doDefaultexhibitionsection',$k,$v); }
+    protected $__table = 'defaultexhibitionsection';    // table name
+    protected $ID;                              // int(4)   not_null
+    protected $SectionNumber;                   // int(4)   not_null
+    protected $Name;                            // varchar(255)   not_null
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
