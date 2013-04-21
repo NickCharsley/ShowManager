@@ -5,4 +5,9 @@
 		<column>ShowName</column>
 		<column>ShowID</column>		
 	</table>		
+	<table name="Exhibition">
+		<column>ID</column>
+		<column>Name</column>
+		<row><value>1</value><value>Summer Show 2008</value></row>
+	</table>		
 </dataset>

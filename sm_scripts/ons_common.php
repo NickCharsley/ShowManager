@@ -13,5 +13,5 @@
  * 
  */
  if (!defined("__COMMON__"))
- 	include_once('../common.php');
+ 	include_once('../ons_common.php');
 ?>

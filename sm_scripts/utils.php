@@ -13,11 +13,8 @@
  	include_once('ons_common.php');
  error_log("Enter", E_USER_NOTICE);
 
-	function PageTitle(){
-		
+	function PageTitle(){	
 		global $defs;
-		
-		
 		
 		print "<title>Show Manager";
 		if (isset($GLOBALS['TESTMODE'])) print ":".$GLOBALS['TESTMODE']; 
@@ -29,6 +26,7 @@
 		}
 		if ($defs->ShowName==""){
 			include("pages/ShowName.php");
+			return;
 		}		
 		$defs->getLinks();
 		print "<div align='center'><h1>";
@@ -63,23 +61,12 @@
 		print "<td>".AddButton("Classes"		,$root."/database/Exhibitionclass.php")."</td>";
 		print "<td>".AddButton("Prizes"			,$root."/database/Prize.php")."</td>";
 		print "<td>".AddButton("Trophies"		,$root."/database/Trophy.php")."</td>";
-		print "<td>".AddButton("Sponsorship"		,$root."/database/Sponsorship.php")."</td>";
-		print "<td>".AddButton("Competitors"		,$root."/database/Exhibitionexhibitor.php")."</td>";
+		print "<td>".AddButton("Sponsorship"	,$root."/database/Sponsorship.php")."</td>";
+		print "<td>".AddButton("Competitors"	,$root."/database/Exhibitionexhibitor.php")."</td>";
 		print "<td>".AddButton("Results"		,$root."/pages/results.php")."</td>";
 		print "<td>".AddButton("Summary"		,$root."/pages/summary.php")."</td>";
 		print "</tr></table>";
 		print "<hr/>";
-	}
-
- 	function __autoload($class_name) {
- 		if (!file_exists($class_name . '.php')){
- 			$class_name=str_replace("_","\\",$class_name);
- 		}
-		require_once $class_name . '.php';
-	}
-
-	if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
-		PageTitle();
 	}
 	
 error_log("Exit", E_USER_NOTICE);

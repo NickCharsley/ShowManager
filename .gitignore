@@ -165,3 +165,4 @@ pip-log.txt
 *_error.log
 cache.*
 test_*.ini
+*.php.*

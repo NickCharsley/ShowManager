@@ -48,7 +48,7 @@ class dbRoot extends DB_DataObject {
 		return $dbTables[$table][$rowID];
 	}
 	
-
+/** /
 	function __set($field,$value){
 		if ($this->$field<>$value){
 			$this->_dirty=true;
@@ -59,14 +59,15 @@ class dbRoot extends DB_DataObject {
 	function __get($field){
 		return $this->$field;
 	}
-
+/**/
 	function Save(){
 		if (!$this->find(true)){
 			$this->insert();
 			$this->find(true);
 		}
 		return $this->ID;
-	}	
+	}
+	
 }
 
 //************************************************

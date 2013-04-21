@@ -77,7 +77,7 @@
     if (strpos($system,'.local')>0
         or !(strpos($system,'localhost')===false)
             or !(strpos($system,'nick-xps')===false)
-				or !(strpos($system,'tdvsvr0165')===false)){				
+				or !(strpos($system,'show.')===false)){				
 		$do_ini='do_nick-xps.ini';
 		if (strpos((isset($_SERVER["SERVER_SOFTWARE"])?$_SERVER["SERVER_SOFTWARE"]:""),"Ubuntu")===false){
         	$ips=";";
@@ -149,46 +149,22 @@
 /***********************************************************\
  * Database Connectivity
 \***********************************************************/
-
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-    if (file_exists(buildpath($root_path,"database",$do_ini))){    	
+    if (file_exists(buildpath($root_path,"database",$do_ini))){
     	if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-        include_once "database/utils.php";
-        if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-        
-        $config = parse_ini_file(buildpath($root_path,"database",$do_ini), true);
-		
-        if ($debug) krumo($config);
-        if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-        
-        foreach($config as $class=>$values) {
-            $options = &PEAR::getStaticProperty($class,'options');
-            $options = $values;
-        }
-        if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-        
-        PEARError($db = MDB2::connect($config['DB_DataObject']['database']),"Early out");
-        //$db->setFetchMode(DB_FETCHMODE_ASSOC);
-        $db->setFetchMode(MDB2_FETCHMODE_ASSOC);
-        set_time_limit(0);
-        DB_DataObject::debugLevel(5);
-        if (str_replace("/","\\",__FILE__)==str_replace("/","\\",$_SERVER["SCRIPT_FILENAME"])){
-            showload("t_dimension");
-        }
-        if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-        
-        DB_DataObject::debugLevel($debug?5:0);
-
-        if ($debug) print_pre($db);
-
+    	include_once "database/utils.php";
+    	if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
+    
+    	$db=setupDB($root_path,$do_ini,$debug);
+    
     }
-	else {
-		print("Missing ".buildpath($root_path,"database",$do_ini)."?");
-		dieHere();
-	}
+    else {
+    	print("Missing ".buildpath($root_path,"database",$do_ini)."?");
+    	dieHere();
+    }
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-        
-  //** Eclipse Debug Code **************************
+    
+//** Eclipse Debug Code **************************
 if (str_replace("/","\\",__FILE__)==str_replace("/","\\",$_SERVER["SCRIPT_FILENAME"])){
     if (class_exists('gtk',false)) {
         print($_SERVER["SCRIPT_FILENAME"]."\n\r");

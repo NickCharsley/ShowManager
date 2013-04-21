@@ -9,12 +9,12 @@ class doDefaultexhibitionclass extends dbRoot
     ###START_AUTOCODE
     /* the code below is auto generated do not remove the above tag */
 
-    protected $__table = 'defaultexhibitionclass';    // table name
-    protected $ID;                              // int(4)   not_null
-    protected $ExhibitionID;                    // int(4)   not_null
-    protected $ExhibitionSectionID;             // int(4)   not_null
-    protected $ClassNumber;                     // int(4)   not_null
-    protected $ClassID;                         // int(4)   not_null
+    public $__table = 'defaultexhibitionclass';    // table name
+    public $ID;                              // int(4)   not_null
+    public $ExhibitionID;                    // int(4)   not_null
+    public $ExhibitionSectionID;             // int(4)   not_null
+    public $ClassNumber;                     // int(4)   not_null
+    public $ClassID;                         // int(4)   not_null
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE

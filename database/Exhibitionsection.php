@@ -9,11 +9,11 @@ class doExhibitionsection extends dbRoot
     ###START_AUTOCODE
     /* the code below is auto generated do not remove the above tag */
 
-    protected $__table = 'exhibitionsection';    // table name
-    protected $ID;                              // int(4)  primary_key not_null
-    protected $ExhibitionID;                    // int(4)  unique_key not_null
-    protected $SectionNumber;                   // int(4)  unique_key not_null
-    protected $SectionID;                       // int(4)  unique_key not_null
+    public $__table = 'exhibitionsection';    // table name
+    public $ID;                              // int(4)  primary_key not_null
+    public $ExhibitionID;                    // int(4)  unique_key not_null
+    public $SectionNumber;                   // int(4)  unique_key not_null
+    public $SectionID;                       // int(4)  unique_key not_null
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE

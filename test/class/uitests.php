@@ -15,12 +15,12 @@ if (!defined("__COMMON__"))
 class uitests extends PHPUnit_Extensions_Selenium2TestCase
 {	
 
-	protected $coverageScriptUrl = 'http://nick-xps/phpunit_coverage.php';
+	protected $coverageScriptUrl = 'http://nick-xps/workspace/showmanager/phpunit_coverage.php';
 	
 	public function testTitle()
 	{
-		$this->url($this->getBrowserUrl().'/workspace/showmanager/');
-		$this->assertEquals('', $this->title());
+		$this->url($GLOBALS['UIROOT']);
+		$this->assertEquals('Show Manager'.(isset($GLOBALS['TESTMODE'])?":".$GLOBALS['TESTMODE']:""), $this->title());
 	}
 }
 

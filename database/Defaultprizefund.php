@@ -9,10 +9,10 @@ class doDefaultprizefund extends dbRoot
     ###START_AUTOCODE
     /* the code below is auto generated do not remove the above tag */
 
-    protected $__table = 'defaultprizefund';    // table name
-    protected $ID;                              // int(4)   not_null
-    protected $Prize;                           // decimal(32,2)  
-    protected $Points;                          // decimal(32,0)  
+    public $__table = 'defaultprizefund';    // table name
+    public $ID;                              // int(4)   not_null
+    public $Prize;                           // decimal(32,2)  
+    public $Points;                          // decimal(32,0)  
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE

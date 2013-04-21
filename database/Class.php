@@ -9,10 +9,10 @@ class doClass extends dbRoot
     ###START_AUTOCODE
     /* the code below is auto generated do not remove the above tag */
 
-    protected $__table = 'class';               // table name
-    protected $ID;                              // int(4)  primary_key not_null
-    protected $Name;                            // varchar(255)  unique_key not_null
-    protected $Description;                     // varchar(255)  unique_key
+    public $__table = 'class';               // table name
+    public $ID;                              // int(4)  primary_key not_null
+    public $Name;                            // varchar(255)  unique_key not_null
+    public $Description;                     // varchar(255)  unique_key
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE

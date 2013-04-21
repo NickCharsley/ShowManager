@@ -26,6 +26,7 @@
 		<delete dir="${basedir}/build/api"/>
 		<delete dir="${basedir}/build/code-browser"/>
 		<delete dir="${basedir}/build/coverage"/>
+		<delete dir="${basedir}/build/ui_coverage"/>
 		<delete dir="${basedir}/build/graph"/>
 		<delete dir="${basedir}/build/logs"/>
 		<delete dir="${basedir}/build/pdepend"/>
@@ -37,6 +38,7 @@
 		<mkdir dir="${basedir}/build/api"/>
 		<mkdir dir="${basedir}/build/code-browser"/>
 		<mkdir dir="${basedir}/build/coverage"/>
+		<mkdir dir="${basedir}/build/ui_coverage"/>
 		<mkdir dir="${basedir}/build/graph"/>
 		<mkdir dir="${basedir}/build/logs"/>
 		<mkdir dir="${basedir}/build/pdepend"/>

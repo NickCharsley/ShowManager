@@ -10,7 +10,7 @@
  */
 
  define("__COMMON__",1);
- //ob_start("ob_gzhandler");
+ ob_start("ob_gzhandler");
  
  error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
     
@@ -154,56 +154,13 @@
 /***********************************************************\
  * Database Connectivity
 \***********************************************************/
-
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
     if (file_exists(buildpath($root_path,"database",$do_ini))){    	
     	if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
         include_once "database/utils.php";
         if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-        
-        $config = parse_ini_file(buildpath($root_path,"database",$do_ini), true);
-		
-		//This is test so we will look to add 'test_' to the database name
-		//This means that we don't have to change the do_XXXX.ini file
-		$db_name=split("/",$config['DB_DataObject']['database']);
-		
-		$name=$db_name[count($db_name)-1];
-		$db_name[count($db_name)-1]=$GLOBALS['DB_DBNAME'];
-		
-		$config['DB_DataObject']['database']=join("/",$db_name);
-		//Now need to 'copy' the schema files as they have the wrong name :(
-		
-		$d = dir($config['DB_DataObject']['schema_location']);
-		while (false !== ($target = $d->read())) {		
-			if (strpos($target,".ini") and substr($target,0,5)!="test_"){
-				$link=str_replace($name, $GLOBALS['DB_DBNAME'], $target);
-				@unlink(buildpath($d->path,$link));
-				link(buildpath($d->path,$target),buildpath($d->path,$link));
-			}
-		}	
-        if (str_replace("/","\\",__FILE__)==str_replace("/","\\",$_SERVER["SCRIPT_FILENAME"]))
-            print_pre($config);
-        if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-        
-        foreach($config as $class=>$values) {
-            $options = &PEAR::getStaticProperty($class,'options');
-            $options = $values;
-        }
-        if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-        
-        PEARError($db = MDB2::connect($config['DB_DataObject']['database']),"Early out");
-        //$db->setFetchMode(DB_FETCHMODE_ASSOC);
-        $db->setFetchMode(MDB2_FETCHMODE_ASSOC);
-        set_time_limit(0);
-        DB_DataObject::debugLevel(5);
-        if (str_replace("/","\\",__FILE__)==str_replace("/","\\",$_SERVER["SCRIPT_FILENAME"])){
-            showload("t_dimension");
-        }
-        if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-        
-        DB_DataObject::debugLevel($debug?5:0);
 
-        if ($debug) print_pre($db);
+        $db=setupDB($root_path,$do_ini,$debug);
 
     }
 	else {

@@ -9,12 +9,12 @@ class doExhibitor extends dbRoot
     ###START_AUTOCODE
     /* the code below is auto generated do not remove the above tag */
 
-    protected $__table = 'exhibitor';           // table name
-    protected $ID;                              // int(4)  primary_key not_null
-    protected $Surname;                         // varchar(255)  unique_key not_null
-    protected $Member;                          // tinyint(1)   not_null
-    protected $Title;                           // varchar(20)  unique_key
-    protected $Initials;                        // varchar(20)  unique_key
+    public $__table = 'exhibitor';           // table name
+    public $ID;                              // int(4)  primary_key not_null
+    public $Surname;                         // varchar(255)  unique_key not_null
+    public $Member;                          // tinyint(1)   not_null
+    public $Title;                           // varchar(20)  unique_key
+    public $Initials;                        // varchar(20)  unique_key
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
