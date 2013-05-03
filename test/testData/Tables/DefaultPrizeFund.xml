@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+	<table name="Prize">
+		<column>ID</column>
+		<column>Name</column>
+		<column>Prize</column>
+		<column>Points</column>
+	</table>		
+</dataset>

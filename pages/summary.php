@@ -9,7 +9,7 @@
  *
  */
  if (!defined("__COMMON__"))
- 	include_once('common.php');
+ 	include_once('ons_common.php');
  error_log("Enter", E_USER_NOTICE);
 //************************************************
 include_once("ExhibitionClass.php");
@@ -34,9 +34,11 @@ class doSummary extends doExhibitionClass {
 }
 
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
-	include_once("common.php");
-
+	include_once("ons_common.php");
+	$defs=dbRoot::fromCache("Defaults",1);
+	
 	PageTitle();
+	
 
 	print AddButton("Calculate Prize Fund",$root."/pages/summary.php?calc=true");
 	print "<br/><br/>";
@@ -54,6 +56,7 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 	$sql="delete from exhibitionclassprize where prizeid=0";
 	PEARError($db->query($sql));
 
+	$title="";
 	PEARError($prize=DB_DataObject::factory("Prize"));
 	$prize->find();
 	while($prize->fetch()){

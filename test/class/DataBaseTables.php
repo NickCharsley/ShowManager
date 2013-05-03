@@ -12,6 +12,9 @@ abstract class DataBaseTables extends ONS_Tests_DatabaseTestCase
 		return array(array($this->DataRowProvider()));
 	}
 
+	function getBackup($data=false){}
+	
+	
 	/**
 	 * 
 	 */	
@@ -90,6 +93,31 @@ abstract class DataBaseTables extends ONS_Tests_DatabaseTestCase
 		}		
 	}
 
+	/**
+	 * @depends testTableCreated
+	 */
+	function testBackupTableWithoutData(){
+		$do=Safe_DataObject_factory(str_replace("Tables/", "", $this->FileName()));
+		$this->assertEquals(strtolower($this->getBackup(false)),strtolower($do->backupTable()));
+	}
+	
+	/**
+	 * @depends testTableCreated
+	 * @depends testMultipleSave
+	 * @dataProvider DataRowsProvider
+	 */
+	function testBackupTableWithData($rows){
+		foreach($rows as $row){
+			$do=Safe_DataObject_factory(str_replace("Tables/", "", $this->FileName()));
+			$data=$row[1];
+			foreach($data as $field=>$value){
+				$do->$field=$value;
+			}
+			$do->Save();
+		}
+		$this->assertEquals(strtolower($this->getBackup(true)),strtolower($do->backupTable()));
+	}
+	
 	/**
 	 * @depends testTableCreated
 	 * @depends testMultipleSave

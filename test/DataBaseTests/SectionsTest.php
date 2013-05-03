@@ -23,6 +23,34 @@ class SectionTest extends DataBaseTables
 		);
 	}
 
+	function getBackup($data=false){
+		return	"\t<table name='Section'>\n".
+				"\t\t<column>ID</column>\n".
+				"\t\t<column>Name</column>\n".
+				"\t\t<column>Description</column>\n".
+	
+				($data?
+						//"\t\t<row><value>1</value><value>Sweet Peas</value><value>3 x one cultivars</value></row>\n".
+						"\t\t<row><value>1</value><value>Flowers</value><value></value></row>\n".
+						"\t\t<row><value>2</value><value>Pot Plants</value><value></value></row>\n".
+						"\t\t<row><value>3</value><value>Vegetables</value><value></value></row>\n".
+						"\t\t<row><value>4</value><value>Fruit</value><value></value></row>\n".
+						"\t\t<row><value>5</value><value>Homecraft</value><value></value></row>\n".
+						"\t\t<row><value>6</value><value>Floral Art</value><value></value></row>\n".
+						"\t\t<row><value>7</value><value>Photography</value><value></value></row>\n".
+						"\t\t<row><value>8</value><value>Art</value><value></value></row>\n".
+						"\t\t<row><value>9</value><value>Needlecraft/Hobbies</value><value></value></row>\n".
+						"\t\t<row><value>10</value><value>Children</value><value></value></row>\n".
+						"\t\t<row><value>11</value><value>2009 Section 1</value><value></value></row>\n".
+						"\t\t<row><value>12</value><value>Spring Show</value><value>All Classes</value></row>\n".
+						"\t\t<row><value>13</value><value>2012 Spring Show</value><value></value></row>\n"						
+					:"").
+	
+				"\t</table>\n";
+	}
+	
+	
+	
 	function FileName(){
 		return "Tables/Section";
 	}	

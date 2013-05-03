@@ -11,6 +11,18 @@ class DefaultsTest extends DataBaseTables
 		);
 	}
 
+	function getBackup($data=false){
+		return	"\t<table name='Defaults'>\n".
+				"\t\t<column>ID</column>\n".
+				"\t\t<column>ShowName</column>\n".
+				"\t\t<column>ShowID</column>\n".
+
+				($data?"\t\t<row><value>1</value><value>BHS</value><value>1</value></row>\n":"").
+				
+				"\t</table>\n";	
+	}
+	
+	
 	function FileName(){
 		return "Tables/Defaults";
 	}

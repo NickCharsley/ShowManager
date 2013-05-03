@@ -23,65 +23,45 @@ class doExhibition extends dbRoot
     function EditLink(){
     	return AddButton("Edit","?action=edit&id=".$this->ID);
     }
+    
     function DefaultLink(){
-    	global $defs;
+    	$defs=dbRoot::fromCache("Defaults",1);
     	if ($this->ID==$defs->ShowID)
     		return "(Default)";
     	else
     		return AddButton("Set as Default","?action=default&id=".$this->ID);
     }
+    
+    function printList(){
+    	$list=clone($this);
+    	$list->find();
+    	print "<table>\n";
+    	while ($list->fetch()){
+    		print "<tr>\n";
+    		print "<td>\n";
+    		print $list->Name;
+    		print "</td>\n";
+    		print "<td>\n";
+    		print $list->EditLink();
+    		print "</td>\n";
+    		print "<td>\n";
+    		print $list->DefaultLink();
+    		print "</td>\n";
+    		print "</tr>\n";
+    	}
+    	print "</table>\n";    	 
+    }    
 }
 //** Eclipse Debug Code **************************
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
-	include_once("common.php");
+	include_once("ons_common.php");
+	
 	PEARError($show=DB_DataObject::factory("Exhibition"));
-	if (isset($_GET['action']) and isset($_GET['id'])){
-		$show->get($_GET['id']);
-		if ($_GET['action']=='default'){
-			if (!isset($defs)){
-				$defs=DB_DataObject::factory("Defaults");
-				$defs->find(true);
-			}
-			$defs->ShowID=$show->ID;
-	 		$defs->update();
-			$defs->getLinks();
-		}
-		if ($_GET['action']<>'edit')
-			PEARError($show=DB_DataObject::factory("Exhibition"));
+	
+	if (PageTitle()){
+		$show->UpdateDefaults();
+		$show->PrintList();
+		$show->PrintForm();
 	}
-
-	PageTitle();
-
-	$fg =&DB_DataObject_FormBuilder::create($show);
-	$form =& $fg->getForm();
-	if ($form->validate()) {
-	    //DB_DataObject::debugLevel(5);
-		$form->process(array(&$fg,'processForm'), false);
-		$form->freeze();
-	}
-
-	PEARError($show=DB_DataObject::factory("Exhibition"));
-	$show->find();
-	print "<table>\n";
-	while ($show->fetch()){
-		print "<tr>\n";
-			print "<td>\n";
-				print $show->Name;
-			print "</td>\n";
-			print "<td>\n";
-				print $show->EditLink();
-			print "</td>\n";
-			print "<td>\n";
-				print $show->DefaultLink();
-			print "</td>\n";
-		print "</tr>\n";
-	}
-	print "</table>\n";
-
-	print AddButton("New","?action=new");
-	print "<hr/>";
-	$form->display();
-
-	print "<hr/>";
 }
 ?>

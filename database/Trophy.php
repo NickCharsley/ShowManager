@@ -34,8 +34,9 @@ class doTrophy extends dbRoot
 }
 
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
-	include_once("common.php");
-
+	include_once("ons_common.php");
+	$defs=dbRoot::fromCache("Defaults",1);
+	
 	PageTitle();
 		
 	DB_DataObject::debuglevel(0);

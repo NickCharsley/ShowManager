@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+	<table name="Defaults">
+		<column>ID</column>
+		<column>ShowName</column>
+		<column>ShowID</column>
+		<row>
+			<value>1</value>
+			<value>BHS</value>
+			<value>9</value>
+		</row>					
+	</table>		
+	<table name="Exhibition">
+		<column>ID</column>
+		<column>Name</column>
+		<row><value>1</value><value>Summer Show 2008</value></row>
+		<row><value>2</value><value>Spring Show 2009</value></row>
+		<row><value>3</value><value>Summer Show 2009</value></row>
+		<row><value>4</value><value>Spring show 2010</value></row>
+		<row><value>5</value><value>Summer Show 2010</value></row>
+		<row><value>6</value><value>Spring Show 2011</value></row>
+		<row><value>7</value><value>Summer Show 2011</value></row>
+		<row><value>8</value><value>Spring Show 2012</value></row>
+		<row><value>9</value><value>Summer Show 2012</value></row>
+	</table>
+	<table name="ExhibitionSection">
+		<column>ID</column>
+		<column>ExhibitionID</column>
+		<column>SectionNumber</column>
+		<column>SectionID</column>
+		<row><value>1</value><value>3</value><value>1</value><value>1</value></row>
+		<row><value>2</value><value>3</value><value>2</value><value>2</value></row>
+		<row><value>3</value><value>3</value><value>3</value><value>3</value></row>
+		<row><value>4</value><value>3</value><value>4</value><value>4</value></row>
+		<row><value>5</value><value>3</value><value>5</value><value>6</value></row>
+		<row><value>6</value><value>3</value><value>6</value><value>5</value></row>
+		<row><value>7</value><value>3</value><value>7</value><value>7</value></row>
+		<row><value>8</value><value>3</value><value>8</value><value>8</value></row>
+		<row><value>9</value><value>3</value><value>9</value><value>9</value></row>
+		<row><value>10</value><value>3</value><value>10</value><value>10</value></row>
+		<row><value>11</value><value>2</value><value>1</value><value>11</value></row>
+		<row><value>12</value><value>5</value><value>1</value><value>1</value></row>
+		<row><value>13</value><value>5</value><value>2</value><value>2</value></row>
+		<row><value>14</value><value>5</value><value>3</value><value>3</value></row>
+		<row><value>15</value><value>5</value><value>4</value><value>4</value></row>
+		<row><value>16</value><value>5</value><value>5</value><value>6</value></row>
+		<row><value>17</value><value>5</value><value>6</value><value>5</value></row>
+		<row><value>18</value><value>5</value><value>7</value><value>7</value></row>
+		<row><value>19</value><value>5</value><value>8</value><value>8</value></row>
+		<row><value>20</value><value>5</value><value>9</value><value>9</value></row>
+		<row><value>21</value><value>5</value><value>10</value><value>10</value></row>
+		<row><value>22</value><value>6</value><value>1</value><value>12</value></row>
+		<row><value>23</value><value>7</value><value>1</value><value>1</value></row>
+		<row><value>24</value><value>7</value><value>2</value><value>2</value></row>
+		<row><value>25</value><value>7</value><value>3</value><value>3</value></row>
+		<row><value>26</value><value>7</value><value>4</value><value>4</value></row>
+		<row><value>27</value><value>7</value><value>5</value><value>6</value></row>
+		<row><value>28</value><value>7</value><value>6</value><value>5</value></row>
+		<row><value>29</value><value>7</value><value>7</value><value>7</value></row>
+		<row><value>30</value><value>7</value><value>8</value><value>8</value></row>
+		<row><value>31</value><value>7</value><value>9</value><value>9</value></row>
+		<row><value>32</value><value>7</value><value>10</value><value>10</value></row>
+		<row><value>33</value><value>8</value><value>2012</value><value>12</value></row>
+		<row><value>34</value><value>8</value><value>1</value><value>13</value></row>
+		<row><value>35</value><value>9</value><value>1</value><value>1</value></row>		
+		<row><value>36</value><value>9</value><value>2</value><value>2</value></row>
+	</table>
+	<table name="Section">
+		<column>ID</column>
+		<column>Name</column>
+		<column>Description</column>
+		<row><value>1</value><value>Flowers</value></row>
+		<row><value>2</value><value>Pot Plants</value></row>
+		<row><value>3</value><value>Vegetables</value></row>
+		<row><value>4</value><value>Fruit</value></row>
+		<row><value>5</value><value>Homecraft</value></row>
+		<row><value>6</value><value>Floral Art</value></row>
+		<row><value>7</value><value>Photography</value></row>
+		<row><value>8</value><value>Art</value></row>
+		<row><value>9</value><value>Needlecraft/Hobbies</value></row>
+		<row><value>10</value><value>Children</value></row>
+		<row><value>11</value><value>2009 Section 1</value></row>
+		<row><value>12</value><value>Spring Show</value><value>All Classes</value></row>
+		<row><value>13</value><value>2012 Spring Show</value></row>				
+	</table>		
+			
+</dataset>

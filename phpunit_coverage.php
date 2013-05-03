@@ -40,6 +40,8 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  * @link       http://www.phpunit.de/
  * @since      File available since Release 1.0.0
+ * 
+ * @codeCoverageIgnore
  */
 
 require_once 'File/Iterator/Autoload.php';
@@ -48,7 +50,28 @@ require_once 'PHP/CodeCoverage/Autoload.php';
 // Set this to the directory that contains the code coverage files.
 // It defaults to getcwd(). If you have configured a different directory
 // in prepend.php, you need to configure the same directory here.
-$GLOBALS['PHPUNIT_COVERAGE_DATA_DIRECTORY'] = getcwd();
+if (isset($_SERVER["SERVER_NAME"])){
+	$system=strtolower($_SERVER["SERVER_NAME"]);
+}
+elseif (isset($_SERVER["COMPUTERNAME"])){
+	$system=strtolower($_SERVER["COMPUTERNAME"]);
+}
+elseif (isset($_SERVER["TERM"])){
+	$system=strtolower($_SERVER["TERM"]);
+}
+else {
+	$system='';
+	print_r($_SERVER);
+	die(__FILE__.':'.__LINE__);
+}
+
+if (strpos($system,'.test')>0){
+	$GLOBALS['PHPUNIT_COVERAGE_DATA_DIRECTORY'] = "C:/xampp/tmp/coverage/test";
+}
+else if (strpos($system,'.adhoc')>0){
+	$GLOBALS['PHPUNIT_COVERAGE_DATA_DIRECTORY'] = "C:/xampp/tmp/coverage/adhoc";
+}
+else $GLOBALS['PHPUNIT_COVERAGE_DATA_DIRECTORY'] = "C:/xampp/tmp/coverage/";
 
 if (isset($_GET['PHPUNIT_SELENIUM_TEST_ID'])) {
     $facade = new File_Iterator_Facade;
@@ -59,10 +82,8 @@ if (isset($_GET['PHPUNIT_SELENIUM_TEST_ID'])) {
 
     $coverage = array();
 
-    foreach ($files as $file) {
-        $data = unserialize(file_get_contents($file));
-        unlink($file);
-        unset($file);
+    foreach ($files as $filename) {
+        $data = unserialize(file_get_contents($filename));
         $filter = new PHP_CodeCoverage_Filter();
 
         foreach ($data as $file => $lines) {
@@ -81,6 +102,8 @@ if (isset($_GET['PHPUNIT_SELENIUM_TEST_ID'])) {
                 }
             }
         }
+        unlink($filename);
+        unset($filename);        
     }
 
     print serialize($coverage);

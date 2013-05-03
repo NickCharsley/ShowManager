@@ -55,8 +55,6 @@
     global $local;
     
     $phpunit=true;
-
-
     
     $debug=isset($_GET['debug']);
 
@@ -93,7 +91,7 @@
 	        ini_set("include_path",ini_get("include_path").$ips."/usr/share/php/PEAR");
         }
         $local=true;        
-        $web=false;
+        $web=true;
     } else if (!(strpos($system,'dovelane')===false)) {
         $do_ini='do_bytenig.ini';
         $common_path='/home/bytenig/common';
@@ -155,8 +153,20 @@
     	include_once "database/utils.php";
     	if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
     
-    	$db=setupDB($root_path,$do_ini,$debug);
-    
+    	$db=setupDB($root_path,$do_ini,$debug);    	
+    	if (isset($GLOBALS['TESTMODE']) and isset($_GET['resetdb'])){
+    		include_once 'test\class\LoadDatabase.php';
+    		
+    		$db_name=split("/",$config['DB_DataObject']['database']);    		
+    		$name=str_replace("test_","",str_replace("adhoc_","",$db_name[count($db_name)-1]));
+    		
+    		$tables=array_keys(parse_ini_file(buildpath($config['DB_DataObject']['schema_location'],"$name.ini"),true));
+    		for ($index=count($tables)-1;$index>=0;$index--){
+    			if (strpos($tables[$index],"__keys")) unset($tables[$index]);	
+    		}    		
+    		$ldb=new LoadDatabase("ShowManager",$tables);
+    		$ldb->ResetDB();
+    	}    
     }
     else {
     	print("Missing ".buildpath($root_path,"database",$do_ini)."?");

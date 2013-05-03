@@ -28,8 +28,9 @@ class doSponsorship extends dbRoot
     }
 }
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
-	include_once("common.php");
-
+	include_once("ons_common.php");
+	$defs=dbRoot::fromCache("Defaults",1);
+	
 	$Sponsorship=DB_DataObject::factory("Sponsorship");
 	if (isset($_GET['action']) and isset($_GET['id'])){
 		$Sponsorship->get($_GET['id']);

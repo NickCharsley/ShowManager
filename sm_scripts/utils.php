@@ -14,19 +14,15 @@
  error_log("Enter", E_USER_NOTICE);
 
 	function PageTitle(){	
-		global $defs;
+		$defs=dbRoot::fromCache("Defaults",1);
 		
 		print "<title>Show Manager";
 		if (isset($GLOBALS['TESTMODE'])) print ":".$GLOBALS['TESTMODE']; 
 		print "</title>";
 
-		if (!isset($defs)){
-			$defs=DB_DataObject::factory("Defaults");
-			$defs->find(true);
-		}
 		if ($defs->ShowName==""){
 			include("pages/ShowName.php");
-			return;
+			return false;
 		}		
 		$defs->getLinks();
 		print "<div align='center'><h1>";
@@ -40,6 +36,7 @@
 		}
 		print "</div>";
 		Menu();
+		return true;
 	}
 
 	function ButtonCSS(){

@@ -21,7 +21,7 @@ class doExhibitor extends dbRoot
     
     
     //this will make this DataObject behave as if it had an extra string field
-    private $Name;
+    public $Name;
     function table() {
         return array_merge(parent::table(), array('Name' => DB_DATAOBJECT_STR));
     }
@@ -58,11 +58,18 @@ class doExhibitor extends dbRoot
     ###Formbuilder Code
 	public $fb_formHeaderText="Competitor";
 	public $fb_linkDisplayLevel=2;
-	public $fb_linkDisplayFields=array("Name");
+	public $fb_linkDisplayFields=array("Name");	
 	###End Formbuilder Code
+	
+	function Fields2Backup(){
+		return array_diff(parent::Fields2Backup(),array("Name"));
+	}
+	
 }
-if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
-	include_once("common.php");
+if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){	
+	include_once("ons_common.php");
+	$defs=dbRoot::fromCache("Defaults",1);
+	
 	$prize=DB_DataObject::factory("exhibitionexhibitor");
 	$prize->ShowID=$defs->ShowID;
 	$fg =&DB_DataObject_FormBuilder::create($prize);

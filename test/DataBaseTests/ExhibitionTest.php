@@ -19,6 +19,29 @@ class ExhibitionTest extends DataBaseTables
 		);
 	}
 
+	function getBackup($data=false){
+		return	"\t<table name='Exhibition'>\n".
+				"\t\t<column>ID</column>\n".
+				"\t\t<column>Name</column>\n".
+	
+				($data?
+						//"\t\t<row><value>1</value><value>Sweet Peas</value><value>3 x one cultivars</value></row>".
+						"\t\t<row><value>1</value><value>Summer Show 2008</value></row>".
+						"\t\t<row><value>2</value><value>Spring Show 2009</value></row>".
+						"\t\t<row><value>3</value><value>Summer Show 2009</value></row>".
+						"\t\t<row><value>4</value><value>Spring show 2010</value></row>".
+						"\t\t<row><value>5</value><value>Summer Show 2010</value></row>".
+						"\t\t<row><value>6</value><value>Spring Show 2011</value></row>".
+						"\t\t<row><value>7</value><value>Summer Show 2011</value></row>".
+						"\t\t<row><value>8</value><value>Spring Show 2012</value></row>".
+						"\t\t<row><value>9</value><value>Summer Show 2012</value></row>"
+
+					:"").
+	
+				"\t</table>\n";
+	}
+	
+	
 	function FileName(){
 		return "Tables/Exhibition";
 	}	

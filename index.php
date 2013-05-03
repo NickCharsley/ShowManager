@@ -12,7 +12,13 @@
  	include_once('ons_common.php');
  error_log("Enter", E_USER_NOTICE);
 //************************************************
-PageTitle();
+ if (isset($_GET['backupdb'])){
+ 	print_pre(dbRoot::BackupDB());
+ 	die;
+ }
+ 
+ PageTitle();
+
 
 //shows
 

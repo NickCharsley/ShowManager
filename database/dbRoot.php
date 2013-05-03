@@ -36,15 +36,24 @@ $dbTables=array();
 
 class dbRoot extends DB_DataObject {
 	protected $_dirty;
+	public $isView=false;
 
 	public $fb_useMutators=true;
+	
+	static function clearCache($table){
+		global $dbTables;
+		if (isset($dbTables[$table])) 
+			unset($dbTables[$table]);
+	}
 	
 	static function fromCache($table,$rowID){
 		global $dbTables;
 		if (!(isset($dbTables[$table]) and isset($dbTables[$table][$rowID]))){
+			error_log("{$table}[{$rowID}] not in Cache");
 			$dbTables[$table][$rowID]=safe_dataobject_factory($table);
 			$dbTables[$table][$rowID]->get($rowID);
 		}
+		else error_log("{$table}[{$rowID}] in Cache");
 		return $dbTables[$table][$rowID];
 	}
 	
@@ -68,6 +77,101 @@ class dbRoot extends DB_DataObject {
 		return $this->ID;
 	}
 	
+	function updateDefaults(){
+		global $config;
+		
+		$defs=dbRoot::fromCache("Defaults",1);
+		$class=substr(get_class($this),strlen($config['DB_DataObject']['class_prefix']));
+		$doForm=safe_dataobject_factory($class);
+		
+		if (isset($_GET['action']) and isset($_GET['id'])){
+			$doForm->get($_GET['id']);
+			if ($_GET['action']=='default'){
+				$defs->ShowID=$doForm->ID;
+				$defs->update();
+				$defs->getLinks();
+			}
+		}	
+	}
+	
+	function printForm(){		
+		$doForm=clone($this);
+				
+		if (isset($_GET['action']) and isset($_GET['id'])){
+			$doForm->get($_GET['id']);
+			if ($_GET['action']<>'edit')
+				$doForm=clone($this);
+		}
+				
+		$fbForm =&DB_DataObject_FormBuilder::create($doForm);
+		$form =& $fbForm->getForm();
+		if ($form->validate()) {
+			//DB_DataObject::debugLevel(5);
+			$form->process(array(&$fbForm,'processForm'), false);
+			$form->freeze();
+		}
+		
+		print AddButton("New","?action=new");
+		print "<br/><br/><hr/>";
+		$form->display();
+		
+		print "<hr/>";
+	}
+	
+	function printList(){}
+	
+	function Fields2Backup(){
+		return array_keys($this->table());
+	}
+	
+	function BackupTable(){
+		if ($this->isView) return "\t<!-- No Backup as View (".$this->__table.") -->\n";
+		
+		$xml ="\t<table name='".$this->__table."'>\n";
+		//Add Fields
+		$fields=$this->Fields2Backup();
+		$xml.="\t\t<column>".join("</column>\n\t\t<column>",$fields)."</column>\n";
+
+		$do=safe_dataobject_factory($this->__table);
+		$do->orderBy("ID");
+		$do->find();
+		while ($do->fetch()){
+			$xml.="\t\t<row>";
+			foreach($fields as $field){
+				if (isset($do->$field))
+					$xml.="<value>".$do->$field."</value>";
+				else	
+					$xml.="<value></value>";
+			}
+			$xml.="</row>\n";
+		}
+		
+		$xml.="\t</table>\n";
+		return $xml;
+	}
+	
+	static function getTables(){
+		global $config;
+		
+		$db_name=split("/",$config['DB_DataObject']['database']);
+		$name=$db_name[count($db_name)-1];
+		
+		$tables=array_keys(parse_ini_file(buildpath($config['DB_DataObject']['schema_location'],"$name.ini"),true));
+		for ($index=count($tables)-1;$index>=0;$index--){
+			if (strpos($tables[$index],"__keys")) unset($tables[$index]);
+		}
+		return $tables;
+	}
+	
+	static function BackupDB(){
+		$xml="<dataset>\n";
+		foreach (dbRoot::getTables() as $table){
+			$do=safe_dataobject_factory($table);
+			$xml.=$do->BackupTable();
+		}
+		$xml.="</dataset>\n";
+		return $xml;		
+	} 
 }
 
 //************************************************

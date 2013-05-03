@@ -16,4 +16,9 @@ class doTrophyresults extends dbRoot
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
+    public $isView=true;
+    
+    function keys(){
+    	return array("TrophyID");
+    }
 }

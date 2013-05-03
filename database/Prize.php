@@ -2,7 +2,7 @@
 /**
  * Table Definition for prize
  */
-require_once 'DB/DataObject.php';
+require_once 'dbRoot.php';
 
 class doPrize extends dbRoot 
 {
@@ -27,8 +27,9 @@ class doPrize extends dbRoot
 }
 //** Eclipse Debug Code **************************
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
-	include_once("common.php");
-
+	include_once("ons_common.php");
+	$defs=dbRoot::fromCache("Defaults",1);
+	
 	$prize=DB_DataObject::factory("Prize");
 	$prize->ShowID=$defs->ShowID;
 	if (isset($_GET['action']) and isset($_GET['id'])){
@@ -65,7 +66,7 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 				print $prize->Name;
 			print "</td>\n";
 			print "<td>\n";
-				print "£".$prize->Prize;
+				print "ï¿½".$prize->Prize;
 			print "</td>\n";
 			print "<td>\n";
 				print $prize->EditLink();

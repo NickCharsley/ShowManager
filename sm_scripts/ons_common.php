@@ -1,7 +1,4 @@
 <?php
-/**
- * @codeCoverageIgnore
- */
 /*
  * File common.php 
  * 
@@ -10,7 +7,7 @@
  * Copyright 2006 ONS
  *
  * 
- * 
+ * @codeCoverageIgnore 
  */
  if (!defined("__COMMON__"))
  	include_once('../ons_common.php');

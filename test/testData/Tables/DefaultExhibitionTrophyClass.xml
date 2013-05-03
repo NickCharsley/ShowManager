@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>	
+	<table name="ExhibitionTrophyClass">
+		<column>ID</column>
+		<column>TrophyID</column>
+		<column>ExhibitionClassID</column>
+	</table>
+	
+	<table name="Exhibition">
+		<column>ID</column>
+		<column>Name</column>
+		<row><value>5</value><value>Summer Show 2010</value></row>		
+	</table>
+	<table name="Trophy">
+		<column>ID</column>
+		<column>ExhibitionID</column>
+		<column>Name</column>
+		<column>Member</column>
+		<row><value>4</value><value>5</value><value>George Ashton Shield</value><value>0</value></row>
+		<row><value>5</value><value>5</value><value>Don Kenny Cup</value><value>0</value></row>
+		<row><value>6</value><value>5</value><value>Scott Shield</value><value>0</value></row>
+	</table>
+	<table name="ExhibitionClass">
+		<column>ID</column>
+		<column>ExhibitionID</column>
+		<column>ExhibitionSectionID</column>
+		<column>ClassNumber</column>
+		<column>ClassID</column>
+		<row><value>94</value><value>5</value><value>12</value><value>8</value><value>8</value></row>
+		<row><value>95</value><value>5</value><value>12</value><value>9</value><value>9</value></row>
+		<row><value>96</value><value>5</value><value>12</value><value>10</value><value>10</value></row>
+		<row><value>98</value><value>5</value><value>12</value><value>11</value><value>11</value></row>
+		<row><value>104</value><value>5</value><value>13</value><value>17</value><value>17</value></row>
+		<row><value>105</value><value>5</value><value>13</value><value>18</value><value>18</value></row>
+		<row><value>106</value><value>5</value><value>13</value><value>19</value><value>19</value></row>
+		<row><value>107</value><value>5</value><value>13</value><value>20</value><value>20</value></row>
+		<row><value>146</value><value>5</value><value>17</value><value>59</value><value>58</value></row>
+		<row><value>147</value><value>5</value><value>17</value><value>60</value><value>59</value></row>
+		<row><value>148</value><value>5</value><value>17</value><value>61</value><value>60</value></row>
+		<row><value>149</value><value>5</value><value>17</value><value>62</value><value>61</value></row>
+		<row><value>150</value><value>5</value><value>17</value><value>63</value><value>62</value></row>
+		<row><value>151</value><value>5</value><value>17</value><value>64</value><value>63</value></row>
+		<row><value>152</value><value>5</value><value>17</value><value>65</value><value>64</value></row>				
+	</table>
+
+
+	
+</dataset>

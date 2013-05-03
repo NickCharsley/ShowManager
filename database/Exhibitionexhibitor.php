@@ -2,7 +2,7 @@
 /**
  * Table Definition for exhibitionexhibitor
  */
-require_once 'DB/DataObject.php';
+require_once 'dbRoot.php';
 
 class doExhibitionexhibitor extends dbRoot 
 {
@@ -31,7 +31,9 @@ class doExhibitionexhibitor extends dbRoot
     }
 }
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
-	include_once("common.php");
+	include_once("ons_common.php");
+	
+	$defs=dbRoot::fromCache("Defaults",1);
 
 	PageTitle();
 	print AddButton("New","?action=new#form");

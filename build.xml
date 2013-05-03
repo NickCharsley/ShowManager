@@ -82,7 +82,8 @@
 		<exec executable="phpmd.bat">
 			<arg path="${src}" />
 			<arg value="text" />
-			<arg value="codesize,controversial,design,naming,unusedcode" />
+			<!-- Removed controversial as a Too messy :) -->
+			<arg value="codesize,design,naming,unusedcode" />
 			<arg value="--exclude" />
 			<arg value="test"/>
 		</exec>
@@ -92,7 +93,8 @@
 		<exec executable="phpmd.bat">
 			<arg path="${src}" />
 			<arg value="xml" />
-			<arg value="codesize,controversial,design,naming,unusedcode" />
+			<!-- Removed ,controversial as it is a bit... :) -->
+			<arg value="codesize,design,naming,unusedcode" />
 			<arg value="--exclude" />
 			<arg value="test"/>
 			<arg value="--reportfile" />

@@ -2,7 +2,7 @@
 /**
  * Table Definition for exhibitionsection
  */
-require_once 'common.php';
+require_once 'dbRoot.php';
 
 class doExhibitionsection extends dbRoot 
 {
@@ -12,7 +12,7 @@ class doExhibitionsection extends dbRoot
     public $__table = 'exhibitionsection';    // table name
     public $ID;                              // int(4)  primary_key not_null
     public $ExhibitionID;                    // int(4)  unique_key not_null
-    public $SectionNumber;                   // int(4)  unique_key not_null
+    public $SectionNumber;                   // varchar(20)  unique_key not_null
     public $SectionID;                       // int(4)  unique_key not_null
 
     /* the code above is auto generated do not remove the tag below */
@@ -27,54 +27,39 @@ class doExhibitionsection extends dbRoot
 	function EditLink(){
     	return AddButton("Edit","?action=edit&id=".$this->ID);
     }
+    
+    function PrintList(){
+    	$list=clone($this);
+    	$list->find();
+    	print "<table>\n";
+    	while ($list->fetch()){
+    		$list->getLinks();
+    		//print_pre($list);
+    		print "<tr>\n";
+    		print "<td>\n";
+    		print "Section ".$list->SectionNumber.": " ;
+    		print $list->_SectionID->Name;
+    		print "</td>\n";
+    		print "<td>\n";
+    		print $list->EditLink();
+    		print "</td>\n";
+    		print "</tr>\n";
+    	}
+    	print "</table>\n";    	 
+    }
 }
+
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
-	include_once("common.php");
-
-	PageTitle();
-
-	PEARError($show=DB_DataObject::factory("ExhibitionSection"));
-	$show->ExhibitionID=$defs->ShowID;
-	if (isset($_GET['action']) and isset($_GET['id'])){
-		$show->get($_GET['id']);
-		if ($_GET['action']<>'edit')
-			PEARError($show=DB_DataObject::factory("ExhibitionSection"));
+	include_once("ons_common.php");
+		
+	PEARError($section=DB_DataObject::factory("ExhibitionSection"));
+	
+	$defs=dbRoot::fromCache("Defaults",1);	
+	$section->ExhibitionID=$defs->ShowID;
+	
+	if (PageTitle()){
+		$section->PrintList();
+		$section->PrintForm();
 	}
-
-
-
-	$fg =&DB_DataObject_FormBuilder::create($show);
-	$form =& $fg->getForm();
-	if ($form->validate()) {
-	    //DB_DataObject::debugLevel(5);
-		$form->process(array(&$fg,'processForm'), false);
-		$form->freeze();
-	}
-
-	PEARError($show=DB_DataObject::factory("ExhibitionSection"));
-	$show->ExhibitionID=$defs->ShowID;
-	$show->find();
-	print "<table>\n";
-	while ($show->fetch()){
-		$show->getLinks();
-		//print_pre($show);
-		print "<tr>\n";
-			print "<td>\n";
-				print "Section ".$show->SectionNumber.": " ;
-				print $show->_SectionID->Name;
-			print "</td>\n";
-			print "<td>\n";
-				print $show->EditLink();
-			print "</td>\n";
-		print "</tr>\n";
-	}
-	print "</table>\n";
-
-	print "<hr/>";
-	print AddButton("New","?action=new");
-	print "<br><br>";
-	$form->display();
-
-	print "<hr/>";
 }
 ?>

@@ -9,7 +9,7 @@
  *
  */
  if (!defined("__COMMON__"))
- 	include_once('common.php');
+ 	include_once('ons_common.php');
  error_log("Enter", E_USER_NOTICE);
 //************************************************
 include_once("ExhibitionClass.php");
@@ -31,7 +31,8 @@ class doResults extends doExhibitionClass {
 }
 
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
-	include_once("common.php");
+	include_once("ons_common.php");
+	$defs=dbRoot::fromCache("Defaults",1);
 
 	PageTitle();
 
