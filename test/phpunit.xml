@@ -6,10 +6,11 @@
          backupStaticAttributes="false"
          strict="true"
          verbose="true">
-                  
-	<testsuite name="ShowManager">
-		<!-- I think we have to run tests in the workspace directory because that's were the webserver looks!! -->
-		<directory suffix="Test.php">C:/Users/nick/workspace/ShowManager/test</directory>
+                        
+	<testsuites>
+		<testsuite name="ShowManager">
+			<!-- I think we have to run tests in the workspace directory because that's were the webserver looks!! -->
+			<directory suffix="Test.php">C:/Users/nick/workspace/ShowManager/test</directory>
 			<exclude>C:/Users/nick/workspace/ShowManager/test/UITests</exclude>					
 		</testsuite>
 	</testsuites>

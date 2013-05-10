@@ -9,17 +9,27 @@
  *
  */
 
- define("__COMMON__",1);
- ob_start("ob_gzhandler");
+define("__COMMON__",1);
+ob_start("ob_gzhandler");
 
- error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
 
- error_log("Enter ".__FILE__);
+error_log("Enter ".__FILE__);
 /************************************************************\
 *   Setup
 \************************************************************/
+global $web;
+global $root;
+global $root_path;
+global $test_path;
+global $ips;
+global $fps;
+global $db;
+global $mobile;
+global $local;
 
-    $common_path=realpath("$root_path/../../ons_common");
+	$root_path=dirname(dirname(__FILE__));//Cos in test directory
+	$common_path=realpath("$root_path/../ons_common");
 
 	include_once("$common_path/krumo/class.krumo.php");
 	krumo::disable();
@@ -50,19 +60,8 @@
 		die(__FILE__.':'.__LINE__);
 	}
 
-    global $web;
-    global $root;
-    global $root_path;
-	global $test_path;
-    global $ips;
-    global $fps;
-    global $db;
-    global $mobile;
-    global $local;
 
     $phpunit=true;
-
-
 
     $debug=isset($_GET['debug']);
 
@@ -71,7 +70,6 @@
     $fps="/";
 
     $root="http://$system";
-    $root_path=dirname(dirname(__FILE__));//Cos in test directory
     $test_path=dirname(__FILE__);
 
     $mobile=(strpos($system,"wewin")===false);
@@ -121,6 +119,7 @@
 	print("<pre>");
         die("System = $system\n");
     }
+
     ini_set("include_path",ini_get("include_path")
                             /*Project Code*/
                             .$ips.$root_path
