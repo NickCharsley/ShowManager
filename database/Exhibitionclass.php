@@ -32,72 +32,48 @@ class doExhibitionclass extends dbRoot
     }
     
     function PrintList(){
+
+    	
+    	
     	$list=clone($this);
+    	$table=array();
+    	 
+    	//Need to add Empty Sections
+    	$section=safe_dataobject_factory("ExhibitionSection");
+    	$section->ExhibitionID=$list->ExhibitionID;
+    	$section->orderBy("SectionNumber*1,SectionNumber");
+    	$section->find();
+    	while ($section->fetch()){
+    		$section->getLinks();
+    		$table[$section->SectionNumber][0]="<tr>\n<td colspan='3'>\n"
+    		."Section ".$section->SectionNumber
+    		.": ".$section->_SectionID->Name
+    		."\n</td>\n</tr>";    	
+    	}    	 
+    	
+    	$list->orderBy("ClassNumber*1,ClassNumber");    	
     	$list->find();
-    	print "<table>\n";
-    	while ($list->fetch()){
+    	while ($list->fetch()){    		
     		$list->getLinks();
-    		print "<tr>\n";
-    		print "<td colspan='3'>\n";
-    		print "Section ".$list->SectionNumber.": " ;
-    		print $list->_SectionID->Name;
-    		print "</td>";
-    		print "</tr>";
-    		PEARError($show=DB_DataObject::factory("ExhibitionClass"));
-    		$show->ExhibitionID=$list->ExhibitionID;
-    		$show->ExhibitionSectionID=$list->ID;
-    		$show->orderBy("ClassNumber");
-    		$show->find();
-    		while ($show->fetch()){
-    			$show->getLinks();
-    			print "<tr>\n";
-    			print "<td>&nbsp;</td>\n";
-    			print "<td>\n";
-    			print "Class ".$show->ClassNumber.": " ;
-    			print $show->_ClassID->Name;
-    			if (strlen($show->_ClassID->Description)>0)
-    				print " (".$show->_ClassID->Description.")";
-    			print "</td>\n";
-    			print "<td>\n";
-    			print $show->EditLink();
-    			print "</td>\n";
-    			print "</tr>\n";
-    		}
+    		$table[$list->_ExhibitionSectionID->SectionNumber][$list->ClassNumber]="<tr>\n<td>&nbsp;</td>\n<td>\n"
+      																					."Class ".$list->ClassNumber.": "
+    																					.$list->_ClassID->Name
+    																					.(strlen($list->_ClassID->Description)>0?" (".$list->_ClassID->Description.")":"")
+    																					."</td>\n<td>\n"
+																		    			.$list->EditLink()
+																		    			."</td>\n</tr>\n";
     	}
+    	
+    	print "<table>\n";
+    	foreach($table as $section)
+    		foreach($section as $row)
+    			print $row;
     	print "</table>\n";    	 
     }
 }
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
-
-	
 	include_once("ons_common.php");
 	
-	PEARError($section=DB_DataObject::factory("ExhibitionClass"));
-	
-	$defs=dbRoot::fromCache("Defaults",1);
-	$section->ExhibitionID=$defs->ShowID;
-	
-	if (PageTitle()){
-		$section->PrintList();
-		$section->PrintForm();
-	}
-		
-	/** /
-	include_once("ons_common.php");
-	$defs=dbRoot::fromCache("Defaults",1);
-
-	PageTitle();
-
-	print AddButton("New","?action=new#form");
-	print "<br><br>";
-
-	print "<hr/>";
-	print AddButton("New","?action=new#form");
-	print "<br><br>";
-	print "<a id='form' name='form'>&nbsp;</a>";
-	$form->display();
-
-	print "<hr/>";
-	/**/
+	dbRoot::showPage("ExhibitionClass");
 }
 ?>

@@ -52,14 +52,6 @@ class doExhibitionsection extends dbRoot
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 	include_once("ons_common.php");
 		
-	PEARError($section=DB_DataObject::factory("ExhibitionSection"));
-	
-	$defs=dbRoot::fromCache("Defaults",1);	
-	$section->ExhibitionID=$defs->ShowID;
-	
-	if (PageTitle()){
-		$section->PrintList();
-		$section->PrintForm();
-	}
+	dbRoot::showPage("ExhibitionSection");
 }
 ?>

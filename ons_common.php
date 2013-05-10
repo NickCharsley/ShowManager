@@ -11,13 +11,13 @@
 
  define("__COMMON__",1);
  //ob_start("ob_gzhandler");
- 
+
  error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
-    
+
  error_log("Enter ".__FILE__);
 /************************************************************\
 *   Setup
-\************************************************************/   
+\************************************************************/
     $time_start=microtime(true);
 
     //print_pre($_SERVER["SERVER_NAME"]);
@@ -27,7 +27,7 @@
     	$system=strtolower($_SERVER["SERVER_NAME"]);
         //print("System = $system\n");
 		//die(__FILE__.':'.__LINE__);
-    }        
+    }
     elseif (isset($_SERVER["COMPUTERNAME"])){
         $system=strtolower($_SERVER["COMPUTERNAME"]);
 		//print("System = $system\n");
@@ -53,9 +53,9 @@
     global $db;
     global $mobile;
     global $local;
-    
+
     $phpunit=true;
-    
+
     $debug=isset($_GET['debug']);
 
     /*Unix set*/
@@ -64,25 +64,25 @@
 
     $root="http://$system";
     $root_path=dirname(__FILE__);
-    
+
     $mobile=(strpos($system,"wewin")===false);
     $local=true;
     ini_set('log_errors',"on");
-    $common_path='C:\Users\nick\workspace\ons_common';
+    $common_path=realpath("$root_path/../ons_common");
 
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
 
     if (strpos($system,'.local')>0
         or !(strpos($system,'localhost')===false)
             or !(strpos($system,'nick-xps')===false)
-				or !(strpos($system,'show.')===false)){				
+				or !(strpos($system,'show.')===false)){
 		$do_ini='do_nick-xps.ini';
 		if (strpos((isset($_SERVER["SERVER_SOFTWARE"])?$_SERVER["SERVER_SOFTWARE"]:""),"Ubuntu")===false){
         	$ips=";";
         	$fps="\\";
         	if (isset($_SERVER["COMPUTERNAME"])){
 	        	if (strtolower($_SERVER["COMPUTERNAME"])=="tdvsvr0165"){
-	        		$common_path='C:\phpsites\ons_common';	        
+	        		$common_path='C:\phpsites\ons_common';
 	        		$do_ini='do_tdvsvr0165.ini';
 	        	}
         	}
@@ -90,7 +90,7 @@
 			$common_path='/home/nick/workspace/common';
 	        ini_set("include_path",ini_get("include_path").$ips."/usr/share/php/PEAR");
         }
-        $local=true;        
+        $local=true;
         $web=true;
     } else if (!(strpos($system,'dovelane')===false)) {
         $do_ini='do_bytenig.ini';
@@ -111,7 +111,7 @@
 	print_r($_ENV);
 	print("<pre>");
         die("System = $system\n");
-    }        
+    }
     ini_set("include_path",ini_get("include_path")
                             /*Project Code*/
                             .$ips.$root_path
@@ -134,12 +134,12 @@
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
 /************************************************************\
 *   Common Utils
-\************************************************************/    
+\************************************************************/
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
     include_once "script/utils.php";
-	
+
     include_once "sm_scripts/utils.php";
-    
+
     ini_set('error_log',$root_path."/test/php_error.log");
     ini_set('max_execution_time',30000);
     include_once "const.php";
@@ -152,28 +152,28 @@
     	if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
     	include_once "database/utils.php";
     	if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-    
-    	$db=setupDB($root_path,$do_ini,$debug);    	
+
+    	$db=setupDB($root_path,$do_ini,$debug);
     	if (isset($GLOBALS['TESTMODE']) and isset($_GET['resetdb'])){
     		include_once 'test\class\LoadDatabase.php';
-    		
-    		$db_name=split("/",$config['DB_DataObject']['database']);    		
+
+    		$db_name=split("/",$config['DB_DataObject']['database']);
     		$name=str_replace("test_","",str_replace("adhoc_","",$db_name[count($db_name)-1]));
-    		
+
     		$tables=array_keys(parse_ini_file(buildpath($config['DB_DataObject']['schema_location'],"$name.ini"),true));
     		for ($index=count($tables)-1;$index>=0;$index--){
-    			if (strpos($tables[$index],"__keys")) unset($tables[$index]);	
-    		}    		
+    			if (strpos($tables[$index],"__keys")) unset($tables[$index]);
+    		}
     		$ldb=new LoadDatabase("ShowManager",$tables);
     		$ldb->ResetDB();
-    	}    
+    	}
     }
     else {
     	print("Missing ".buildpath($root_path,"database",$do_ini)."?");
     	dieHere();
     }
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-    
+
 //** Eclipse Debug Code **************************
 if (str_replace("/","\\",__FILE__)==str_replace("/","\\",$_SERVER["SCRIPT_FILENAME"])){
     if (class_exists('gtk',false)) {

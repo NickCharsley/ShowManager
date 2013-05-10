@@ -13,13 +13,13 @@ if (!defined("__COMMON__"))
 //************************************************
 
 if ($GLOBALS['TESTMODE']=="adhoc"){
-	class testmode_uitests extends PHPUnit_Extensions_Selenium2TestCase
+	class testmode_uitests extends PHPUnit_Extensions_SeleniumTestCase_SauceOnDemandTestCase
 	{
 		protected $coverageScriptUrl = 'http://show.adhoc/phpunit_coverage.php';
 		protected $uiroot= 'http://show.adhoc';
 	}
 } else {
-	class testmode_uitests extends PHPUnit_Extensions_Selenium2TestCase
+	class testmode_uitests extends PHPUnit_Extensions_SeleniumTestCase_SauceOnDemandTestCase
 	{
 		protected $coverageScriptUrl = 'http://show.test/phpunit_coverage.php';
 		protected $uiroot= 'http://show.test';
@@ -52,8 +52,8 @@ class uitests extends testmode_uitests
 	}
 	
 	function subLoadPage($page){
-		$this->url($this->uiroot.$page);
-		$this->assertEquals('Show Manager'.(isset($GLOBALS['TESTMODE'])?":".$GLOBALS['TESTMODE']:""), $this->title());
+		$this->open($this->uiroot.$page);
+		$this->assertTitle('Show Manager'.(isset($GLOBALS['TESTMODE'])?":".$GLOBALS['TESTMODE']:""));
 	}
 	
 	
@@ -71,7 +71,7 @@ class uitests extends testmode_uitests
 	 */
 	public function subPageMenu($page)
 	{
-			$this->url($this->uiroot.$page);
+			$this->open($this->uiroot.$page);
 			$elements= $this->elements($this->using('css selector')->value('span'));
 
 			//print_r($elements);

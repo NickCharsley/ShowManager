@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+
+
 <phpunit
 	     backupGlobals="false"
          backupStaticAttributes="false"
          strict="true"
          verbose="true">
-       
-	<testsuites>
-		<testsuite name="ShowManager">
-			<!-- I think we have to run tests in the workspace directory because that's were the webserver looks!! -->
-			<directory suffix="Test.php">C:/Users/nick/workspace/ShowManager/test</directory>
+                  
+	<testsuite name="ShowManager">
+		<!-- I think we have to run tests in the workspace directory because that's were the webserver looks!! -->
+		<directory suffix="Test.php">C:/Users/nick/workspace/ShowManager/test</directory>
 			<exclude>C:/Users/nick/workspace/ShowManager/test/UITests</exclude>					
 		</testsuite>
 	</testsuites>

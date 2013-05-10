@@ -120,6 +120,19 @@ class dbRoot extends DB_DataObject {
 	
 	function printList(){}
 	
+	static function showPage($type){
+		PEARError($page=safe_DataObject_factory($type));
+
+		$defs=dbRoot::fromCache("Defaults",1);
+		$page->ExhibitionID=$defs->ShowID;
+				
+		if (PageTitle()){
+			$page->UpdateDefaults();
+			$page->PrintList();
+			$page->PrintForm();
+		}
+	}
+	
 	function Fields2Backup(){
 		return array_keys($this->table());
 	}

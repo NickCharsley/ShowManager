@@ -56,12 +56,7 @@ class doExhibition extends dbRoot
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 	include_once("ons_common.php");
 	
-	PEARError($show=DB_DataObject::factory("Exhibition"));
+	dbRoot::showPage("Exhibition");
 	
-	if (PageTitle()){
-		$show->UpdateDefaults();
-		$show->PrintList();
-		$show->PrintForm();
-	}
 }
 ?>

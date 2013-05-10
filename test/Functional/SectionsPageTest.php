@@ -10,15 +10,7 @@ class SectionsPageTest extends pagetests
 	}
 	
 	function getOutput(){
-		PEARError($section=DB_DataObject::factory("ExhibitionSection"));
-	
-		$defs=dbRoot::fromCache("Defaults",1);	
-		$section->ExhibitionID=$defs->ShowID;
-		
-		if (PageTitle()){
-			$section->PrintList();
-			$section->PrintForm();
-		}				
+		dbRoot::showPage("ExhibitionSection");	
 	}
 
 	public function ListProvider(){

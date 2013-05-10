@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project name="ShowManager" default="build">
-	
-	<property name="src"  location="."/> 
-	<property name="test" location="test"/>
 
+	<property name="os-build" location="${basedir}/build-${os.name}.properties"/>
+	
+	<property file="${basedir}/build-local.properties"/>
+	<property file="${basedir}/build-all.properties"/>
+	<property file="${os-build}"/>
+
+	<property name="src"  location="${workspace}"/> 
+	<property name="test" location="${workspace}/test"/>
+	
+	<echoproperties/>
+	
 	<target name="build" depends="prepare,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpunit,phpcb"/>
 
 	<target name="build-parallel" depends="prepare,lint,tools-parallel,phpunit,phpcb"/>

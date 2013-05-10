@@ -3,20 +3,14 @@ include_once('ons_common.php');
 
 class ShowsPageTest extends pagetests
 {
-	public $tables=array("Defaults","Exhibition");
+	public $tables=array("Exhibition","Defaults");
 	
 	function FileName(){
 		return "Pages/Shows";
 	}
 	
 	function getOutput(){
-		PEARError($show=DB_DataObject::factory("Exhibition"));
-		
-		if (PageTitle()){	
-			$show->UpdateDefaults();
-			$show->PrintList();
-			$show->PrintForm();
-		}		
+		dbRoot::showPage("Exhibition");	
 	}
 	
 	public function ListProvider(){
