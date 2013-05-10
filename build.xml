@@ -2,10 +2,10 @@
 
 <project name="ShowManager" default="build">
 
-	<property name="os-build" location="${basedir}/build-${os.name}.properties"/>
+	<property name="os-build" location="${basedir}/properties/build-${os.name}.properties"/>
 	
-	<property file="${basedir}/build-local.properties"/>
-	<property file="${basedir}/build-all.properties"/>
+	<property file="${basedir}/properties/build-local.properties"/>
+	<property file="${basedir}/properties/build-all.properties"/>
 	<property file="${os-build}"/>
 
 	<property name="src"  location="${workspace}"/> 

@@ -27,98 +27,66 @@ global $fps;
 global $db;
 global $mobile;
 global $local;
+global $common_path;
+global $system;
+global $do_ini;
 
-	$root_path=dirname(dirname(__FILE__));//Cos in test directory
-	$common_path=realpath("$root_path/../ons_common");
+	function loadProperties(){
+		global $show_properties;
+
+		@$props[]=strtolower(PHP_OS);
+		@$props[]=strtolower($_SERVER["COMPUTERNAME"]);
+		@$props[]=strtolower(getenv("COMPUTERNAME"));
+		@list($props[])=preg_split("#[./ (]+#", strtolower($_SERVER["SERVER_NAME"]),2);
+		@$props[]=strtolower($_SERVER["SERVER_NAME"]);
+		@$props[]=strtolower($_SERVER["TERM"]);
+		@list($props[])=preg_split("#[./ (]+#", strtolower($_SERVER["SERVER_SOFTWARE"]),2);
+		$props[]="local";
+
+		$ini="";
+		$filename=dirname(__FILE__);
+		if (strtolower(basename($filename))=='test'){
+			$props[]="test";
+			$filename=dirname($filename);
+		}
+
+		$filename.="/properties";
+
+		foreach($props as $prop)
+			if ($prop<>"")
+				@$ini.="\n".file_get_contents("$filename/$prop.properties");
+
+		$vars=parse_ini_string($ini);
+		foreach($vars as $var=>$values)
+			$GLOBALS[$var]=$values;
+
+		if ($show_properties){
+			print ("<pre>\n");
+
+			foreach($props as $prop)
+				if ($prop<>"")
+					print("$prop.properties\n");
+			print($ini);
+
+			//print_r($GLOBALS);
+			print_r($vars);
+
+			die("Listing of Expected Property Files\n</pre>");
+		}
+
+	}
+
+	loadProperties();
 
 	include_once("$common_path/krumo/class.krumo.php");
 	krumo::disable();
 
     $time_start=microtime(true);
-
-    //print_pre($_SERVER["SERVER_NAME"]);
-    //print_pre($_ENV["COMPUTERNAME"]);
-
-    if (isset($_SERVER["SERVER_NAME"])){
-    	$system=strtolower($_SERVER["SERVER_NAME"]);
-        print("System = $system\n");
-		die(__FILE__.':'.__LINE__);
-    }
-    elseif (isset($_SERVER["COMPUTERNAME"])){
-        $system=strtolower($_SERVER["COMPUTERNAME"]);
-		//print("System = $system\n");
-		//die(__FILE__.':'.__LINE__);
-	}
-    elseif (isset($_SERVER["TERM"])){
-        $system=strtolower($_SERVER["TERM"]);
-		        print("System = $system\n");
-		die(__FILE__.':'.__LINE__);
-	}
-    else {
-        $system='';
-		print_r($_SERVER);
-		die(__FILE__.':'.__LINE__);
-	}
-
-
-    $phpunit=true;
-
     $debug=isset($_GET['debug']);
 
-    /*Unix set*/
-    $ips=":";
-    $fps="/";
-
-    $root="http://$system";
-    $test_path=dirname(__FILE__);
-
-    $mobile=(strpos($system,"wewin")===false);
-    $local=true;
     ini_set('log_errors',"on");
 
-
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-
-    if (strpos($system,'.local')>0
-        or !(strpos($system,'localhost')===false)
-            or !(strpos($system,'nick-xps')===false)
-				or !(strpos($system,'tdvsvr0165')===false)){
-		$do_ini='do_nick-xps.ini';
-		if (strpos((isset($_SERVER["SERVER_SOFTWARE"])?$_SERVER["SERVER_SOFTWARE"]:""),"Ubuntu")===false){
-        	$ips=";";
-        	$fps="\\";
-        	if (isset($_SERVER["COMPUTERNAME"])){
-	        	if (strtolower($_SERVER["COMPUTERNAME"])=="tdvsvr0165"){
-	        		$common_path='C:\phpsites\ons_common';
-	        		$do_ini='do_tdvsvr0165.ini';
-	        	}
-        	}
-		} else {
-			$common_path='/home/nick/workspace/common';
-	        ini_set("include_path",ini_get("include_path").$ips."/usr/share/php/PEAR");
-        }
-        $local=true;
-        $web=false;
-    } else if (!(strpos($system,'dovelane')===false)) {
-        $do_ini='do_bytenig.ini';
-        $common_path='/home/bytenig/common';
-        ini_set("include_path",ini_get("include_path").$ips."/home/bytenig/php");
-        $local=false;
-        $web=false;
-    } else if (!(strpos($system,'xterm')===false)) {
-        //$do_ini='do_bytenig.ini';
-        $common_path='/home/nick/workspace/common';
-        ini_set("include_path",ini_get("include_path").$ips."/usr/share/php/PEAR");
-        $local=true;
-        $web=false;
-    } else
-    {
-        phpinfo();
-	print("<pre>");
-	print_r($_ENV);
-	print("<pre>");
-        die("System = $system\n");
-    }
 
     ini_set("include_path",ini_get("include_path")
                             /*Project Code*/
@@ -130,7 +98,7 @@ global $local;
                             .$ips.$root_path.$fps."extensions"
                             .$ips.$root_path.$fps."database"
                             /*Test Code*/
-                            .$ips.$test_path.$fps."class"
+                            .(isset($test_path)?$ips.$test_path.$fps."class":"")
                             /*Common Code*/
                             .$ips.$common_path
                             .$ips.$common_path.$fps."script"
