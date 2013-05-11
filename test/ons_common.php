@@ -46,13 +46,8 @@ global $do_ini;
 				$props[]=$url;
 			}
 		}
-
-
-
-
 		@$props[]=strtolower($_SERVER["TERM"]);
 		@list($props[])=preg_split("#[./ (]+#", strtolower($_SERVER["SERVER_SOFTWARE"]),2);
-		$props[]="local";
 
 		$ini="";
 		$filename=dirname(__FILE__);
@@ -60,6 +55,9 @@ global $do_ini;
 			$props[]="test";
 			$filename=dirname($filename);
 		}
+
+		//Local is last as it has to beable to overwrite other settings
+		$props[]="local";
 
 		$filename.="/properties";
 
@@ -84,7 +82,7 @@ global $do_ini;
 
 			die("Listing of Expected Property Files\n</pre>");
 		}
-
+		return array_keys($vars);
 	}
 
 	loadProperties();
