@@ -37,8 +37,19 @@ global $do_ini;
 		@$props[]=strtolower(PHP_OS);
 		@$props[]=strtolower($_SERVER["COMPUTERNAME"]);
 		@$props[]=strtolower(getenv("COMPUTERNAME"));
-		@list($props[])=preg_split("#[./ (]+#", strtolower($_SERVER["SERVER_NAME"]),2);
-		@$props[]=strtolower($_SERVER["SERVER_NAME"]);
+		@$doms=preg_split("#[.]+#", strtolower($_SERVER["SERVER_NAME"]));
+		if (count($doms)){
+			$url=$doms[0];
+			$props[]=$url;
+			for($index=1;$index<count($doms);$index++){
+				$url.=".{$doms[$index]}";
+				$props[]=$url;
+			}
+		}
+
+
+
+
 		@$props[]=strtolower($_SERVER["TERM"]);
 		@list($props[])=preg_split("#[./ (]+#", strtolower($_SERVER["SERVER_SOFTWARE"]),2);
 		$props[]="local";
