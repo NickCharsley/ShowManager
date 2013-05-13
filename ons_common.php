@@ -21,7 +21,6 @@ error_log("Enter ".__FILE__);
 
 global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_path,$system,$do_ini,$term;
 
-
 	function loadProperties(){
 		global $show_properties;
 		global $test;
@@ -45,7 +44,7 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
 		$filename=dirname(__FILE__);
 		if ($test){
 			$props[]="test";
-			$filename=dirname($filename);
+			//$filename=dirname($filename);
 		}
 
 		//Local is last as it has to beable to overwrite other settings
@@ -61,7 +60,7 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
 		foreach($vars as $var=>$values)
 			$GLOBALS[$var]=$values;
 
-		if ($show_properties){
+		if ($show_properties or $test){
 			print ("<pre>\n");
 
 			foreach($props as $prop)
@@ -154,5 +153,5 @@ if (str_replace("/","\\",__FILE__)==str_replace("/","\\",$_SERVER["SCRIPT_FILENA
 if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
 
 //************************************************
-debug_error_log("Exit ".__FILE__);
+error_log("Exit ".__FILE__);
 ?>
