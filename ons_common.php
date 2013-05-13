@@ -18,27 +18,27 @@ error_log("Enter ".__FILE__);
 /************************************************************\
 *   Setup
 \************************************************************/
-global $web;
-global $root;
-global $root_path;
-global $test_path;
-global $ips;
-global $fps;
-global $db;
-global $mobile;
-global $local;
 
-	function loadProperties(){
+global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_path,$system,$do_ini;
+
+
+	function loadProperties($globalvars){
 		global $show_properties;
 
 		@$props[]=strtolower(PHP_OS);
 		@$props[]=strtolower($_SERVER["COMPUTERNAME"]);
 		@$props[]=strtolower(getenv("COMPUTERNAME"));
-		@list($props[])=preg_split("#[./ (]+#", strtolower($_SERVER["SERVER_NAME"]),2);
-		@$props[]=strtolower($_SERVER["SERVER_NAME"]);
+		@$doms=preg_split("#[.]+#", strtolower($_SERVER["SERVER_NAME"]));
+		if (count($doms)){
+			$url=$doms[0];
+			$props[]=$url;
+			for($index=1;$index<count($doms);$index++){
+				$url.=".{$doms[$index]}";
+				$props[]=$url;
+			}
+		}
 		@$props[]=strtolower($_SERVER["TERM"]);
 		@list($props[])=preg_split("#[./ (]+#", strtolower($_SERVER["SERVER_SOFTWARE"]),2);
-		$props[]="local";
 
 		$ini="";
 		$filename=dirname(__FILE__);
@@ -46,6 +46,9 @@ global $local;
 			$props[]="test";
 			$filename=dirname($filename);
 		}
+
+		//Local is last as it has to beable to overwrite other settings
+		$props[]="local";
 
 		$filename.="/properties";
 
@@ -70,14 +73,10 @@ global $local;
 
 			die("Listing of Expected Property Files\n</pre>");
 		}
-		else print_r($vars);
-
+		return array_merge($globalvars,array_keys($vars));
 	}
 
 	loadProperties();
-
-	include_once("$common_path/krumo/class.krumo.php");
-	krumo::disable();
 
     $time_start=microtime(true);
     $debug=isset($_GET['debug']);

@@ -18,20 +18,11 @@ error_log("Enter ".__FILE__);
 /************************************************************\
 *   Setup
 \************************************************************/
-global $web;
-global $root;
-global $root_path;
-global $test_path;
-global $ips;
-global $fps;
-global $db;
-global $mobile;
-global $local;
-global $common_path;
-global $system;
-global $do_ini;
 
-	function loadProperties(){
+global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_path,$system,$do_ini;
+
+
+	function loadProperties($globalvars){
 		global $show_properties;
 
 		@$props[]=strtolower(PHP_OS);
@@ -82,7 +73,7 @@ global $do_ini;
 
 			die("Listing of Expected Property Files\n</pre>");
 		}
-		return array_keys($vars);
+		return array_merge($globalvars,array_keys($vars));
 	}
 
 	loadProperties();
