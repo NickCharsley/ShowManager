@@ -9,9 +9,8 @@
                         
 	<testsuites>
 		<testsuite name="ShowManager">
-			<!-- I think we have to run tests in the workspace directory because that's were the webserver looks!! -->
-			<directory suffix="Test.php">C:/Users/nick/workspace/ShowManager/test</directory>
-			<exclude>C:/Users/nick/workspace/ShowManager/test/UITests</exclude>					
+			<directory suffix="Test.php">.</directory>
+			<exclude>UITests</exclude>					
 		</testsuite>
 	</testsuites>
 
@@ -28,17 +27,16 @@
 			<directory>C:/Users/nick/workspace/ShowManager/test</directory>
 		</blacklist>
 		<whitelist addUncoveredFilesFromWhitelist="true">
-			<!-- I think we have to run tests in the workspace directory because that's were the webserver looks!! -->
-			<directory suffix=".php">C:/Users/nick/workspace/ShowManager</directory>
+			<directory suffix=".php">..</directory>
 			<exclude>
-				<directory>C:/Users/nick/workspace/ShowManager/test</directory>
+				<directory>../test</directory>
 			</exclude>
 		</whitelist>
 	</filter>
 
 	<php>
 		<var name="DB_DSN" value="mysql:host=localhost;dbname=test_showmanager" />
-		<var name="DB_USER" value="root" />
+		<var name="DB_USER" value="test" />
 		<var name="DB_PASSWD" value="sas0527" />
 		<var name="DB_DBNAME" value="test_showmanager" />
 		<var name="DB_SYNCNAME" value="showmanager" />
