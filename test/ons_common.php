@@ -22,7 +22,7 @@ error_log("Enter ".__FILE__);
 global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_path,$system,$do_ini;
 
 
-	function loadProperties($globalvars){
+	function loadProperties(){
 		global $show_properties;
 
 		@$props[]=strtolower(PHP_OS);
@@ -73,7 +73,7 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
 
 			die("Listing of Expected Property Files\n</pre>");
 		}
-		return array_merge($globalvars,array_keys($vars));
+		return array_keys($vars);
 	}
 
 	loadProperties();
