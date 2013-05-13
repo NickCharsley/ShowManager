@@ -21,7 +21,6 @@ error_log("Enter ".__FILE__);
 
 global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_path,$system,$do_ini;
 
-
 	function loadProperties(){
 		global $show_properties;
 
@@ -71,7 +70,7 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
 			//print_r($GLOBALS);
 			print_r($vars);
 
-			die("Listing of Expected Property Files\n</pre>");
+			print("Listing of Expected Property Files\n</pre>");
 		}
 		return array_keys($vars);
 	}

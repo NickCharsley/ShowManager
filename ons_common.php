@@ -71,7 +71,7 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
 			//print_r($GLOBALS);
 			print_r($vars);
 
-			die("Listing of Expected Property Files\n</pre>");
+			print("Listing of Expected Property Files\n</pre>");
 		}
 		return array_keys($vars);
 	}
