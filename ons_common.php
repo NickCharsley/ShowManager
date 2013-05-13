@@ -19,11 +19,12 @@ error_log("Enter ".__FILE__);
 *   Setup
 \************************************************************/
 
-global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_path,$system,$do_ini;
+global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_path,$system,$do_ini,$term;
 
 
 	function loadProperties(){
 		global $show_properties;
+		global $test;
 
 		@$props[]=strtolower(PHP_OS);
 		@$props[]=strtolower($_SERVER["COMPUTERNAME"]);
@@ -42,7 +43,7 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
 
 		$ini="";
 		$filename=dirname(__FILE__);
-		if (strtolower(basename($filename))=='test'){
+		if ($test){
 			$props[]="test";
 			$filename=dirname($filename);
 		}
@@ -68,10 +69,10 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
 					print("$prop.properties\n");
 			print($ini);
 
-			//print_r($GLOBALS);
 			print_r($vars);
 
-			print("Listing of Expected Property Files\n</pre>");
+			print ("Listing of Expected Property Files\n");
+			print ("</pre>");
 		}
 		return array_keys($vars);
 	}
