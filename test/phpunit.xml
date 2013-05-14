@@ -22,9 +22,9 @@
 		<log type="junit" target="../build/logs/junit.xml" logIncompleteSkipped="false"/>
 	</logging>
 
-	<filter>
+	<filter_off>
 		<blacklist>
-			<directory>C:/Users/nick/workspace/ShowManager/test</directory>
+			<directory>../test</directory>
 		</blacklist>
 		<whitelist addUncoveredFilesFromWhitelist="true">
 			<directory suffix=".php">..</directory>
@@ -32,7 +32,7 @@
 				<directory>../test</directory>
 			</exclude>
 		</whitelist>
-	</filter>
+	</filter_off>
 
 	<php>
 		<var name="DB_DSN" value="mysql:host=localhost;dbname=test_showmanager" />
