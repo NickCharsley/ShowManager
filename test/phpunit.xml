@@ -22,18 +22,6 @@
 		<log type="junit" target="../build/logs/junit.xml" logIncompleteSkipped="false"/>
 	</logging>
 
-	<filter_off>
-		<blacklist>
-			<directory>../test</directory>
-		</blacklist>
-		<whitelist addUncoveredFilesFromWhitelist="true">
-			<directory suffix=".php">..</directory>
-			<exclude>
-				<directory>../test</directory>
-			</exclude>
-		</whitelist>
-	</filter_off>
-
 	<php>
 		<var name="DB_DSN" value="mysql:host=localhost;dbname=test_showmanager" />
 		<var name="DB_USER" value="test" />
