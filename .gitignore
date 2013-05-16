@@ -99,7 +99,6 @@ publish
 # Others
 [Bb]in
 [Oo]bj
-sql
 TestResults
 *.Cache
 ClientBin
@@ -166,3 +165,4 @@ pip-log.txt
 cache.*
 test_*.ini
 *.php.*
+phpunit.xml
