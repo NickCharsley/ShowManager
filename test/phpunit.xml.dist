@@ -7,7 +7,7 @@
                         
 	<testsuites>
 		<testsuite name="ShowManager">
-			<directory suffix="JenkinsTest.php" >.</directory>
+			<directory suffix="Test.php" >.</directory>
 			<exclude>UI</exclude>
 		</testsuite>
 	</testsuites>
