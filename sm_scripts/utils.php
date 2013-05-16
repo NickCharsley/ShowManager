@@ -11,19 +11,19 @@
  */
  if (!defined("__COMMON__"))
  	include_once('ons_common.php');
- error_log("Enter", E_USER_NOTICE);
+ error_log("Enter ".__FILE__);
 
-	function PageTitle(){	
+	function PageTitle(){
 		$defs=dbRoot::fromCache("Defaults",1);
-		
+
 		print "<title>Show Manager";
-		if (isset($GLOBALS['TESTMODE'])) print ":".$GLOBALS['TESTMODE']; 
+		if (isset($GLOBALS['TESTMODE'])) print ":".$GLOBALS['TESTMODE'];
 		print "</title>";
 
 		if ($defs->ShowName==""){
 			include("pages/ShowName.php");
 			return false;
-		}		
+		}
 		$defs->getLinks();
 		print "<div align='center'><h1>";
 		print $defs->ShowName;
@@ -65,6 +65,6 @@
 		print "</tr></table>";
 		print "<hr/>";
 	}
-	
-error_log("Exit", E_USER_NOTICE);
+
+error_log("Exit ".__FILE__);
 ?>

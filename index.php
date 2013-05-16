@@ -10,13 +10,13 @@
  */
  if (!defined("__COMMON__"))
  	include_once('ons_common.php');
- error_log("Enter", E_USER_NOTICE);
+ error_log("Enter ".__FILE__);
 //************************************************
  if (isset($_GET['backupdb'])){
  	print_pre(dbRoot::BackupDB());
  	die;
  }
- 
+
  PageTitle();
 
 
@@ -27,5 +27,5 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 
 }
 //************************************************
-error_log("Exit", E_USER_NOTICE);
+error_log("Exit ".__FILE__);
 ?>

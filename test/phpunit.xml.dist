@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
-
 <phpunit
 	     backupGlobals="false"
          backupStaticAttributes="false"
@@ -9,8 +7,8 @@
                         
 	<testsuites>
 		<testsuite name="ShowManager">
-			<directory suffix="Test.php">.</directory>
-			<exclude>UITests</exclude>					
+			<directory suffix="JenkinsTest.php" >.</directory>
+			<exclude>UI</exclude>
 		</testsuite>
 	</testsuites>
 

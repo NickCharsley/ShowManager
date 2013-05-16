@@ -13,7 +13,7 @@
  */
  if (!defined("__COMMON__"))
  	include_once('../ons_common.php');
- error_log("Enter", E_USER_NOTICE);
+ error_log("Enter ".__FILE__);
 //************************************************
 
 //DONE: It's just a stub file'
@@ -21,8 +21,8 @@
 //** Eclipse Debug Code **************************
 if (strpos($_SERVER['SCRIPT_NAME'],"common.php")>0){
 	print("<h1 align='center'>common.php</h1>");
-	phpinfo();	
+	phpinfo();
 }
 //************************************************
-error_log("Exit", E_USER_NOTICE);
+error_log("Exit ".__FILE__);
 ?>

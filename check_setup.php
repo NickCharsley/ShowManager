@@ -10,12 +10,12 @@
  */
  if (!defined("__COMMON__"))
  	include_once('ons_common.php');
- error_log("Enter", E_USER_NOTICE);
+ error_log("Enter ".__FILE__);
 //************************************************
 	print "<title>Check Setup:Show Manager";
 	if (isset($GLOBALS['TESTMODE'])) print ":".$GLOBALS['TESTMODE'];
 	print "</title>";
-	 
+
 	Krumo::enable();
 
 	Krumo($db);
@@ -24,7 +24,7 @@
 	print "<hr/>\n";//Standard Krumo Stuff
 
 	krumo($GLOBALS);
-	
+
 	Krumo::classes();
 	Krumo::conf();
 	Krumo::cookie();
@@ -43,9 +43,9 @@
 	Krumo::server();
 	Krumo::session();
 	Krumo::version();
-	
-	
-  
+
+
+
 //************************************************
-error_log("Exit", E_USER_NOTICE);
+error_log("Exit ".__FILE__);
 ?>

@@ -1,6 +1,6 @@
 <?php
 include_once('ons_common.php');
-
+error_log("Enter ".__FILE__);
 abstract class pagetests extends ONS_Tests_DatabaseTestCase
 {
 
@@ -10,18 +10,18 @@ abstract class pagetests extends ONS_Tests_DatabaseTestCase
 		$this->expectOutputString("<title>Show Manager".(isset($GLOBALS['TESTMODE'])?":".$GLOBALS['TESTMODE']:"")."</title>");
 		$this->getOutput();
 	}
-	
+
 	public function ListProvider(){
 		return array(array(""));
-	}	
-	
+	}
+
 	function testPageTitle(){
 		dbRoot::clearCache("Defaults");
-	
+
 		$this->expectOutputRegex("|^<title>Show Manager".(isset($GLOBALS['TESTMODE'])?":".$GLOBALS['TESTMODE']:"")."</title>.*|");
 		PageTitle();
 	}
-	
+
 	/**
 	 *	@dataProvider ListProvider
 	 */
@@ -34,7 +34,7 @@ abstract class pagetests extends ONS_Tests_DatabaseTestCase
 			$this->getOutput();
 		}
 	}
-	
-	
+
 }
+error_log("Exit ".__FILE__);
 ?>

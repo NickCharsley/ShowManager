@@ -14,7 +14,6 @@ ob_start("ob_gzhandler");
 
 error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
 
-error_log("Enter ".__FILE__);
 /************************************************************\
 *   Setup
 \************************************************************/
@@ -23,7 +22,7 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
 
 	function loadProperties(){
 		global $show_properties;
-		global $test;
+		global $TESTMODE;
 
 		@$props[]=strtolower(PHP_OS);
 		@$props[]=strtolower($_SERVER["COMPUTERNAME"]);
@@ -42,7 +41,7 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
 
 		$ini="";
 		$filename=dirname(__FILE__);
-		if ($test){
+		if (isset($TESTMODE)){
 			$props[]="test";
 			//$filename=dirname($filename);
 		}
@@ -60,7 +59,7 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
 		foreach($vars as $var=>$values)
 			$GLOBALS[$var]=$values;
 
-		if ($show_properties or $test){
+		if ($show_properties){
 			print ("<pre>\n");
 
 			foreach($props as $prop)
@@ -78,10 +77,16 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
 
 	loadProperties();
 
+	ini_set('log_errors',"on");
+	ini_set('error_log',$root_path."/test/php_error.log");
+	ini_set('max_execution_time',30000);
+
+	error_log("Enter ".__FILE__);//Late so it goes to the Error Log :)
+	error_log("ShowManager Properties Loaded");
+
     $time_start=microtime(true);
     $debug=isset($_GET['debug']);
 
-    ini_set('log_errors',"on");
 
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
 
@@ -113,9 +118,6 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
     include_once "script/utils.php";
     include_once "sm_scripts/utils.php";
-	krumo::disable() ;
-    ini_set('error_log',$root_path."/test/php_error.log");
-    ini_set('max_execution_time',30000);
     include_once "const.php";
     PEAR::setErrorHandling(PEAR_ERROR_CALLBACK, 'PEAR_ErrorToPEAR_Exception');
 /***********************************************************\

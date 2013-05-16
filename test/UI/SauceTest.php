@@ -10,7 +10,7 @@
  */
 if (!defined("__COMMON__"))
  	include_once 'ons_common.php';
-error_log("Enter", E_USER_NOTICE);
+error_log("Enter ".__FILE__);
 //************************************************
 
 class SauceTest extends PHPUnit_Extensions_SeleniumTestCase_SauceOnDemandTestCase {
@@ -35,7 +35,7 @@ class SauceTest extends PHPUnit_Extensions_SeleniumTestCase_SauceOnDemandTestCas
 					'browserVersion' => '8.'
 			)
 	);
-	
+
 	function setUp() {
 		$this->setBrowserUrl('http://example.saucelabs.com');
 	}
@@ -52,5 +52,5 @@ if (str_replace("/","\\",__FILE__)==str_replace("/","\\",$_SERVER["SCRIPT_FILENA
 	phpinfo();
 }
 //************************************************
-error_log("Exit", E_USER_NOTICE);
+error_log("Exit ".__FILE__);
 ?>

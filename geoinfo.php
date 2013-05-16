@@ -10,7 +10,7 @@
  */
 // if (!defined("__COMMON__"))
 // 	include_once('common.php');
- error_log("Enter", E_USER_NOTICE);
+ error_log("Enter ".__FILE__);
 //************************************************
 
  print '<?xml version="1.0" encoding="UTF-8"?>';
@@ -46,5 +46,5 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 
 }
 //************************************************
-error_log("Exit", E_USER_NOTICE);
+error_log("Exit ".__FILE__);
 ?>

@@ -1,6 +1,6 @@
 <?php
 /*
- * File ShowName
+ * File testDOT
  * Created on  by nick
  * email php@oldnicksoftware.co.uk
  *
@@ -13,13 +13,19 @@ if (!defined("__COMMON__"))
 error_log("Enter ".__FILE__);
 //************************************************
 
-//TODO: Need some content here!
-
-//** Debug Code **************************
-if (str_replace("/","\\",__FILE__)==str_replace("/","\\",$_SERVER["SCRIPT_FILENAME"]))
+class DatabaseJenkinsTest extends PHPUnit_Framework_TestCase
 {
-	phpinfo();
+
+	/*
+	 *
+	 */
+	function testJenkinsActive(){
+		$this->assertEquals(true,true);
+	}
+
 }
+
 //************************************************
 error_log("Exit ".__FILE__);
 ?>
+
