@@ -15,6 +15,10 @@ error_log("Enter ".__FILE__);
 
 class FunctionalJenkinsTest extends PHPUnit_Framework_TestCase
 {
+	function __construct($name = NULL, array $data = array(), $dataName = ''){
+		error_log("Initialised ".get_class($this));
+		parent::__construct($name, $data, $dataName);
+	}
 
 	/*
 	 *

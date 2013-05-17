@@ -17,17 +17,39 @@ if ($GLOBALS['TESTMODE']=="adhoc"){
 	{
 		protected $coverageScriptUrl = 'http://show.adhoc/phpunit_coverage.php';
 		protected $uiroot= 'http://show.adhoc';
+
+		function __construct($name = NULL, array $data = array(), $dataName = ''){
+			error_log("Initialised ".get_class($this));
+			parent::__construct($name, $data, $dataName);
+		}
 	}
 } else {
 	class testmode_uitests extends PHPUnit_Extensions_SeleniumTestCase_SauceOnDemandTestCase
 	{
 		protected $coverageScriptUrl = 'http://show.test/phpunit_coverage.php';
 		protected $uiroot= 'http://show.test';
+
+		function __construct($name = NULL, array $data = array(), $dataName = ''){
+			error_log("Initialised ".get_class($this));
+			parent::__construct($name, $data, $dataName);
+		}
+
 	}
 }
 
 class uitests extends testmode_uitests
-{		
+{
+	/**
+	 * Not really a test,
+	 * this just us a place to hang
+	 * the stamp of class name into error log :)
+	 */
+
+	function testClassInit(){
+		error_log("Initialised ".get_class($this));
+		$this->assertEquals(true,true);
+	}
+
 	public function PageProvider(){
 		return
 		array (
@@ -42,30 +64,30 @@ class uitests extends testmode_uitests
 				array("/pages/results.php"),
 				array("/pages/summary.php"),
 		);
-	}	
-	
-	
+	}
+
+
 	function testLoadPage()
 	{
 		foreach ($this->PageProvider() as $page)
 			$this->subLoadPage($page[0]);
 	}
-	
+
 	function subLoadPage($page){
 		$this->open($this->uiroot.$page);
 		$this->assertTitle('Show Manager'.(isset($GLOBALS['TESTMODE'])?":".$GLOBALS['TESTMODE']:""));
 	}
-	
-	
+
+
 	/*
 	 * depends testLoadPage
-	*/	
+	*/
 	public function testPageMenu()
 	{
 		foreach ($this->PageProvider() as $page)
-			$this->subPageMenu($page[0]);	
+			$this->subPageMenu($page[0]);
 	}
-	
+
 	/**
 	 * @dataProvider PageProvider
 	 */
@@ -75,9 +97,9 @@ class uitests extends testmode_uitests
 			$elements= $this->elements($this->using('css selector')->value('span'));
 
 			//print_r($elements);
-			
+
 			$this->assertGreaterThan(0,count($elements));
-			
+
 			$this->assertEquals("Home",$elements[0]->text());
 //			$this->assertEquals("Shows", $this->getText("//td[2]/a/span"));
 //			$this->assertEquals("Sections", $this->getText("//td[3]/a/span"));
@@ -91,7 +113,7 @@ class uitests extends testmode_uitests
 //			$this->assertEquals("BHS", $this->getText("css=h1"));
 //			$this->assertEquals("Summer Show 2012", $this->getText("css=h2"));
 //			$this->assertTrue($this->isElementPresent("css=hr"));
-	}	
+	}
 /*
  * 158
     );
@@ -158,12 +180,12 @@ selected.
 void assertIsNotSelected(string
 $selectLocator, string $value)
 Reports an error if the given value is selected.
- * 
- * 
- */	
-	
-	
-	
+ *
+ *
+ */
+
+
+
 }
 
 ?>
