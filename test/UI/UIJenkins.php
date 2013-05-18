@@ -13,14 +13,14 @@ if (!defined("__COMMON__"))
 error_log("Enter ".__FILE__);
 //************************************************
 
-class UIJenkinsTest extends PHPUnit_Framework_TestCase
+class UIJenkins extends PHPUnit_Framework_TestCase
 {
 
 	/*
 	 *
 	 */
-	function testJenkinsActive(){
-		$this->assertEquals(true,true);
+	function testUIJenkinsActive(){
+		$this->assertEquals(true,false);
 	}
 
 }

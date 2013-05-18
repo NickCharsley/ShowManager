@@ -13,18 +13,15 @@ if (!defined("__COMMON__"))
 error_log("Enter ".__FILE__);
 //************************************************
 
-class FunctionalJenkinsTest extends PHPUnit_Framework_TestCase
+class Jenkins extends PHPUnit_Framework_TestCase
 {
-	function __construct($name = NULL, array $data = array(), $dataName = ''){
-		error_log("Initialised ".get_class($this));
-		parent::__construct($name, $data, $dataName);
-	}
 
 	/*
-	 *
+	 * We set this to fail so it tells us this Directory is Active :)
+	 * It is excluded from normal tests, we have to get it by asking to test Jenkins.php :)
 	 */
-	function testJenkinsActive(){
-		$this->assertEquals(true,true);
+	function testRootJenkinsActive(){
+		$this->assertEquals(true,false);
 	}
 
 }
