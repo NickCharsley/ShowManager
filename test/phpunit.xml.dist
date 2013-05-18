@@ -3,13 +3,14 @@
 	     backupGlobals="false"
          backupStaticAttributes="false"
          strict="true"
-         verbose="true">
+         verbose="true"
+         processIsolation="false">
                         
 	<testsuites>
 		<testsuite name="ShowManager">
 			<directory suffix="Test.php" >.</directory>
 			<exclude>UI</exclude>
-			<exclude>Functional</exclude>
+			<exclude>Dead_Functional</exclude>
 		</testsuite>
 	</testsuites>
 
