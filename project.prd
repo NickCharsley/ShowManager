@@ -21,6 +21,12 @@ Last=0
 [TODO]
 FileExtension=.PHP;.CSS;.HTM;.HTML;.INC;.JS;.SQL;.TODO;.TXT;.XML;.SH
 
+[History]
+Last=3
+1=C:\Users\nick\workspace\ShowManager\test\ons_common.php
+2=C:\Users\nick\workspace\ShowManager\test\phpunit_dbonly.xml
+3=C:\Users\nick\workspace\ShowManager\test\Jenkins.php
+
 [Session]
 Active=2
 Last=3

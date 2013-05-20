@@ -165,4 +165,6 @@ pip-log.txt
 cache.*
 test_*.ini
 *.php.*
-phpunit.xml
+test/phpunit.xml
+/nbproject/private/
+xdebug_remote.log

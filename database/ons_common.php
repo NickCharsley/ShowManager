@@ -12,7 +12,7 @@
  *
  */
  if (!defined("__COMMON__"))
- 	include_once('../ons_common.php');
+ 	include_once(dirname(__FILE__).'/../ons_common.php');
  error_log("Enter ".__FILE__);
 //************************************************
 

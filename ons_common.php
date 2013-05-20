@@ -10,7 +10,11 @@
  */
 
 define("__COMMON__",1);
-ob_start("ob_gzhandler");
+if (!in_array('ob_gzhandler', ob_list_handlers())) {
+    ob_start('ob_gzhandler');
+} else {
+    ob_start();
+}
 
 error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
 
@@ -96,7 +100,7 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
                             .$ips.$root_path.$fps."script"
                             .$ips.$root_path.$fps."class"
                             .$ips.$root_path.$fps."font"
-                            .$ips.$root_path.$fps."page"
+                            .$ips.$root_path.$fps."pages"
                             .$ips.$root_path.$fps."extensions"
                             .$ips.$root_path.$fps."database"
                             /*Test Code*/
@@ -106,7 +110,7 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
                             .$ips.$common_path.$fps."script"
                             .$ips.$common_path.$fps."class"
                             .$ips.$common_path.$fps."font"
-                            .$ips.$common_path.$fps."page"
+                            .$ips.$common_path.$fps."pages"
                             .$ips.$common_path.$fps."extensions"
                             .$ips.$common_path.$fps."googleApi"
                             .$ips.$common_path.$fps."googleApi".$fps."contrib"

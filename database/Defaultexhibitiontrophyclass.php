@@ -2,7 +2,7 @@
 /**
  * Table Definition for defaultexhibitiontrophyclass
  */
-require_once 'DB/DataObject.php';
+require_once 'ons_common.php';
 
 class doDefaultexhibitiontrophyclass extends dbRoot 
 {

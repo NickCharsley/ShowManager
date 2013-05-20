@@ -10,7 +10,6 @@
 		<testsuite name="ShowManager">
 			<directory suffix="Test.php" >.</directory>
 			<exclude>UI</exclude>
-			<exclude>Dead_Functional</exclude>
 		</testsuite>
 	</testsuites>
 
