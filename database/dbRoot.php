@@ -173,7 +173,7 @@ class dbRoot extends DB_DataObject {
 		for ($index=count($tables)-1;$index>=0;$index--){
 			if (strpos($tables[$index],"__keys")) unset($tables[$index]);
 		}
-		return $tables;
+		return array_values($tables);
 	}
 
 	static function BackupDB(){

@@ -9,135 +9,86 @@ if (!defined("__ONS_COMMON__"))
  */
 class dbRootTest extends PHPUnit_Framework_TestCase {
 
-    /**
-     * @var dbRoot
-     */
-    protected $object;
+public $loadDB;
 
-    /**
-     * Sets up the fixture, for example, opens a network connection.
-     * This method is called before a test is executed.
-     */
-    protected function setUp() {
-        $this->object = new dbRoot;
+    function __construct($name = NULL, array $data = array(), $dataName = ''){
+        error_log("Initialised ".get_class($this));
+        $this->loadDB=new LoadDatabase("Functional/Cache",array("Defaults","Exhibition"));
+        parent::__construct($name, $data , $dataName);
     }
 
-    /**
-     * Tears down the fixture, for example, closes a network connection.
-     * This method is called after a test is executed.
-     */
-    protected function tearDown() {
-        
+    function testInitaliseDatabase(){
+        $this->loadDB->testInitaliseDatabase();
     }
-
-    /**
-     * @covers dbRoot::clearCache
-     * @todo   Implement testClearCache().
-     */
-    public function testClearCache() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
-    }
-
+       
     /**
      * @covers dbRoot::fromCache
      * @todo   Implement testFromCache().
      */
     public function testFromCache() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        global $dbTables;
+        $defs=dbRoot::fromCache("Defaults",1);
+        $this->assertGreaterThanOrEqual(1,count($dbTables["Defaults"]));
+        $this->assertEquals("BHS",$defs->ShowName);
     }
 
     /**
-     * @covers dbRoot::Save
-     * @todo   Implement testSave().
+     * @depends testFromCache
      */
-    public function testSave() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+    function testDefaultsCached(){
+            $defs1=dbRoot::fromCache("Defaults",1);
+            $defs2=dbRoot::fromCache("Defaults",1);
+
+            $this->assertSame($defs1,$defs2);
     }
 
+    
     /**
-     * @covers dbRoot::updateDefaults
-     * @todo   Implement testUpdateDefaults().
+     * @covers dbRoot::clearCache
+     * @depends testFromCache
      */
-    public function testUpdateDefaults() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+    public function testClearCache() {
+        global $dbTables;
+        dbRoot::clearCache("Defaults");
+        $this->assertArrayNotHasKey("Defaults",$dbTables);
     }
 
-    /**
-     * @covers dbRoot::printForm
-     * @todo   Implement testPrintForm().
-     */
-    public function testPrintForm() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
-    }
 
-    /**
-     * @covers dbRoot::printList
-     * @todo   Implement testPrintList().
-     */
-    public function testPrintList() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
-    }
-
-    /**
-     * @covers dbRoot::showPage
-     * @todo   Implement testShowPage().
-     */
-    public function testShowPage() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
-    }
-
-    /**
-     * @covers dbRoot::Fields2Backup
-     * @todo   Implement testFields2Backup().
-     */
-    public function testFields2Backup() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
-    }
-
-    /**
-     * @covers dbRoot::BackupTable
-     * @todo   Implement testBackupTable().
-     */
-    public function testBackupTable() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
-    }
 
     /**
      * @covers dbRoot::getTables
      * @todo   Implement testGetTables().
      */
     public function testGetTables() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        $tables=dbRoot::getTables();
+        //N.B. strtolower it so its consitent case.
+        $tables=array_map('strtolower',$tables);
+        //N.B. asort it so its alphabetical.        
+        sort($tables);
+        
+        $this->assertEquals(
+                array(
+                    'class',
+                    'defaultexhibitionclass',
+                    'defaultexhibitionclassprize',
+                    'defaultexhibitionexhibitor',
+                    'defaultexhibitionsection',
+                    'defaultexhibitiontrophyclass',
+                    'defaultprizefund',
+                    'defaults',
+                    'exhibition',
+                    'exhibitionclass',
+                    'exhibitionclassprize',
+                    'exhibitionexhibitor',
+                    'exhibitionsection',
+                    'exhibitiontrophyclass',
+                    'exhibitor',
+                    'prize',
+                    'section',
+                    'sponsorship',
+                    'trophy',
+                    'trophyresults')
+                ,$tables);
     }
 
     /**
