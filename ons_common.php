@@ -10,10 +10,12 @@
  */
 
 define("__COMMON__",1);
-if (!in_array('ob_gzhandler', ob_list_handlers())) {
-    ob_start('ob_gzhandler');
-} else {
-    ob_start();
+if (!isset($GLOBALS['TESTMODE'])){
+    if (!in_array('ob_gzhandler', ob_list_handlers())) {
+        ob_start('ob_gzhandler');
+    } else {
+        ob_start();
+    }
 }
 
 error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);

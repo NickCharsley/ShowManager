@@ -2,7 +2,7 @@
 /**
  * Table Definition for defaultexhibitionclass
  */
-require_once 'DB/DataObject.php';
+require_once 'ons_common.php';
 
 class doDefaultexhibitionclass extends dbRoot 
 {
