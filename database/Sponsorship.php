@@ -23,54 +23,40 @@ class doSponsorship extends dbRoot
 	public $fb_linkDisplayLevel=3;
 	###End Formbuilder Code
 
-	function EditLink(){
+    function fetch(){
+        if (!parent::fetch()) return false;
+        //Need to replace £ with &pound;
+        $this->Prize = str_replace("Â£", "&pound;", $this->Prize);
+        return true;
+    }
+        
+    function EditLink(){
     	return AddButton("Edit","?type=sponsorship&action=edit&id=".$this->ID);
+    }
+    
+    function PrintList(){
+    	$list=clone($this);
+    	$list->find();
+        print "<table>\n";
+	while ($list->fetch()){
+            print "<tr>\n";
+                print "<td>\n";
+                    print $list->Name;
+                print "</td>\n";
+                print "<td>\n";
+                    print $list->Prize;
+                print "</td>\n";
+                print "<td>\n";
+                    print $list->EditLink();
+                print "</td>\n";
+            print "</tr>\n";
+        }
+	print "</table>\n";
+	print "<hr/>";
     }
 }
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 	include_once("ons_common.php");
-	$defs=dbRoot::fromCache("Defaults",1);
-	
-	$Sponsorship=DB_DataObject::factory("Sponsorship");
-	if (isset($_GET['action']) and isset($_GET['id'])){
-		$Sponsorship->get($_GET['id']);
-	}
-
-	PageTitle();
-
-	$fg =&DB_DataObject_FormBuilder::create($Sponsorship);
-	$form =& $fg->getForm();
-	if ($form->validate()) {
-	    //DB_DataObject::debugLevel(5);
-		$form->process(array(&$fg,'processForm'), false);
-		$form->freeze();
-	}
-
-	$Sponsorship=DB_DataObject::factory("Sponsorship");
-	$Sponsorship->ShowID=$defs->ShowID;
-	$Sponsorship->find();
-	print "<table>\n";
-	while ($Sponsorship->fetch()){
-		print "<tr>\n";
-			print "<td>\n";
-				print $Sponsorship->Name;
-			print "</td>\n";
-			print "<td>\n";
-				print $Sponsorship->Prize;
-			print "</td>\n";
-			print "<td>\n";
-				print $Sponsorship->EditLink();
-			print "</td>\n";
-		print "</tr>\n";
-	}
-	print "</table>\n";
-
-	print AddButton("New","?action=new");
-
-	print "<hr/>";
-	$form->display();
-
-	print "<hr/>";
-
+        dbRoot::showPage("Sponsorship");              
 }
 ?>

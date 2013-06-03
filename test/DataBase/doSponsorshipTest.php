@@ -16,8 +16,10 @@ class doSponsorshipTest extends DataBaseTables {
             array(6, array("Name" => "Patio Pot 1", "ExhibitionClassPrizeID" => 100, "Prize" => "£7 Hardware Voucher")),
             array(7, array("Name" => "Patio Pot 2", "ExhibitionClassPrizeID" => 101, "Prize" => "£3 Hardware Voucher")),
             array(8, array("Name" => "Begonias", "ExhibitionClassPrizeID" => 102, "Prize" => "Unwin Voucher")),
+            //Testing Long Prizes
             array(9, array("Name" => "Flowering Plant 1", "ExhibitionClassPrizeID" => 103, "Prize" => "£10 Bickerdike Voucher")),
             array(10, array("Name" => "Flowering Plant 2", "ExhibitionClassPrizeID" => 104, "Prize" => "£5 Bickerdike Voucher")),
+            array(11, array("Name" => "Football World Cup 1", "ExhibitionClassPrizeID" => 104, "Prize" => "£6 Baldock Flowers Voucher")),
         );
     }
 
@@ -38,7 +40,8 @@ class doSponsorshipTest extends DataBaseTables {
                         "\t\t<row><value>7</value><value>Patio Pot 2</value><value>101</value><value>£3 Hardware Voucher</value></row>\n" .
                         "\t\t<row><value>8</value><value>Begonias</value><value>102</value><value>Unwin Voucher</value></row>\n" .
                         "\t\t<row><value>9</value><value>Flowering Plant 1</value><value>103</value><value>£10 Bickerdike Voucher</value></row>\n" .
-                        "\t\t<row><value>10</value><value>Flowering Plant 2</value><value>104</value><value>£5 Bickerdike Voucher</value></row>\n" : "") .
+                        "\t\t<row><value>10</value><value>Flowering Plant 2</value><value>104</value><value>£5 Bickerdike Voucher</value></row>\n" .
+                        "\t\t<row><value>11</value><value>Football World Cup 1</value><value>104</value><value>£6 Baldock Flowers Voucher</value></row>\n": "") .
                 "\t</table>\n";
     }
 

@@ -28,90 +28,78 @@ class doResults extends doExhibitionClass {
 	function EditLink(){
     	return AddButton("Class ".$this->ClassNumber,"?action=edit&id=".$this->ID."#form");
     }
+    
+    function PrintList(){
+	PEARError($prize=DB_DataObject::factory("Prize"));
+	$prize->find();
+        $title="";
+	while($prize->fetch()){
+		$title.="<td>".$prize->Name."</td>";
+	}
+        $list=clone($this);
+        
+        PEARError($sec=DB_DataObject::factory("ExhibitionSection"));
+	$sec->ExhibitionID=$list->ExhibitionID;
+	$sec->orderBy("SectionNumber*1,SectionNumber");   
+	$sec->find();
+	print "<table border='1'>\n";
+	while ($sec->fetch()){
+            $sec->getLinks();
+            print "<tr>\n";
+                print "<td colspan='3'>\n";
+                    print "Section ".$sec->SectionNumber.": " ;
+                    print $sec->_SectionID->Name;
+                print "</td>\n";
+                print $title;
+            print "</tr>\n";
+
+            $list=clone($this);
+            $list->ExhibitionSectionID=$sec->ID;
+            $list->orderBy("ClassNumber*1,ClassNumber");
+            $list->find();
+            while ($list->fetch()){
+                $list->getLinks();
+                print "<tr>\n";
+                    print "<td colspan='2' align='right'>\n";
+                        print "&nbsp;".$list->EditLink();
+                    print "</td>\n";
+                    print "<td>\n";
+                        print $list->_ClassID->Name;
+                        if (strlen($list->_ClassID->Description)>0)
+                            print " (".$list->_ClassID->Description.")";
+                    print "</td>\n";
+                    $results=array(1=>"-",2=>"-",3=>"-");
+                    foreach($results as $place){
+                        print "<td>$place</td>";
+                    }
+                    print "</tr>\n";            
+            }
+        }
+        print "</table>\n";
+    }
+    
 }
 
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 	include_once("ons_common.php");
-	$defs=dbRoot::fromCache("Defaults",1);
-
-	PageTitle();
-
-	PEARError($show=DB_DataObject::factory("Results"));
-	$show->ExhibitionID=$defs->ShowID;
-	if (isset($_GET['action']) and isset($_GET['id'])){
-		$show->get($_GET['id']);
-		if ($_GET['action']<>'edit')
-			PEARError($show=DB_DataObject::factory("Results"));
-	} else if (!isset($_POST['ID']))
-		$show->get(1);
-
-	$fg =&DB_DataObject_FormBuilder::create($show);
-	$form =& $fg->getForm();
-	if ($form->validate()) {
-	    //DB_DataObject::debugLevel(5);
-		$form->process(array(&$fg,'processForm'), false);
-		$form->freeze();
-		//DB_DataObject::debugLevel(0);
-	}
-
-	print "<a id='form' name='form'/>";
-	$form->display();
-	$title="";
-
-	PEARError($prize=DB_DataObject::factory("Prize"));
-	$prize->find();
-	while($prize->fetch()){
-		$title.="<td>".$prize->Name."</td>";
-	}
-
-	PEARError($sec=DB_DataObject::factory("ExhibitionSection"));
-	$sec->ExhibitionID=$defs->ShowID;
-	$sec->orderBy("sectionNumber");
-	$sec->find();
-	print "<table border='1'>\n";
-	while ($sec->fetch()){
-		$sec->getLinks();
-		print "<tr>\n";
-			print "<td colspan='3'>\n";
-				print "Section ".$sec->SectionNumber.": " ;
-				print $sec->_SectionID->Name;
-			print "</td>";
-			print $title;
-		print "</tr>";
-		PEARError($show=DB_DataObject::factory("Results"));
-		$show->ExhibitionID=$defs->ShowID;
-		$show->ExhibitionSectionID=$sec->ID;
-		$show->orderBy("ClassNumber");
-		$show->find();
-		while ($show->fetch()){
-			$show->getLinks();
-			print "<tr>\n";
-				print "<td colspan='2' align='right'>\n";
-					print "&nbsp;".$show->EditLink();
-				print "</td>\n";
-				print "<td>\n";
-					print $show->_ClassID->Name;
-					if (strlen($show->_ClassID->Description)>0)
-						print " (".$show->_ClassID->Description.")";
-				print "</td>\n";
+        dbRoot::showPage("Results");		
+		
+/** /
 				$results=array(1=>"-",2=>"-",3=>"-");
 				PEARError($res=DB_DataObject::factory("ExhibitionClassPrize"));
 				//DB_DataObject::debugLevel(5);
-				$res->ExhibitionClassID=$show->ID;
+				$res->ExhibitionClassID=$list->ID;
 				$res->orderBy("PrizeID");
 				$res->find();
 				while ($res->fetch()){
 					$res->getLinks();
 					$results[$res->PrizeID]=$res->_ExhibitionExhibitorID->ExhibitorNumber;
 				}
-				foreach($results as $place){
-					print "<td>$place</td>";
-				}
-			print "</tr>\n";
 		}
 	}
 	print "</table>\n";
 
 	print "<hr/>";
+/**/
 }
 ?>

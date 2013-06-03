@@ -11,6 +11,11 @@ abstract class DataBaseViews extends ONS_Tests_DatabaseTestCase
 	function DataRowsProvider(){
 		return array(array($this->DataRowProvider()));
 	}
+        
+        protected function sync($table){
+            //Because we should be in Sync due to Migrations!
+            truncateTable($table);
+        }
 
 	function getBackup($data=false){
 		return "\t<!-- No Backup as View (".str_replace("Tables/", "", $this->FileName()).") -->\n";

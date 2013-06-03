@@ -55,7 +55,7 @@ class doExhibition extends dbRoot
 //** Eclipse Debug Code **************************
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 	include_once("ons_common.php");
-	
+
 	dbRoot::showPage("Exhibition");
 	
 }

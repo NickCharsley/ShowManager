@@ -12,6 +12,11 @@ abstract class DataBaseTables extends ONS_Tests_DatabaseTestCase
 		return array(array($this->DataRowProvider()));
 	}
 
+        protected function sync($table){
+            //Because we should be in Sync due to Migrations!
+//            truncateTable($table);
+        }
+        
 	function getBackup($data=false){}
 	
 	
@@ -19,9 +24,11 @@ abstract class DataBaseTables extends ONS_Tests_DatabaseTestCase
 	 * 
 	 */	
 	function testTableCreated(){
-		$do=Safe_DataObject_factory(str_replace("Tables/", "", $this->FileName()));
-		
-		$this->assertEquals(strtolower("do".str_replace("Tables/", "", $this->FileName())),strtolower(get_class($do)));		
+            LoadDatabase::testInitaliseDatabase();
+
+            $do=Safe_DataObject_factory(str_replace("Tables/", "", $this->FileName()));
+
+            $this->assertEquals(strtolower("do".str_replace("Tables/", "", $this->FileName())),strtolower(get_class($do)));		
 	}	
 	
 	//We will take on trust that 'Normal Activity' works so it's more complicated activity we will test

@@ -44,7 +44,8 @@ class doExhibitor extends dbRoot
         parent::update($do);
     }
     function find($doFind=false){
-    	//$this->orderBy();
+    	$order=$this->orderBy();
+                    
     	$this->orderBy("Surname, Initials, Title");
     	$ret=parent::find($doFind);
     	//if ($doFind) $this->fetch();

@@ -93,7 +93,6 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
     $time_start=microtime(true);
     $debug=isset($_GET['debug']);
 
-
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
 
     ini_set("include_path",ini_get("include_path")
@@ -111,6 +110,7 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
                             .$ips.$common_path
                             .$ips.$common_path.$fps."script"
                             .$ips.$common_path.$fps."class"
+                            .$ips.$common_path.$fps."database"
                             .$ips.$common_path.$fps."font"
                             .$ips.$common_path.$fps."pages"
                             .$ips.$common_path.$fps."extensions"
@@ -129,6 +129,7 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
 /***********************************************************\
  * Database Connectivity
 \***********************************************************/
+    
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
     if (file_exists(buildpath($root_path,"database",$do_ini))){
     	if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");

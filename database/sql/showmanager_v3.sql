@@ -168,7 +168,7 @@ INSERT INTO `class` (`ID`, `Name`, `Description`) VALUES
 (178, 'Onions 3', NULL),
 (84, 'Painted Stone', 'Age 3-6'),
 (3, 'Pansies', '4 blooms'),
-(21, 'Patio Pot', '12"/30cm across; any type; any shape'),
+(21, 'Patio Pot', '12"/30cm across, any type, any shape'),
 (40, 'Peas', '6 pods'),
 (140, 'Photo of my Pet', NULL),
 (4, 'Pinks', '4 blooms'),
@@ -223,71 +223,11 @@ INSERT INTO `class` (`ID`, `Name`, `Description`) VALUES
 
 -- --------------------------------------------------------
 
---
--- Stand-in structure for view `defaultexhibitionclass`
---
-CREATE TABLE IF NOT EXISTS `defaultexhibitionclass` (
-`ID` int(11)
-,`ExhibitionID` int(11)
-,`ExhibitionSectionID` int(11)
-,`ClassNumber` int(11)
-,`ClassID` int(11)
-);
--- --------------------------------------------------------
 
---
--- Stand-in structure for view `defaultexhibitionclassprize`
---
-CREATE TABLE IF NOT EXISTS `defaultexhibitionclassprize` (
-`ID` int(11)
-,`ExhibitionClassID` int(11)
-,`PrizeID` int(11)
-,`Prize` decimal(10,2)
-,`Points` int(11)
-,`ExhibitionExhibitorID` int(11)
-);
--- --------------------------------------------------------
 
---
--- Stand-in structure for view `defaultexhibitionexhibitor`
---
-CREATE TABLE IF NOT EXISTS `defaultexhibitionexhibitor` (
-`ID` int(11)
-,`ExhibitionID` int(11)
-,`ExhibitorNumber` int(11)
-,`ExhibitorID` int(11)
-);
--- --------------------------------------------------------
 
---
--- Stand-in structure for view `defaultexhibitionsection`
---
-CREATE TABLE IF NOT EXISTS `defaultexhibitionsection` (
-`ID` int(11)
-,`SectionNumber` int(11)
-,`Name` varchar(255)
-);
--- --------------------------------------------------------
 
---
--- Stand-in structure for view `defaultexhibitiontrophyclass`
---
-CREATE TABLE IF NOT EXISTS `defaultexhibitiontrophyclass` (
-`id` int(11)
-,`trophyid` int(11)
-,`exhibitionclassid` int(11)
-);
--- --------------------------------------------------------
 
---
--- Stand-in structure for view `defaultprizefund`
---
-CREATE TABLE IF NOT EXISTS `defaultprizefund` (
-`ID` int(11)
-,`Prize` decimal(32,2)
-,`Points` decimal(32,0)
-);
--- --------------------------------------------------------
 
 --
 -- Table structure for table `defaults`
@@ -3229,66 +3169,50 @@ INSERT INTO `trophy` (`ID`, `ExhibitionID`, `Name`, `Member`) VALUES
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `trophyresults`
---
-CREATE TABLE IF NOT EXISTS `trophyresults` (
-`TrophyID` int(11)
-,`ExhibitorID` int(11)
-,`Points` decimal(32,0)
-);
--- --------------------------------------------------------
-
---
 -- Structure for view `defaultexhibitionclass`
 --
-DROP TABLE IF EXISTS `defaultexhibitionclass`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `defaultexhibitionclass` AS select `exhibitionclass`.`ID` AS `ID`,`exhibitionclass`.`ExhibitionID` AS `ExhibitionID`,`exhibitionclass`.`ExhibitionSectionID` AS `ExhibitionSectionID`,`exhibitionclass`.`ClassNumber` AS `ClassNumber`,`exhibitionclass`.`ClassID` AS `ClassID` from (`defaults` join `exhibitionclass` on((`defaults`.`ShowID` = `exhibitionclass`.`ExhibitionID`)));
+CREATE  VIEW `defaultexhibitionclass` AS select `exhibitionclass`.`ID` AS `ID`,`exhibitionclass`.`ExhibitionID` AS `ExhibitionID`,`exhibitionclass`.`ExhibitionSectionID` AS `ExhibitionSectionID`,`exhibitionclass`.`ClassNumber` AS `ClassNumber`,`exhibitionclass`.`ClassID` AS `ClassID` from (`defaults` join `exhibitionclass` on((`defaults`.`ShowID` = `exhibitionclass`.`ExhibitionID`)));
 
 -- --------------------------------------------------------
 
 --
 -- Structure for view `defaultexhibitionclassprize`
 --
-DROP TABLE IF EXISTS `defaultexhibitionclassprize`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `defaultexhibitionclassprize` AS select `exhibitionclassprize`.`ID` AS `ID`,`exhibitionclassprize`.`ExhibitionClassID` AS `ExhibitionClassID`,`exhibitionclassprize`.`PrizeID` AS `PrizeID`,`exhibitionclassprize`.`Prize` AS `Prize`,`exhibitionclassprize`.`Points` AS `Points`,`exhibitionclassprize`.`ExhibitionExhibitorID` AS `ExhibitionExhibitorID` from `exhibitionclassprize` where `exhibitionclassprize`.`ExhibitionClassID` in (select `exhibitionclass`.`ID` AS `ID` from (`exhibitionclass` join `defaults` on((`defaults`.`ShowID` = `exhibitionclass`.`ExhibitionID`))));
+CREATE  VIEW `defaultexhibitionclassprize` AS select `exhibitionclassprize`.`ID` AS `ID`,`exhibitionclassprize`.`ExhibitionClassID` AS `ExhibitionClassID`,`exhibitionclassprize`.`PrizeID` AS `PrizeID`,`exhibitionclassprize`.`Prize` AS `Prize`,`exhibitionclassprize`.`Points` AS `Points`,`exhibitionclassprize`.`ExhibitionExhibitorID` AS `ExhibitionExhibitorID` from `exhibitionclassprize` where `exhibitionclassprize`.`ExhibitionClassID` in (select `exhibitionclass`.`ID` AS `ID` from (`exhibitionclass` join `defaults` on((`defaults`.`ShowID` = `exhibitionclass`.`ExhibitionID`))));
 
 -- --------------------------------------------------------
 
 --
 -- Structure for view `defaultexhibitionexhibitor`
 --
-DROP TABLE IF EXISTS `defaultexhibitionexhibitor`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `defaultexhibitionexhibitor` AS select `exhibitionexhibitor`.`ID` AS `ID`,`exhibitionexhibitor`.`ExhibitionID` AS `ExhibitionID`,`exhibitionexhibitor`.`ExhibitorNumber` AS `ExhibitorNumber`,`exhibitionexhibitor`.`ExhibitorID` AS `ExhibitorID` from (`exhibitionexhibitor` join `defaults` on((`defaults`.`ShowID` = `exhibitionexhibitor`.`ExhibitionID`)));
+CREATE  VIEW `defaultexhibitionexhibitor` AS select `exhibitionexhibitor`.`ID` AS `ID`,`exhibitionexhibitor`.`ExhibitionID` AS `ExhibitionID`,`exhibitionexhibitor`.`ExhibitorNumber` AS `ExhibitorNumber`,`exhibitionexhibitor`.`ExhibitorID` AS `ExhibitorID` from (`exhibitionexhibitor` join `defaults` on((`defaults`.`ShowID` = `exhibitionexhibitor`.`ExhibitionID`)));
 
 -- --------------------------------------------------------
 
 --
 -- Structure for view `defaultexhibitionsection`
 --
-DROP TABLE IF EXISTS `defaultexhibitionsection`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `defaultexhibitionsection` AS select `exhibitionsection`.`ID` AS `ID`,`exhibitionsection`.`SectionNumber` AS `SectionNumber`,`section`.`Name` AS `Name` from ((`exhibitionsection` join `defaults` on((`defaults`.`ShowID` = `exhibitionsection`.`ExhibitionID`))) join `section` on((`section`.`ID` = `exhibitionsection`.`SectionID`)));
+CREATE  VIEW `defaultexhibitionsection` AS select `exhibitionsection`.`ID` AS `ID`,`exhibitionsection`.`SectionNumber` AS `SectionNumber`,`section`.`Name` AS `Name` from ((`exhibitionsection` join `defaults` on((`defaults`.`ShowID` = `exhibitionsection`.`ExhibitionID`))) join `section` on((`section`.`ID` = `exhibitionsection`.`SectionID`)));
 
 -- --------------------------------------------------------
 
 --
 -- Structure for view `defaultexhibitiontrophyclass`
 --
-DROP TABLE IF EXISTS `defaultexhibitiontrophyclass`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `defaultexhibitiontrophyclass` AS select `exhibitiontrophyclass`.`id` AS `id`,`exhibitiontrophyclass`.`TrophyID` AS `trophyid`,`exhibitiontrophyclass`.`ExhibitionClassID` AS `exhibitionclassid` from `exhibitiontrophyclass` where `exhibitiontrophyclass`.`ExhibitionClassID` in (select `exhibitionclass`.`ID` AS `ID` from (`exhibitionclass` join `defaults` on((`defaults`.`ShowID` = `exhibitionclass`.`ExhibitionID`))));
+CREATE  VIEW `defaultexhibitiontrophyclass` AS select `exhibitiontrophyclass`.`id` AS `id`,`exhibitiontrophyclass`.`TrophyID` AS `trophyid`,`exhibitiontrophyclass`.`ExhibitionClassID` AS `exhibitionclassid` from `exhibitiontrophyclass` where `exhibitiontrophyclass`.`ExhibitionClassID` in (select `exhibitionclass`.`ID` AS `ID` from (`exhibitionclass` join `defaults` on((`defaults`.`ShowID` = `exhibitionclass`.`ExhibitionID`))));
 
 -- --------------------------------------------------------
 
 --
 -- Structure for view `defaultprizefund`
 --
-DROP TABLE IF EXISTS `defaultprizefund`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `defaultprizefund` AS select `exhibitor`.`ID` AS `ID`,sum(`exhibitionclassprize`.`Prize`) AS `Prize`,sum(`exhibitionclassprize`.`Points`) AS `Points` from ((((`exhibitionclass` join `defaults` on((`exhibitionclass`.`ExhibitionID` = `defaults`.`ShowID`))) join `exhibitionclassprize` on((`exhibitionclass`.`ID` = `exhibitionclassprize`.`ExhibitionClassID`))) join `exhibitionexhibitor` on((`exhibitionclassprize`.`ExhibitionExhibitorID` = `exhibitionexhibitor`.`ID`))) join `exhibitor` on((`exhibitionexhibitor`.`ExhibitorID` = `exhibitor`.`ID`))) group by `exhibitor`.`ID`;
+CREATE  VIEW `defaultprizefund` AS select `exhibitor`.`ID` AS `ID`,sum(`exhibitionclassprize`.`Prize`) AS `Prize`,sum(`exhibitionclassprize`.`Points`) AS `Points` from ((((`exhibitionclass` join `defaults` on((`exhibitionclass`.`ExhibitionID` = `defaults`.`ShowID`))) join `exhibitionclassprize` on((`exhibitionclass`.`ID` = `exhibitionclassprize`.`ExhibitionClassID`))) join `exhibitionexhibitor` on((`exhibitionclassprize`.`ExhibitionExhibitorID` = `exhibitionexhibitor`.`ID`))) join `exhibitor` on((`exhibitionexhibitor`.`ExhibitorID` = `exhibitor`.`ID`))) group by `exhibitor`.`ID`;
 
 -- --------------------------------------------------------
 
@@ -3297,4 +3221,4 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `trophyresults`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `trophyresults` AS select `trophy`.`ID` AS `TrophyID`,`exhibitionexhibitor`.`ExhibitorID` AS `ExhibitorID`,sum(`exhibitionclassprize`.`Points`) AS `Points` from (((`trophy` join `exhibitiontrophyclass` on((`trophy`.`ID` = `exhibitiontrophyclass`.`TrophyID`))) join `exhibitionclassprize` on((`exhibitiontrophyclass`.`ExhibitionClassID` = `exhibitionclassprize`.`ExhibitionClassID`))) join `exhibitionexhibitor` on((`exhibitionclassprize`.`ExhibitionExhibitorID` = `exhibitionexhibitor`.`ID`))) group by `trophy`.`ID`,`trophy`.`Name`,`exhibitionexhibitor`.`ExhibitorID` order by `trophy`.`ID`,sum(`exhibitionclassprize`.`Points`) desc;
+CREATE  VIEW `trophyresults` AS select `trophy`.`ID` AS `TrophyID`,`exhibitionexhibitor`.`ExhibitorID` AS `ExhibitorID`,sum(`exhibitionclassprize`.`Points`) AS `Points` from (((`trophy` join `exhibitiontrophyclass` on((`trophy`.`ID` = `exhibitiontrophyclass`.`TrophyID`))) join `exhibitionclassprize` on((`exhibitiontrophyclass`.`ExhibitionClassID` = `exhibitionclassprize`.`ExhibitionClassID`))) join `exhibitionexhibitor` on((`exhibitionclassprize`.`ExhibitionExhibitorID` = `exhibitionexhibitor`.`ID`))) group by `trophy`.`ID`,`trophy`.`Name`,`exhibitionexhibitor`.`ExhibitorID` order by `trophy`.`ID`,sum(`exhibitionclassprize`.`Points`) desc;

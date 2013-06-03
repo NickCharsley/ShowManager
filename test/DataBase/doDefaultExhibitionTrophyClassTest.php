@@ -1,4 +1,5 @@
 <?php
+
 if (!defined("__ONS_COMMON__"))
     include_once('ons_common.php');
 
@@ -8,11 +9,11 @@ if (!defined("__ONS_COMMON__"))
 class doDefaultExhibitionTrophyClassTest extends DataBaseViews {
 
     public $tables = array("DefaultExhibitionTropyClass", "Exhibition", "Section");
-    
+
     function DataRowProvider() {
         return array(array(""));
     }
-    
+
     function FileName() {
         return "Tables/DefaultExhibitionSection";
     }

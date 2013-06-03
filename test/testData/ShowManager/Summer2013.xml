@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<dataset>
+	<table name="Defaults">
+		<column>ID</column>
+		<column>ShowName</column>
+		<column>ShowID</column>
+		<row>
+			<value>1</value>
+			<value>BHS</value>
+			<value>11</value>
+		</row>					
+	</table>		
+	<table name="Exhibition">
+		<column>ID</column>
+		<column>Name</column>
+		<row><value>1</value><value>Summer Show 2008</value></row>
+		<row><value>2</value><value>Spring Show 2009</value></row>
+		<row><value>3</value><value>Summer Show 2009</value></row>
+		<row><value>4</value><value>Spring show 2010</value></row>
+		<row><value>5</value><value>Summer Show 2010</value></row>
+		<row><value>6</value><value>Spring Show 2011</value></row>
+		<row><value>7</value><value>Summer Show 2011</value></row>
+		<row><value>8</value><value>Spring Show 2012</value></row>
+		<row><value>9</value><value>Summer Show 2012</value></row>
+                <row><value>10</value><value>Spring Show 2013</value></row>
+                <row><value>11</value><value>Summer Show 2013</value></row>
+	</table>		
+        <table name="Sponsorship">
+            <column>ID</column>
+            <column>Name</column>
+            <column>ExhibitionClassPrizeID</column>
+            <column>Prize</column>
+            <row>
+                <value>1</value>
+                <value>Sweet Peas 1st</value>
+                <value>1</value>
+                <value>Unwins Voucher</value>
+            </row>
+            <row>
+                <value>2</value>
+                <value>Sweet Peas 2nd</value>
+                <value>2</value>
+                <value>Unwins Voucher</value>
+            </row>
+
+            <row>
+                <value>3</value>
+                <value>Roses 1st</value>
+                <value>3</value>
+                <value>£5 (Bob Smith)</value>
+            </row>
+            <row>
+                <value>4</value>
+                <value>Roses 2nd</value>
+                <value>4</value>
+                <value>£3 (Bob Smith)</value>
+            </row>
+            <row>
+                <value>5</value>
+                <value>Roses 3rd</value>
+                <value>5</value>
+                <value>£2 (Bob Smith)</value>
+            </row>
+            
+            <row>
+                <value>6</value>
+                <value>Vase of Flowers 1st</value>
+                <value>6</value>
+                <value>£5 (Mrs Gray)</value>
+            </row>
+            <row>
+                <value>7</value>
+                <value>Vase of Flowers 2nd</value>
+                <value>7</value>
+                <value>£3 (Mrs Gray)</value>
+            </row>
+            <row>
+                <value>8</value>
+                <value>Vase of Flowers 3rd</value>
+                <value>8</value>
+                <value>£2 (Mrs Gray)</value>
+            </row>
+            
+            <row>
+                <value>9</value>
+                <value>Patio Pot 1st</value>
+                <value>9</value>
+                <value>£7 Voucher (Baldock Hardware)</value>
+            </row>
+            <row>
+                <value>10</value>
+                <value>Patio Pot 2nd</value>
+                <value>10</value>
+                <value>£3 Voucher (Baldock Hardware)</value>
+            </row>
+            
+            <row>
+                <value>11</value>
+                <value>Flowering Plant 1st</value>
+                <value>11</value>
+                <value>£10 Voucher (Bickerdike Garden Centre)</value>
+            </row>
+            <row>
+                <value>12</value>
+                <value>Flowering Plant 2nd</value>
+                <value>12</value>
+                <value>£6 Voucher (Bickerdike Garden Centre)</value>
+            </row>
+            
+            <row>
+                <value>13</value>
+                <value>Hanging Basket 1st</value>
+                <value>13</value>
+                <value>£8 Voucher (C Keeble)</value>
+            </row>
+            <row>
+                <value>14</value>
+                <value>Hanging Basket 2nd</value>
+                <value>14</value>
+                <value>£6 Voucher (C Keeble)</value>
+            </row>
+            <row>
+                <value>15</value>
+                <value>Hanging Basket 3rd</value>
+                <value>15</value>
+                <value>£4 Voucher (C Keeble)</value>
+            </row>
+            
+            <row>
+                <value>16</value>
+                <value>Other Fruit 1st</value>
+                <value>16</value>
+                <value>£5 (Mr M Camp)</value>
+            </row>
+            <row>
+                <value>17</value>
+                <value>Other Fruit 2nd</value>
+                <value>17</value>
+                <value>£3 (Mr M Camp)</value>
+            </row>
+            <row>
+                <value>18</value>
+                <value>Other Fruit 3rd</value>
+                <value>18</value>
+                <value>£2 (Mr M Camp)</value>
+            </row>
+            
+            <row>
+                <value>19</value>
+                <value>Fireworks 1st</value>
+                <value>19</value>
+                <value>£6 Voucher (Ruby Tuesday)</value>
+            </row>
+            <row>
+                <value>20</value>
+                <value>Fireworks 2nd</value>
+                <value>20</value>
+                <value>£4 Voucher (Ruby Tuesday)</value>
+            </row>
+            <row>
+                <value>21</value>
+                <value>Fireworks 3rd</value>
+                <value>21</value>
+                <value>£3 Voucher (Ruby Tuesday)</value>
+            </row>
+            
+            <row>
+                <value>22</value>
+                <value>Fruit Cake 1st</value>
+                <value>22</value>
+                <value>£5 (Days of Ashwell)</value>
+            </row>
+            <row>
+                <value>23</value>
+                <value>Fruit Cake 2nd</value>
+                <value>23</value>
+                <value>£3 (Days of Ashwell)</value>
+            </row>
+            <row>
+                <value>24</value>
+                <value>Fruit Cake 3rd</value>
+                <value>24</value>
+                <value>£2 (Days of Ashwell)</value>
+            </row>
+    </table>
+    <table name="Exhibitor">
+        <column>ID</column>
+        <column>Surname</column>
+        <column>Member</column>
+        <column>Title</column>
+        <column>Initials</column>
+        <row><value>1</value><value>George</value><value>0</value><value>Mr</value><value>P</value></row>
+        <row><value>2</value><value>Payne</value><value>0</value><value>Mrs</value><value>S M</value></row>
+        <row><value>3</value><value>Clarke</value><value>0</value><value>Mrs</value><value></value></row>
+        <row><value>4</value><value>Lee</value><value>0</value><value>Mrs</value><value></value></row>
+        <row><value>5</value><value>Davey</value><value>0</value><value>Mrs</value><value></value></row>
+        <row><value>6</value><value>Metcalfe</value><value>1</value><value></value><value>E</value></row>
+        <row><value>7</value><value>Metcalfe</value><value>0</value><value>Mr</value><value>A J</value></row>
+        <row><value>8</value><value>Bird</value><value>0</value><value>Mr</value><value>J</value></row>
+        <row><value>9</value><value>Wagstaff</value><value>0</value><value>Mrs</value><value></value></row>
+        <row><value>10</value><value>Ginn</value><value>0</value><value>Mr</value><value></value></row>		
+    </table>    
+    <table name="ExhibitionExhibitor">
+        <column>ID</column>
+        <column>ExhibitionID</column>
+        <column>ExhibitorNumber</column>
+        <column>ExhibitorID</column>
+        <row>
+            <value>1</value>
+            <value>11</value>
+            <value>1</value>
+            <value>1</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>11</value>
+            <value>2</value>
+            <value>2</value>
+        </row>
+        <row>
+            <value>3</value>
+            <value>11</value>
+            <value>3</value>
+            <value>3</value>
+        </row>
+        <row>
+            <value>4</value>
+            <value>11</value>
+            <value>4</value>
+            <value>4</value>
+        </row>
+        <row>
+            <value>5</value>
+            <value>11</value>
+            <value>5</value>
+            <value>5</value>
+        </row>
+        <row>
+            <value>6</value>
+            <value>11</value>
+            <value>6</value>
+            <value>6</value>
+        </row>
+        <row>
+            <value>7</value>
+            <value>11</value>
+            <value>7</value>
+            <value>7</value>
+        </row>
+        <row>
+            <value>8</value>
+            <value>11</value>
+            <value>8</value>
+            <value>8</value>
+        </row>
+        <row>
+            <value>9</value>
+            <value>11</value>
+            <value>9</value>
+            <value>9</value>
+        </row>
+        <row>
+            <value>10</value>
+            <value>11</value>
+            <value>10</value>
+            <value>10</value>
+        </row>
+    </table>
+    <table name="Section">
+            <column>ID</column>
+            <column>Name</column>
+            <column>Description</column>
+            <row><value>1</value><value>Flowers</value></row>
+            <row><value>2</value><value>Pot Plants</value></row>
+            <row><value>3</value><value>Vegetables</value></row>
+            <row><value>4</value><value>Fruit</value></row>
+            <row><value>5</value><value>Homecraft</value></row>
+            <row><value>6</value><value>Floral Art</value></row>
+            <row><value>7</value><value>Photography</value></row>
+            <row><value>8</value><value>Art</value></row>
+            <row><value>9</value><value>Needlecraft/Hobbies</value></row>
+            <row><value>10</value><value>Children</value></row>
+ 	</table>		    
+	<table name="ExhibitionSection">
+            <column>ID</column>
+            <column>ExhibitionID</column>
+            <column>SectionNumber</column>
+            <column>SectionID</column>
+            <row><value>1</value><value>11</value><value>1</value><value>1</value></row>
+            <row><value>2</value><value>11</value><value>2</value><value>2</value></row>
+            <row><value>3</value><value>11</value><value>3</value><value>3</value></row>
+            <row><value>4</value><value>11</value><value>4</value><value>4</value></row>
+            <row><value>5</value><value>11</value><value>5</value><value>6</value></row>
+            <row><value>6</value><value>11</value><value>6</value><value>5</value></row>
+            <row><value>7</value><value>11</value><value>7</value><value>7</value></row>
+            <row><value>8</value><value>11</value><value>8</value><value>8</value></row>
+            <row><value>9</value><value>11</value><value>9</value><value>9</value></row>
+            <row><value>10</value><value>11</value><value>10</value><value>10</value></row>
+        </table>
+	<table name="Class">
+            <column>ID</column>
+            <column>Name</column>
+            <column>Description</column>
+            <row><value>1</value><value>Sweet Peas</value><value>3 x one cultivars</value></row>
+            <row><value>2</value><value>Sweet Peas</value><value>6 x two or more cultivars</value></row>
+            <row><value>3</value><value>Pansies</value><value>4 blooms</value></row>
+            <row><value>4</value><value>Pinks</value><value>4 blooms</value></row>
+            <row><value>5</value><value>Small Flowers</value><value>6 blooms (not to sxceed size of £2 coin)</value></row>
+            <row><value>6</value><value>Clematis</value><value>1 bloom</value></row>
+            <row><value>7</value><value>Clematis</value><value>3 blooms</value></row>
+            <row><value>8</value><value>Roses</value><value>3 blooms H.T. of one cultivar</value></row>
+            <row><value>9</value><value>Roses</value><value>3 blooms H.T. of two or more cultivars</value></row>
+            <row><value>10</value><value>Roses</value><value>3 stems floribunda type</value></row>
+            <row><value>11</value><value>Roses</value><value>1 specimen type</value></row>
+            <row><value>12</value><value>A vase of annuals</value><value>not to exceed 9 stems</value></row>
+            <row><value>13</value><value>A vase of any other flowers</value><value>not to exceed 9 stems</value></row>
+            <row><value>14</value><value>3 Stems Penstemons</value><value>any variety</value></row>
+            <row><value>15</value><value>Flowering Shrub(s)</value><value>vase of 3 stems</value></row>
+            <row><value>16</value><value>Dahlia</value><value>vase of 1 stem</value></row>				
+	</table>					        
+</dataset>
