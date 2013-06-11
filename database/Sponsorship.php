@@ -23,13 +23,6 @@ class doSponsorship extends dbRoot
 	public $fb_linkDisplayLevel=3;
 	###End Formbuilder Code
 
-    function fetch(){
-        if (!parent::fetch()) return false;
-        //Need to replace £ with &pound;
-        $this->Prize = str_replace("Â£", "&pound;", $this->Prize);
-        return true;
-    }
-        
     function EditLink(){
     	return AddButton("Edit","?type=sponsorship&action=edit&id=".$this->ID);
     }

@@ -76,7 +76,7 @@ class dbRoot extends DB_DataObject {
 		}
 		return $this->ID;
 	}
-
+        
 	function updateDefaults(){
 		global $config;
 

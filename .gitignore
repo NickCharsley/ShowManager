@@ -161,10 +161,17 @@ pip-log.txt
 # Mac crap
 .DS_Store
 
-*_error.log
 cache.*
 test_*.ini
 *.php.*
 test/phpunit.xml
-/nbproject/private/
 xdebug_remote.log
+
+errorLogs/
+sencha/
+*.log
+backup/
+build-local.properties
+nbproject/
+nul
+phpunit.xml

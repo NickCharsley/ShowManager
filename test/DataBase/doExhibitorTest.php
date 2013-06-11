@@ -29,17 +29,16 @@ class doExhibitorTest extends DataBaseTables {
                 "\t\t<column>Title</column>\n" .
                 "\t\t<column>Initials</column>\n" .
                 ($data ?
-                        //"\t\t<row><value>1</value><value>Sweet Peas</value><value>3 x one cultivars</value></row>\n".
-                        "\t\t<row><value>1</value><value>George</value><value>0</value><value>Mr</value><value>P</value></row>\n" .
-                        "\t\t<row><value>2</value><value>Payne</value><value>0</value><value>Mrs</value><value>S M</value></row>\n" .
-                        "\t\t<row><value>3</value><value>Clarke</value><value>0</value><value>Mrs</value><value></value></row>\n" .
-                        "\t\t<row><value>4</value><value>Lee</value><value>0</value><value>Mrs</value><value></value></row>\n" .
-                        "\t\t<row><value>5</value><value>Davey</value><value>0</value><value>Mrs</value><value></value></row>\n" .
-                        "\t\t<row><value>6</value><value>Metcalfe</value><value>1</value><value></value><value>E</value></row>\n" .
-                        "\t\t<row><value>7</value><value>Metcalfe</value><value>0</value><value>Mr</value><value>A J</value></row>\n" .
                         "\t\t<row><value>8</value><value>Bird</value><value>0</value><value>Mr</value><value>J</value></row>\n" .
-                        "\t\t<row><value>9</value><value>Wagstaff</value><value>0</value><value>Mrs</value><value></value></row>\n" .
-                        "\t\t<row><value>10</value><value>Ginn</value><value>0</value><value>Mr</value><value></value></row>\n" : "") .
+                        "\t\t<row><value>3</value><value>Clarke</value><value>0</value><value>Mrs</value><value></value></row>\n" .
+                        "\t\t<row><value>5</value><value>Davey</value><value>0</value><value>Mrs</value><value></value></row>\n" .
+                        "\t\t<row><value>1</value><value>George</value><value>0</value><value>Mr</value><value>P</value></row>\n" .
+                        "\t\t<row><value>10</value><value>Ginn</value><value>0</value><value>Mr</value><value></value></row>\n" .
+                        "\t\t<row><value>4</value><value>Lee</value><value>0</value><value>Mrs</value><value></value></row>\n" .
+                        "\t\t<row><value>7</value><value>Metcalfe</value><value>0</value><value>Mr</value><value>A J</value></row>\n" .
+                        "\t\t<row><value>6</value><value>Metcalfe</value><value>1</value><value></value><value>E</value></row>\n" .
+                        "\t\t<row><value>2</value><value>Payne</value><value>0</value><value>Mrs</value><value>S M</value></row>\n" .
+                        "\t\t<row><value>9</value><value>Wagstaff</value><value>0</value><value>Mrs</value><value></value></row>\n" : "") .
                 "\t</table>\n";
     }
 
