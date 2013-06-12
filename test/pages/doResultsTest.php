@@ -32,7 +32,7 @@ class doResultsTest extends pagetests {
                 array("<tr>\n<td colspan='3'>\nSection 9: Needlecraft/Hobbies</td>\n<td>First</td><td>Second</td><td>Third</td></tr>"),
                 array("<tr>\n<td colspan='3'>\nSection 10: Children</td>\n<td>First</td><td>Second</td><td>Third</td></tr>\n"),
                 
-                array("<tr>\n<td colspan='2' align='right'>\n&nbsp;<a class='Button' href='\?action=edit&id=1#form'><span>Class 1</span></a>\n</td>\n<td>\nSweet Peas \(3 x one cultivars\)</td>\n<td>-</td><td>-</td><td>-</td></tr>"),
+                array("<tr>\n<td colspan='2' align='right'>\n&nbsp;<a class='Button' href='\?action=edit&id=1#form'><span>Class 1</span></a>\n</td>\n<td>\nSweet Peas \(3 x one cultivar\)</td>\n<td>-</td><td>-</td><td>-</td></tr>"),
                 array("<tr>\n<td colspan='2' align='right'>\n&nbsp;<a class='Button' href='\?action=edit&id=2#form'><span>Class 2</span></a>\n</td>\n<td>\nSweet Peas \(6 x two or more cultivars\)</td>\n<td>-</td><td>-</td><td>-</td></tr>"),
                 array("<tr>\n<td colspan='2' align='right'>\n&nbsp;<a class='Button' href='\?action=edit&id=3#form'><span>Class 3</span></a>\n</td>\n<td>\nPansies \(4 blooms\)</td>\n<td>-</td><td>-</td><td>-</td></tr>"),
                 array("<tr>\n<td colspan='2' align='right'>\n&nbsp;<a class='Button' href='\?action=edit&id=4#form'><span>Class 4</span></a>\n</td>\n<td>\nPinks \(4 blooms\)</td>\n<td>-</td><td>-</td><td>-</td></tr>"),

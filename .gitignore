@@ -172,6 +172,7 @@ sencha/
 *.log
 backup/
 build-local.properties
-nbproject/
+nbproject
+
 nul
 phpunit.xml

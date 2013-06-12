@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <dataset>
 	<table name="Defaults">
 		<column>ID</column>
@@ -301,7 +301,7 @@
         <column>ID</column>
         <column>Name</column>
         <column>Description</column>
-        <row><value>1</value><value>Sweet Peas</value><value>3 x one cultivars</value></row>
+        <row><value>1</value><value>Sweet Peas</value><value>3 x one cultivar</value></row>
         <row><value>2</value><value>Sweet Peas</value><value>6 x two or more cultivars</value></row>
         <row><value>3</value><value>Pansies</value><value>4 blooms</value></row>
         <row><value>4</value><value>Pinks</value><value>4 blooms</value></row>
@@ -323,7 +323,7 @@
         <row><value>19</value><value>Fuchsias</value><value>1 bush/shrub type pot max 8"/20cm</value></row>
         <row><value>20</value><value>Fuchsias</value><value>1 bush/shrub type pot max 6"/15cm</value></row>
         <row><value>21</value><value>Patio Pot</value><value>12"/30cm across, any type, any shape</value></row>
-        <row><value>22</value><value>Begonias</value><value>1 any size pot</value></row>
+        <row><value>22</value><value>Begonias (corm)</value><value>1 any size pot</value></row>
         <row><value>23</value><value>Regal Pelargonium</value><value>1 any size pot</value></row>
         <row><value>24</value><value>Geranium</value><value>1 any size pot</value></row>
         <row><value>25</value><value>Flowering Plant</value><value>1 any size pot (not in own class)</value></row>
@@ -449,6 +449,14 @@
             <value>1</value>
             <value>16</value>
             <value>16</value>
+        </row>
+
+        <row>
+            <value>17</value>
+            <value>11</value>
+            <value>2</value>
+            <value>17</value>
+            <value>17</value>
         </row>
     </table>
 </dataset>
