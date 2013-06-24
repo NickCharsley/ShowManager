@@ -31,55 +31,54 @@ class doTrophy extends dbRoot
 	public $fb_linkDisplayLevel=2;
 	###End Formbuilder Code
 
+        function PrintList(){
+            $trophy=clone($this);
+            $trophy->find();
+            print "<table>\n";
+            while ($trophy->fetch()){
+                print "<tr>\n";
+                    print "<td colspan='2'><em><b>\n";
+                        print $trophy->Name;
+                    print "</b></em></td>\n";
+                    print "<td>\n";
+                        print $trophy->EditLink();
+                    print "</td>\n";
+                    print "<td>\n&nbsp;</td>\n";
+                print "</tr>\n";
+                $doETC=safe_dataobject_factory("ExhibitionTrophyClass");
+                $doETC->TrophyID=$trophy->ID;
+                $cols=0;
+                
+                if ($doETC->find()){
+                    print "<tr><td>\n&nbsp;</td>\n";
+                    while ($doETC->fetch()){
+                        if ($cols++>2){
+                            $cols=1;
+                            print "</tr><tr><td>\n&nbsp;</td>\n";
+                        }              
+                        $doEC=dbRoot::fromCache("ExhibitionClass", $doETC->ExhibitionClassID);
+                        $doC=dbRoot::fromCache("Class", $doEC->ClassID);
+                        print "<td>\n".$doEC->ClassNumber.") ".$doC->Name."\n";
+                        if ($doC->Description!=""){
+                        //    print "\n (".$doC->Description.")\n";                                                        
+                        }
+                        print "</td>\n";
+                    }
+                    print "</tr>\n";
+                } else {
+                    print "<tr><td>\n&nbsp;</td>\n<td colspan='3'>No Classes Allocated</td></tr>\n";
+                }
+            }
+            print "</table>\n";
+            
+        }
+        
 }
 
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 	include_once("ons_common.php");
-	$defs=dbRoot::fromCache("Defaults",1);
 	
-	PageTitle();
-		
-	DB_DataObject::debuglevel(0);
-	$dotrophy=DB_DataObject::factory("Trophy");
-	$dotrophy->ExhibitionID=$defs->ShowID;	
-	if (isset($_GET['action']) and isset($_GET['id'])){
-		$dotrophy->get($_GET['id']);
-	}
-	
-
-	$fg =&DB_DataObject_FormBuilder::create($dotrophy);
-	$form =& $fg->getForm();
-	if ($form->validate()) {
-	    DB_DataObject::debugLevel(0);
-		$form->process(array(&$fg,'processForm'), false);
-		$form->freeze();
-	}
-
-	$trophy=DB_DataObject::factory("Trophy");
-	$trophy->ExhibitionID=$defs->ShowID;
-	$trophy->find();
-	print "<table>\n";
-	while ($trophy->fetch()){
-		print "<tr>\n";
-			print "<td>\n";
-				print $trophy->Name;
-			print "</td>\n";
-			print "<td>\n";
-				print $trophy->Prize;
-			print "</td>\n";
-			print "<td>\n";
-				print $trophy->EditLink();
-			print "</td>\n";
-		print "</tr>\n";
-	}
-	print "</table>\n";
-
-	print AddButton("New","?action=new");
-
-	print "<hr/>";
-	$form->display();
-
-	print "<hr/>";
+        dbRoot::showPage("Trophy");
 
 }
 ?>

@@ -60,6 +60,52 @@ class MigrationsTest extends PHPUnit_Framework_TestCase
         $lib = new PHPDbMigrate($phpdbmigrate);
         $lib->run(004,$target);
     }
+
+    /**
+     * @depends testRunMigration004
+     * @expectedException Exception
+     * @expectedExceptionMessage Exit Called: Migration Finished
+     */
+    function testRunMigration005(){
+        $target="test_adhoc";
+        $dns=SplitDataObjectConfig();
+        //$sqlpath=buildpath($dns['class_location'],"sql","showmanager_v3.sql");
+        $migrationPath=buildpath(dirname(dirname(__FILE__)),"testData","Migrations");
+        
+        $phpdbmigrate= 
+            array(
+                $target => array(
+                    "db" => $dns,
+                    ),
+                "migrations_path" => $migrationPath,
+                "return_type" => "\n",
+                );
+        $lib = new PHPDbMigrate($phpdbmigrate);
+        $lib->run(005,$target);
+    }
+
+    /**
+     * @depends testRunMigration004
+     * @depends testRunMigration005
+     * @expectedException Exception
+     */
+    function testRunMigrationAll(){
+        $target="test_adhoc";
+        $dns=SplitDataObjectConfig();
+        $migrationPath=buildpath(dirname(dirname(__FILE__)),"testData","Migrations");
+        
+        $phpdbmigrate= 
+            array(
+                $target => array(
+                    "db" => $dns,
+                    ),
+                "migrations_path" => $migrationPath,
+                "return_type" => "\n",
+                );
+        $lib = new PHPDbMigrate($phpdbmigrate);
+        $lib->run(null,$target);
+    }
+
     
 }
 

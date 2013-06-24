@@ -17,12 +17,14 @@ class doPrize extends dbRoot
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
+
+    ###Formbuilder Code
+    public $fb_linkDisplayFields=array("Name");
+    ###End Formbuilder Code
+    
     function EditLink(){
     	print "<td>".AddButton('Edit',"?action=edit&id=".$this->ID)."</td>";
     }
-	###Formbuilder Code
-	public $fb_linkDisplayFields=array("Name");
-	###End Formbuilder Code
 
     function PrintList(){
     	$prize=clone($this);

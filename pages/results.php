@@ -69,6 +69,13 @@ class doResults extends doExhibitionClass {
                             print " (".$list->_ClassID->Description.")";
                     print "</td>\n";
                     $results=array(1=>"-",2=>"-",3=>"-");
+                    $doResults=safe_dataobject_factory("ExhibitionClassPrize");
+                    $doResults->ExhibitionClassID=$list->ClassID;
+                    $doResults->find();
+                    while ($doResults->fetch()){
+                        $doResults->getLinks();
+                        $results[$doResults->PrizeID]=$doResults->_ExhibitionExhibitorID->ExhibitorNumber;
+                    }                    
                     foreach($results as $place){
                         print "<td>$place</td>";
                     }
