@@ -32,21 +32,21 @@
 
     //Local is last as it has to beable to overwrite other settings
     $props[]="local";		
-
-    foreach($props as $prop)
-        if ($prop<>"")
-            @$ini.="\n".file_get_contents("$filename/$prop.properties");
-
-    $vars=parse_ini_string($ini);
     print ("<h1>Listing of Expected Property Files</h1>\n");
-    print ("<pre>\n");
+    
 
     foreach($props as $prop)
-    if ($prop<>"")
-            print("$prop.properties\n");
-    print($ini);
+        if ($prop<>""){
+            print "<h2>$prop.properties</h2><pre>";
+            @$data=file_get_contents("$filename/$prop.properties");
+            $ini.="\n$data";
+            print "$data</pre><hr/>";
+        }
+            
+    
+    $vars=parse_ini_string($ini);
+    print ("<pre>\n");
     print_r($vars);
-
     print ("</pre>");
 
     $GLOBALS['show_properties']=true;
