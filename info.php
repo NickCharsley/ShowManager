@@ -7,9 +7,10 @@
  *
  * Copyright 2009 ONS
  *
- */
+ * /
 if (!defined("__COMMON__"))
  	include_once('ons_common.php');
+/**/
  error_log("Enter ".__FILE__);
 //************************************************
 phpinfo();

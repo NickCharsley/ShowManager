@@ -1,2 +1,0 @@
-php_value auto_prepend_file "C:\Users\nick\workspace\ShowManager\prepend.php"
-php_value auto_append_file  "C:\Users\nick\workspace\ShowManager\append.php"
