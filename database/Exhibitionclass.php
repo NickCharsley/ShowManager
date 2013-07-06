@@ -18,23 +18,80 @@ class doExhibitionclass extends dbRoot
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
-	###Formbuilder Code
-	public $fb_formHeaderText="Class";
-	public $fb_userEditableFields=array("ID","ExhibitionSectionID","ClassNumber","ClassID");
-	public $fb_fieldLabels=array("ExhibitionID"=>"Show","ExhibitionSectionID"=>"Section","ClassID"=>"Class");
-	public $fb_linkNewValue=array("ClassID");
-	public $fb_linkDisplayLevel=2;
-	public $fb_linkDisplayFields=array("ExhibitionID","ExhibitionSectionID","ClassID");
+    ###Formbuilder Code
+    public $fb_formHeaderText="Class";
+    public $fb_userEditableFields=array("ID","ExhibitionSectionID","ClassNumber","ClassID");
+    public $fb_fieldLabels=array("ExhibitionID"=>"Show","ExhibitionSectionID"=>"Section","ClassID"=>"Class");
+    public $fb_linkNewValue=array("ClassID");
+    public $fb_linkDisplayLevel=2;
+    public $fb_linkDisplayFields=array("ExhibitionID","ExhibitionSectionID","ClassID");
 
-	###End Formbuilder Code
-	function EditLink(){
+    ###End Formbuilder Code
+    function ImportObject($object,$key,$Exhibitors=false){
+        if (!isset($this->ID)){
+            //Exhibition Class Found by Class Number and Exhibition ID
+            $this->ClassNumber=dbRoot::getObjectValue("ClassNumber", $object);
+            $this->ExhibitionID=dbRoot::importMap("Exhibition", dbRoot::getObjectValue("ExhibitionID", $object));
+            if ($this->find(true)){
+                //Need to check data
+                diehere();
+            } else {
+                //Now Need to Get Data....
+                $ClassID=dbRoot::getObjectValue("ClassID", $object);
+                if (dbRoot::importMap("Class",$ClassID)==0){
+                    $map=dbRoot::getImportMap("Class", $ClassID);                    
+                    $map['do']->ImportObject($map['data'],$ClassID,$Exhibitors);
+                }                                        
+                $this->ClassID=dbRoot::importMap("Class",$ClassID);
+                
+                $ExhibitionSectionID=dbRoot::getObjectValue("ExhibitionSectionID", $object);
+                if (dbRoot::importMap("ExhibitionSection",$ExhibitionSectionID)==0){
+                    $map=dbRoot::getImportMap("ExhibitionSection", $ExhibitionSectionID);                    
+                    $map['do']->ImportObject($map['data'],$ExhibitionSectionID,$Exhibitors);
+                }                                        
+                $this->ExhibitionSectionID=dbRoot::importMap("ExhibitionSection",$ExhibitionSectionID);                
+
+                $this->insert();
+                $this->find(true);
+            }
+            dbRoot::addToCache($this);
+            dbRoot::importMap($this->__table,$key,$this->ID);
+        }
+    }
+        
+        
+    function EditLink(){
     	return AddButton("Edit","?action=edit&id=".$this->ID."#form");
     }
     
-    function PrintList(){
+    private function getChildren($child,&$ret,$Exhibitors=false){
+        $doC=safe_dataobject_factory($child);
+        $doC->ExhibitionClassID=$this->ID;
+        $doC->find();
+        while ($doC->fetch()){
+            $doC->gatherExportDataObjects($ret,$Exhibitors);
+        }        
+    }
+    
+    function gatherExportDataObjects(&$ret,$Exhibitors=false){
+        if (parent::gatherExportDataObjects($ret,$Exhibitors)){
+            //Now Add Children
+            //ExhibitionClassPrize
+            $this->getChildren("ExhibitionClassPrize", $ret,$Exhibitors);
+            //Exhibition
+            $doE=dbRoot::fromCache("Exhibition",$this->ExhibitionID);
+            $doE->gatherExportDataObjects($ret,$Exhibitors);
+            //ExhibitionSection
+            $doES=dbRoot::fromCache("ExhibitionSection",$this->ExhibitionSectionID);
+            $doES->gatherExportDataObjects($ret,$Exhibitors);
+            //Class
+            $doC=dbRoot::fromCache("Class",$this->ClassID);
+            $doC->gatherExportDataObjects($ret,$Exhibitors);
+        }
+    }
 
-    	
-    	
+    
+    function PrintList(){
     	$list=clone($this);
     	$table=array();
     	 

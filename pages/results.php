@@ -73,9 +73,12 @@ class doResults extends doExhibitionClass {
                     $doResults->ExhibitionClassID=$list->ClassID;
                     $doResults->find();
                     while ($doResults->fetch()){
-                        $doResults->getLinks();
-                        $results[$doResults->PrizeID]=$doResults->_ExhibitionExhibitorID->ExhibitorNumber;
-                    }                    
+                        try {
+                            $doResults->getLinks();
+                            $results[$doResults->PrizeID]=$doResults->_ExhibitionExhibitorID->ExhibitorNumber;
+                        } catch (Exception $e){}                        
+                    }    
+                    
                     foreach($results as $place){
                         print "<td>$place</td>";
                     }

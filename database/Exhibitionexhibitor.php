@@ -26,6 +26,19 @@ class doExhibitionexhibitor extends dbRoot
     public $fb_linkDisplayLevel=2;
 
     ###End Formbuilder Code
+    function gatherExportDataObjects(&$ret,$Exhibitors=true){
+        if (parent::gatherExportDataObjects($ret,$Exhibitors)){
+            //Now Add Children
+            //Exhibition
+            $doE=dbRoot::fromCache("Exhibition",$this->ExhibitionID);
+            $doE->gatherExportDataObjects($ret,$Exhibitors);
+            //Exhibitor
+            $doE=dbRoot::fromCache("Exhibitor",$this->ExhibitorID);
+            $doE->gatherExportDataObjects($ret,$Exhibitors);
+        }
+    }
+
+    
     function EditLink(){
         return AddButton("Edit","?action=edit&id=".$this->ID."#form");
     }

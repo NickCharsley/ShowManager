@@ -10,8 +10,8 @@
  */
 error_log("Enter ".__FILE__);
 
-//$GLOBALS['show_properties']=true;
 $GLOBALS['test']=true;
+$GLOBALS['TESTMODE']=true;
 
 include_once("../ons_common.php");
 

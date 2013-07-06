@@ -17,6 +17,23 @@ class doTrophy extends dbRoot
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
+    function ImportObject($object,$key,$Exhibitors=false){
+        if (!isset($this->ID)){
+            //Exhibition Class Found by Class Number and Exhibition ID
+            $this->Name=dbRoot::getObjectValue("Name", $object);
+            $this->ExhibitionID=dbRoot::importMap("Exhibition", dbRoot::getObjectValue("ExhibitionID", $object));
+            if (!$this->find(true)){
+                //Now Need to Get Data....
+                $this->Member=dbRoot::getObjectValue("Member", $object);
+
+                $this->insert();
+                $this->find(true);
+            }
+            dbRoot::addToCache($this);
+            dbRoot::importMap($this->__table,$key,$this->ID);
+        }
+    }
+    
     function EditLink(){
     	print "<td>".AddButton('Edit',"?action=edit&id=".$this->ID)."</td>";
     }

@@ -5,18 +5,6 @@ class LoadDatabase {//extends ONS_Tests_DatabaseTestCase {
         static $dns;
     
 	protected $filename;
-/** /
-	function __construct($filename,$tables){
-		$this->filename=$filename;
-		$this->tables=$tables;
-		
-		parent::__construct();
-	}
-/** /	
-	function FileName(){
-		return $this->filename;
-	}
-/**/	
 	static function testInitaliseDatabase($forceLoad=false){
             if (!isset(LoadDatabase::$dns) or $forceLoad){
                 $dns=SplitDataObjectConfig();
@@ -49,6 +37,7 @@ class LoadDatabase {//extends ONS_Tests_DatabaseTestCase {
                     //should NOT throw an exception, that is lazy!
                 }
             }
+            return true;
     	}
 /** /	
 	function ResetDB(){

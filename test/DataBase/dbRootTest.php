@@ -36,7 +36,20 @@ class dbRootTest extends PHPUnit_Framework_TestCase {
 
         $this->assertSame($defs1, $defs2);
     }
-
+    
+    /**
+     * @depends testFromCache
+     */
+    function testAddToCache(){
+        //Get DB Object
+    }
+    /**
+     * @depends testFromCache
+     */
+    function testAddToCacheNoDupe(){
+        //Get DB Object
+    }
+    
     /**
      * @covers dbRoot::clearCache
      * @depends testFromCache
@@ -85,13 +98,14 @@ class dbRootTest extends PHPUnit_Framework_TestCase {
 
     /**
      * @covers dbRoot::BackupDB
-     * @todo   Implement testBackupDB().
+     * @depends testInitaliseDatabase
      */
     public function testBackupDB() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        $temp=buildPath(__DIR__,"backup.xml");
+        file_put_contents($temp, dbRoot::BackupDB());
+        //$this->assertXmlFileEqualsXmlFile(buildPath(__DIR__,"..","testData","ShowManager","Summer2013.xml"),$temp);
     }
-
+    
+    
+    
 }

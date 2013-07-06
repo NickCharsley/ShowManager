@@ -33,153 +33,152 @@
             <row>
                 <value>1</value>
                 <value>Sweet Peas 1st</value>
-                <value>1</value>
+                <value>2</value>
                 <value>Unwins Voucher</value>
             </row>
             <row>
                 <value>2</value>
                 <value>Sweet Peas 2nd</value>
-                <value>2</value>
+                <value>3</value>
                 <value>Unwins Voucher</value>
             </row>
-
             <row>
                 <value>3</value>
                 <value>Roses 1st</value>
-                <value>3</value>
+                <value>4</value>
                 <value>£5 (Bob Smith)</value>
             </row>
             <row>
                 <value>4</value>
                 <value>Roses 2nd</value>
-                <value>4</value>
+                <value>5</value>
                 <value>£3 (Bob Smith)</value>
             </row>
             <row>
                 <value>5</value>
                 <value>Roses 3rd</value>
-                <value>5</value>
+                <value>6</value>
                 <value>£2 (Bob Smith)</value>
             </row>
             
             <row>
                 <value>6</value>
                 <value>Vase of Flowers 1st</value>
-                <value>6</value>
+                <value>7</value>
                 <value>£5 (Mrs Gray)</value>
             </row>
             <row>
                 <value>7</value>
                 <value>Vase of Flowers 2nd</value>
-                <value>7</value>
+                <value>8</value>
                 <value>£3 (Mrs Gray)</value>
             </row>
             <row>
                 <value>8</value>
                 <value>Vase of Flowers 3rd</value>
-                <value>8</value>
+                <value>9</value>
                 <value>£2 (Mrs Gray)</value>
             </row>
             
             <row>
                 <value>9</value>
                 <value>Patio Pot 1st</value>
-                <value>9</value>
+                <value>2</value>
                 <value>£7 Voucher (Baldock Hardware)</value>
             </row>
             <row>
                 <value>10</value>
                 <value>Patio Pot 2nd</value>
-                <value>10</value>
+                <value>2</value>
                 <value>£3 Voucher (Baldock Hardware)</value>
             </row>
             
             <row>
                 <value>11</value>
                 <value>Flowering Plant 1st</value>
-                <value>11</value>
+                <value>2</value>
                 <value>£10 Voucher (Bickerdike Garden Centre)</value>
             </row>
             <row>
                 <value>12</value>
                 <value>Flowering Plant 2nd</value>
-                <value>12</value>
+                <value>2</value>
                 <value>£6 Voucher (Bickerdike Garden Centre)</value>
             </row>
             
             <row>
                 <value>13</value>
                 <value>Hanging Basket 1st</value>
-                <value>13</value>
+                <value>2</value>
                 <value>£8 Voucher (C Keeble)</value>
             </row>
             <row>
                 <value>14</value>
                 <value>Hanging Basket 2nd</value>
-                <value>14</value>
+                <value>2</value>
                 <value>£6 Voucher (C Keeble)</value>
             </row>
             <row>
                 <value>15</value>
                 <value>Hanging Basket 3rd</value>
-                <value>15</value>
+                <value>2</value>
                 <value>£4 Voucher (C Keeble)</value>
             </row>
             
             <row>
                 <value>16</value>
                 <value>Other Fruit 1st</value>
-                <value>16</value>
+                <value>2</value>
                 <value>£5 (Mr M Camp)</value>
             </row>
             <row>
                 <value>17</value>
                 <value>Other Fruit 2nd</value>
-                <value>17</value>
+                <value>2</value>
                 <value>£3 (Mr M Camp)</value>
             </row>
             <row>
                 <value>18</value>
                 <value>Other Fruit 3rd</value>
-                <value>18</value>
+                <value>2</value>
                 <value>£2 (Mr M Camp)</value>
             </row>
             
             <row>
                 <value>19</value>
                 <value>Fireworks 1st</value>
-                <value>19</value>
+                <value>2</value>
                 <value>£6 Voucher (Ruby Tuesday)</value>
             </row>
             <row>
                 <value>20</value>
                 <value>Fireworks 2nd</value>
-                <value>20</value>
+                <value>2</value>
                 <value>£4 Voucher (Ruby Tuesday)</value>
             </row>
             <row>
                 <value>21</value>
                 <value>Fireworks 3rd</value>
-                <value>21</value>
+                <value>2</value>
                 <value>£3 Voucher (Ruby Tuesday)</value>
             </row>
             
             <row>
                 <value>22</value>
                 <value>Fruit Cake 1st</value>
-                <value>22</value>
+                <value>2</value>
                 <value>£5 (Days of Ashwell)</value>
             </row>
             <row>
                 <value>23</value>
                 <value>Fruit Cake 2nd</value>
-                <value>23</value>
+                <value>2</value>
                 <value>£3 (Days of Ashwell)</value>
             </row>
             <row>
                 <value>24</value>
                 <value>Fruit Cake 3rd</value>
-                <value>24</value>
+                <value>2</value>
                 <value>£2 (Days of Ashwell)</value>
             </row>
     </table>
@@ -508,14 +507,7 @@
         <row><value>70</value><value>11</value><value>6</value><value>70</value><value>187</value></row>
                         
         <row><value>1</value><value>11</value><value>1</value><value>1</value><value>1</value></row>
-        
-        <row>
-            <value>2</value>
-            <value>11</value>
-            <value>1</value>
-            <value>2</value>
-            <value>2</value>
-        </row>
+        <row><value>2</value><value>11</value><value>1</value><value>2</value><value>2</value></row>
         <row>
             <value>3</value>
             <value>11</value>
@@ -898,15 +890,13 @@
             <value>54</value>
         </row>
 
-        <row>
-            <value>57</value>
+        <row><value>57</value>
             <value>11</value>
             <value>5</value>
             <value>57</value>
             <value>183</value>
         </row>
-        <row>
-            <value>58</value>
+        <row><value>58</value>
             <value>11</value>
             <value>5</value>
             <value>58</value>
@@ -1302,14 +1292,18 @@
         <column>Prize</column>
         <column>Points</column>
         <column>ExhibitionExhibitorID</column>
-        <row>
-            <value>1</value>
-            <value>1</value>
-            <value>1</value>
-            <value>1.5</value>
-            <value>3</value>
-            <value>1</value>
-        </row>
+        <row><value>1</value><value>1</value><value>1</value><value>1.5</value><value>3</value><value>1</value></row>
+        
+        <row><value>2</value><value>2</value><value>1</value><value>1.5</value><value>3</value><null/></row>
+        <row><value>3</value><value>2</value><value>2</value><value>0.8</value><value>2</value><null/></row>
+        
+        <row><value>4</value><value>11</value><value>1</value><value>1.5</value><value>3</value><null/></row>
+        <row><value>5</value><value>11</value><value>2</value><value>0.8</value><value>2</value><null/></row>
+        <row><value>6</value><value>11</value><value>3</value><value>0.5</value><value>1</value><null/></row>
+        
+        <row><value>7</value><value>13</value><value>1</value><value>1.5</value><value>3</value><null/></row>
+        <row><value>8</value><value>13</value><value>2</value><value>0.8</value><value>2</value><null/></row>
+        <row><value>9</value><value>13</value><value>3</value><value>0.5</value><value>1</value><null/></row>
     </table>		
     <table name="Prize">
         <column>ID</column>
@@ -1320,6 +1314,4 @@
         <row><value>2</value><value>Second</value><value>1.00</value><value>2</value></row>
         <row><value>3</value><value>Third</value> <value>0.50</value><value>1</value></row>
     </table>	
-
-    
 </dataset>

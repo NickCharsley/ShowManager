@@ -21,6 +21,21 @@ class doPrize extends dbRoot
     ###Formbuilder Code
     public $fb_linkDisplayFields=array("Name");
     ###End Formbuilder Code
+
+    function ImportObject($object,$key,$Exhibitors=false){
+        if (!isset($this->ID)){
+            $this->Name=dbRoot::getObjectValue("Name", $object);
+            if (!$this->find(true)){
+                //Need to save this as New
+                $this->Points=dbRoot::getObjectValue("Points", $object);
+                $this->Points=dbRoot::getObjectValue("Prize", $object);                
+                $this->insert();
+                $this->find(true);
+            }
+            dbRoot::addToCache($this);
+            dbRoot::importMap($this->__table,$key,$this->ID);
+        }
+    }    
     
     function EditLink(){
     	print "<td>".AddButton('Edit',"?action=edit&id=".$this->ID)."</td>";

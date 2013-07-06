@@ -3,6 +3,7 @@
  * Table Definition for exhibition
  */
 require_once 'dbRoot.php';
+require_once 'XML/Serializer.php';
 
 class doExhibition extends dbRoot 
 {
@@ -51,6 +52,72 @@ class doExhibition extends dbRoot
     	}
     	print "</table>\n";    	 
     }    
+    
+    private function getChildren($child,&$ret,$Exhibitors=false){
+        $doC=safe_dataobject_factory($child);
+        $doC->ExhibitionID=$this->ID;
+        $doC->find();
+        while ($doC->fetch()){
+            $doC->gatherExportDataObjects($ret,$Exhibitors);
+        }        
+    }
+    
+    function gatherExportDataObjects(&$ret,$Exhibitors=false){
+        if (parent::gatherExportDataObjects($ret,$Exhibitors))
+        {
+            //Now Add Children            
+            $this->getChildren("Prize", $ret, $Exhibitors);
+            //ExhibitionClass
+            $this->getChildren("ExhibitionClass", $ret, $Exhibitors);
+            $this->getChildren("ExhibitionSection", $ret, $Exhibitors);
+            //Not a direct Child!!! $this->getChildren("ExhibitionClassPrize", $ret, $Exhibitors);
+            if ($Exhibitors) $this->getChildren("ExhibitionExhibitor", $ret, $Exhibitors);
+            $this->getChildren("ExhibitionTrophyClass", $ret, $Exhibitors);
+       }
+    }
+    
+    //Static Functions.....
+    static function Reset($ExhibitionID){
+
+    }
+
+    static function Export($ExhibitionID,$Exhibitors=false){
+        dbRoot::CalculatePrizeFund();
+        $do=dbRoot::fromCache("Exhibition",$ExhibitionID);
+        $objects=array();
+        $do->gatherExportDataObjects($objects,$Exhibitors);
+        krumo($objects);
+        
+        $xml ="<showmanager name='Export Exhibition {$do->Name}'>\n";
+        foreach($objects as $type=>$keys)
+            foreach($keys as $key){
+                $doC=dbRoot::fromCache($type, $key);
+                $xml.=$doC->ExportInstance();
+            }
+        $xml.="</showmanager>\n";
+        
+        return $xml;
+    }
+
+    static function Remove($ExhibitionID){
+    }
+
+    function ImportObject($object,$key,$Exhibitors=false){
+        if (!isset($this->ID)){
+            //if (dbRoot::importMap($this->__table,$key)==0){
+                $this->Name=dbRoot::getObjectValue("Name", $object);
+                if (!$this->find(true)){
+                    //Need to save this as New
+                    $this->insert();
+                    $this->find(true);
+                }
+                dbRoot::addToCache($this);
+                dbRoot::importMap($this->__table,$key,$this->ID);
+            //}
+        }
+    }
+
+    
 }
 //** Eclipse Debug Code **************************
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){

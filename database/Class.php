@@ -21,5 +21,20 @@ class doClass extends dbRoot
     public $fb_linkDisplayFields=array("Name","Description");
     ###End Formbuilder Code
     
+    function ImportObject($object,$key,$Exhibitors=false){
+        if (!isset($this->ID)){
+            //if (dbRoot::importMap($this->__table,$key)==0){
+                $this->Name=dbRoot::getObjectValue("Name", $object);
+                $this->Description=dbRoot::getObjectValue("Description", $object);
+                if (!$this->find(true)){
+                    //Need to save this as New
+                    $this->insert();
+                    $this->find(true);
+                }
+                dbRoot::addToCache($this);
+                dbRoot::importMap($this->__table,$key,$this->ID);
+            //}
+        }
+    }    
 }
 ?>

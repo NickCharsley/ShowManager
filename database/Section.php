@@ -16,10 +16,27 @@ class doSection extends dbRoot
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
-	###Formbuilder Code
-	public $fb_formHeaderText="Section";
-	public $fb_linkDisplayFields=array("Name");
-	###End Formbuilder Code
+    ###Formbuilder Code
+    public $fb_formHeaderText="Section";
+    public $fb_linkDisplayFields=array("Name");
+    ###End Formbuilder Code
+    
+    function ImportObject($object,$key,$Exhibitors=false){
+        if (!isset($this->ID)){
+            //if (dbRoot::importMap($this->__table,$key)==0){
+                $this->Name=dbRoot::getObjectValue("Name", $object);
+                $this->Description=dbRoot::getObjectValue("Description", $object);
+                if (!$this->find(true)){
+                    //Need to save this as New
+                    $this->insert();
+                    $this->find(true);
+                }
+                dbRoot::addToCache($this);
+                dbRoot::importMap($this->__table,$key,$this->ID);
+            //}
+        }
+    }    
+
 }
 //** Eclipse Debug Code **************************
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){

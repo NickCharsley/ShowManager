@@ -28,6 +28,43 @@ class doExhibitionsection extends dbRoot
     	return AddButton("Edit","?action=edit&id=".$this->ID);
     }
     
+    function gatherExportDataObjects(&$ret,$Exhibitors){
+        if (parent::gatherExportDataObjects($ret,$Exhibitors)){
+            //Now Add Children
+            //Exhibition
+            $doE=dbRoot::fromCache("Exhibition",$this->ExhibitionID);
+            $doE->gatherExportDataObjects($ret,$Exhibitors);        
+            //Section
+            $doS=dbRoot::fromCache("Section",$this->SectionID);
+            $doS->gatherExportDataObjects($ret,$Exhibitors);        
+        }
+    }
+
+    function ImportObject($object,$key,$Exhibitors=false){
+        if (!isset($this->ID)){
+            //Exhibition Section Found by Section Number and Exhibition ID
+            $this->SectionNumber=dbRoot::getObjectValue("SectionNumber", $object);
+            $this->ExhibitionID=dbRoot::importMap("Exhibition", dbRoot::getObjectValue("ExhibitionID", $object));
+            if ($this->find(true)){
+                //Need to check data
+                diehere();
+            } else {
+                //Now Need to Get Data....
+                $SectionID=dbRoot::getObjectValue("SectionID", $object);
+                if (dbRoot::importMap("Section",$SectionID)==0){
+                    $map=dbRoot::getImportMap("Section", $SectionID);                    
+                    $map['do']->ImportObject($map['data'],$SectionID,$Exhibitors);
+                }                                        
+                $this->SectionID=dbRoot::importMap("Section",$SectionID);
+                
+                $this->insert();
+                $this->find(true);
+            }
+            dbRoot::addToCache($this);
+            dbRoot::importMap($this->__table,$key,$this->ID);
+        }
+    }
+    
     function PrintList(){
     	$list=clone($this);
     	$list->find();

@@ -46,16 +46,14 @@ global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_pat
 		@list($props[])=preg_split("#[./ (]+#", strtolower($_SERVER["SERVER_SOFTWARE"]),2);
 
 		$ini="";
-		$filename=dirname(__FILE__);
+		$filename=__DIR__."/properties";
 		if (isset($TESTMODE)){
 			$props[]="test";
 			//$filename=dirname($filename);
 		}
 
 		//Local is last as it has to beable to overwrite other settings
-		$props[]="local";
-
-		$filename.="/properties";
+		$props[]="local";		
 
 		foreach($props as $prop)
 			if ($prop<>"")

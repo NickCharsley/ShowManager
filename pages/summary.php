@@ -42,20 +42,8 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 
 	print AddButton("Calculate Prize Fund",$root."/pages/summary.php?calc=true");
 	print "<br/><br/>";
-	if (isset($_GET['calc'])){
-		$sql="update `exhibitionclassprize` " .
-			 "set prize=(select prize from prize where prize.id=prizeid)," .
-			 "points=(select points from prize where prize.id=prizeid)" .
-			 "where `exhibitionclassprize`.`ExhibitionClassID` in (" .
-			 "SELECT exhibitionclass.ID " .
-			 "FROM exhibitionclass " .
-			 "INNER JOIN defaults " .
-			 "ON (exhibitionclass.ExhibitionID = defaults.ShowID))";
-		PEARError($db->query($sql));
-	}
-	$sql="delete from exhibitionclassprize where prizeid=0";
-	PEARError($db->query($sql));
-
+        dbRoot::CalculatePrizeFund(isset($_GET['calc']));
+                
 	$title="";
 	PEARError($prize=DB_DataObject::factory("Prize"));
 	$prize->find();
@@ -97,7 +85,7 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 
 	PEARError($sec=DB_DataObject::factory("ExhibitionSection"));
 	$sec->ExhibitionID=$defs->ShowID;
-	$sec->orderBy("sectionNumber");
+	$sec->orderBy("sectionNumber*1");
 	$sec->find();
 	print "<table border='1'>\n";
 	while ($sec->fetch()){
@@ -112,7 +100,7 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 		PEARError($summary=DB_DataObject::factory("Summary"));
 		$summary->ExhibitionID=$defs->ShowID;
 		$summary->ExhibitionSectionID=$sec->ID;
-		$summary->orderBy("ClassNumber");
+		$summary->orderBy("ClassNumber*1");
 		$summary->find();
 		while ($summary->fetch()){
 			$summary->getLinks();
@@ -132,9 +120,11 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 				$res->orderBy("PrizeID");
 				$res->find();
 				while ($res->fetch()){
+                                    try {
 					$res->getLinks();
 					$res->_ExhibitionExhibitorID->getLinks();
 					$results[$res->PrizeID]=$res->_ExhibitionExhibitorID->_ExhibitorID->Name;
+                                    } catch (Exception $e){}
 				}
 				foreach($results as $place){
 					print "<td>$place</td>";
@@ -180,7 +170,7 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 				print "</tr>\n";
 			}
 		}
-		print "<tr><td colspan='2'>Prize Money: </td><td>�".$exhibitor->Prize."</td></tr>\n";
+		print "<tr><td colspan='2'>Prize Money: </td><td>£".$exhibitor->Prize."</td></tr>\n";
 		print "<tr><td colspan='5'><hr/></td></tr>\n";
 //		print "</table>\n";
 	}

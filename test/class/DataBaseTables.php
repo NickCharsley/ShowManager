@@ -24,7 +24,7 @@ abstract class DataBaseTables extends ONS_Tests_DatabaseTestCase
 	 * 
 	 */	
 	function testTableCreated(){
-            LoadDatabase::testInitaliseDatabase();
+            LoadDatabase::testInitaliseDatabase(true);
 
             $do=Safe_DataObject_factory(str_replace("Tables/", "", $this->FileName()));
 

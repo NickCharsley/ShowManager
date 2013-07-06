@@ -30,8 +30,10 @@ define('DB_DATAOBJECT_DELETED'     ,12348);  // Needs to Be deleted
 class DB_DataObject_Exception extends PEAR_Exception {};
 
 global $dbTables;
+global $importMap;
 
 $dbTables=array();
+$importMap=array();
 
 
 class dbRoot extends DB_DataObject {
@@ -41,20 +43,52 @@ class dbRoot extends DB_DataObject {
 	public $fb_useMutators=true;
 
 	static function clearCache($table){
-		global $dbTables;
-		if (isset($dbTables[$table]))
-			unset($dbTables[$table]);
+            global $dbTables;
+            if (isset($dbTables[$table]))
+                    unset($dbTables[$table]);
 	}
+        
+        static function addToCache($dataobject){
+            global $dbTables;
+            $rowID=$dataobject->ID;
+            $table=strtolower($dataobject->__table);
+            if ($rowID<=0) return;
+            if (!(isset($dbTables[$table]) and isset($dbTables[$table][$rowID]))){
+                    //error_log("{$table}[{$rowID}] not in Cache");
+                    $dbTables[$table][$rowID]=$dataobject;
+            }
+            //else error_log("{$table}[{$rowID}] in Cache");
+            return $dbTables[$table][$rowID];            
+        }
 
+        static function getImportMap($table,$key){
+            global $importMap;
+            if ($key<=0) return NULL;
+            $table=strtolower($table);
+            return $importMap[$table][$key];
+        }
+        
+        static function importMap($table,$key,$id=-1){
+            global $importMap;
+            if ($key<=0) return 0;
+            $table=strtolower($table);
+            if ($id>0){
+                $importMap[$table][$key]['map']=$id;
+            }            
+            return $importMap[$table][$key]['map'];
+        }
+        
 	static function fromCache($table,$rowID){
-		global $dbTables;
-		if (!(isset($dbTables[$table]) and isset($dbTables[$table][$rowID]))){
-			//error_log("{$table}[{$rowID}] not in Cache");
-			$dbTables[$table][$rowID]=safe_dataobject_factory($table);
-			$dbTables[$table][$rowID]->get($rowID);
-		}
-		//else error_log("{$table}[{$rowID}] in Cache");
-		return $dbTables[$table][$rowID];
+            global $dbTables;
+            if ($rowID<=0) return;
+            $table=strtolower($table);
+            if (!(isset($dbTables[$table]) and isset($dbTables[$table][$rowID]))){
+                    //error_log("{$table}[{$rowID}] not in Cache");
+                    $dbTables[$table][$rowID]=safe_dataobject_factory($table);
+                    $dbTables[$table][$rowID]->get($rowID);
+            }
+            //else error_log("{$table}[{$rowID}] in Cache");
+            return $dbTables[$table][$rowID];
 	}
 
 /** /
@@ -94,6 +128,38 @@ class dbRoot extends DB_DataObject {
 		}
 	}
 
+        static function CalculatePrizeFund($reset=false){
+            global $db;
+            //This does several things
+            //1 Delete any Prizes that nolonger exist
+            $sql="delete from exhibitionclassprize where prizeid=0";
+            PEARError($db->query($sql));
+            //2 Add Prize combinations that are missing
+            $sql="insert into exhibitionclassprize (ExhibitionClassID,prizeID,prize,points) ".
+                "select ec.ID ExhibitionClassID, p.ID prizeID,prize,points ".
+                "from exhibitionclass ec,prize p ".
+                "where not exists ( ".
+                "    select 1 ".
+                "    from exhibitionclassprize ecp ".
+                "    where ec.ID=ecp.ExhibitionClassID ".
+                "    and p.ID=ecp.prizeID ".
+                ");";
+            krumo($sql);
+            PEARError($db->query($sql));
+            //3 Refreshes Prizes with thier values and points
+            if ($reset){
+                $sql="update `exhibitionclassprize` " .
+                    "set prize=(select prize from prize where prize.id=prizeid)," .
+                    "points=(select points from prize where prize.id=prizeid)" .
+                    "where `exhibitionclassprize`.`ExhibitionClassID` in (" .
+                    "SELECT exhibitionclass.ID " .
+                    "FROM exhibitionclass " .
+                    "INNER JOIN defaults " .
+                    "ON (exhibitionclass.ExhibitionID = defaults.ShowID))";
+		PEARError($db->query($sql));
+            }            
+        }
+        
 	function printForm(){
 		$doForm=clone($this);
 
@@ -152,9 +218,9 @@ class dbRoot extends DB_DataObject {
 			$xml.="\t\t<row>";
 			foreach($fields as $field){
 				if (isset($do->$field))
-					$xml.="<value>".$do->$field."</value>";
+					$xml.="<value>".htmlentities($do->$field,ENT_COMPAT | ENT_XML1)."</value>";
 				else
-					$xml.="<value></value>";
+					$xml.="<null/>";
 			}
 			$xml.="</row>\n";
 		}
@@ -184,6 +250,85 @@ class dbRoot extends DB_DataObject {
 		}
 		$xml.="</dataset>\n";
 		return $xml;
+	}
+
+        function gatherExportDataObjects(&$ret,$Exhibitors=false){
+            //Just add Me
+            if (isset($ret[$this->__table]))
+                if(isset($ret[$this->__table][$this->ID])) return false;
+            $ret[$this->__table][$this->ID]=$this->ID;
+            return true;
+        }
+        
+        function ImportObject($object,$key,$Exhibitors=false){
+            $values=split("\n",$object);
+            krumo($values);
+        }
+  
+        static function getObjectValue($name,$object){
+            if (!(strpos($object,"<value name='$name'")===false)){
+                $id=substr($object,strpos($object,"<value name='$name'"));
+                $id=substr($id,strpos($id,">")+1);
+                $id=substr($id,0,strpos($id,"<"));
+                return $id;
+            }
+        }
+        
+        static function Import($filename,$Exhibitors=false){
+            //Clear $importMap
+            global $importMap;
+            $importMap=array();
+            //Load File
+            $xml=file_get_contents($filename);
+            $a_xml=split('<object',$xml);
+            unset($a_xml[0]);//pre first Object so rubish;
+            //krumo($a_xml);
+            
+            foreach ($a_xml as $object){
+                $object="<object$object";
+                //Get Object Name
+                if (!(strpos($object,"<object name=")===false)){
+                    $name=substr($object,strpos($object,"'")+1);
+                    $name=substr($name,0,strpos($name,"'"));
+                    
+                    //Get Object ID
+                    if (!(strpos($object,"<value name='ID'")===false)){
+                        $id=  dbRoot::getObjectValue('ID',$object);
+                        //Add to $importMap
+                        $importMap[$name][$id]['map']=0;
+                        $importMap[$name][$id]['data']=$object;
+                        $importMap[$name][$id]['do']=safe_dataobject_factory($name);
+                        $importMap[$name][$id]['imported']=false;
+                    }
+                }
+            }
+            foreach ($importMap as $name=>$objects){
+                foreach ($objects as $id=>$object){
+                    if ($object['map']==0){
+                        //$importMap[$name][$id]['imported']=true;
+                        $object['do']->ImportObject($object['data'],$id,$Exhibitors);
+                    }
+                }
+            }
+            krumo($importMap);
+            return true;
+        }
+        
+        function ExportInstance(){
+            if ($this->isView) return "\t<!-- No Export as View (".$this->__table.") -->\n";
+
+            $xml ="\t<object name='".$this->__table."'>\n";
+            $fields=$this->Fields2Backup();
+
+            foreach($fields as $field){
+                if (isset($this->$field))
+                    $xml.="\t\t<value name='$field'>".htmlentities($this->$field,ENT_COMPAT | ENT_XML1)."</value>\n";
+                else
+                    $xml.="<null/>";
+            }
+
+            $xml.="\t</object>\n";
+            return $xml;
 	}
 }
 
