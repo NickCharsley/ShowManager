@@ -18,13 +18,19 @@ class doExhibitionsection extends dbRoot
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
     ###Formbuilder Code
-	public $fb_formHeaderText="Section";
-	public $fb_userEditableFields=array("ID","SectionNumber","SectionID");
-	public $fb_fieldLabels=array("ExhibitionID"=>"Show","SectionID"=>"Section");
-	public $fb_linkNewValue=true;
-	public $fb_linkDisplayFields=array("SectionNumber");
-	###End Formbuilder Code
-	function EditLink(){
+    public $fb_formHeaderText="Section";
+    public $fb_userEditableFields=array("ID","SectionNumber","SectionID");
+    public $fb_fieldLabels=array("ExhibitionID"=>"Show","SectionID"=>"Section");
+    public $fb_linkNewValue=true;
+    public $fb_linkDisplayFields=array("SectionNumber");
+    ###End Formbuilder Code
+    
+    function SectionName(){
+        return dbRoot::fromCache("Section", $this->SectionID)->Name;
+    }
+
+    
+    function EditLink(){
     	return AddButton("Edit","?action=edit&id=".$this->ID);
     }
     

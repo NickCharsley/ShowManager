@@ -70,7 +70,7 @@ class doResults extends doExhibitionClass {
                     print "</td>\n";
                     $results=array(1=>"-",2=>"-",3=>"-");
                     $doResults=safe_dataobject_factory("ExhibitionClassPrize");
-                    $doResults->ExhibitionClassID=$list->ClassID;
+                    $doResults->ExhibitionClassID=$list->ID;
                     $doResults->find();
                     while ($doResults->fetch()){
                         try {
@@ -82,7 +82,9 @@ class doResults extends doExhibitionClass {
                     foreach($results as $place){
                         print "<td>$place</td>";
                     }
-                    print "</tr>\n";            
+                    print "</tr>\n";
+                    
+                    
             }
         }
         print "</table>\n";

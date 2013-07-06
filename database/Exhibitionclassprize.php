@@ -25,6 +25,26 @@ class doExhibitionclassprize extends dbRoot
     public $fb_linkDisplayLevel=2;
     ###End Formbuilder Code
 
+    function SectionName(){
+        return dbRoot::fromCache("ExhibitionClass", $this->ExhibitionClassID)->SectionName();
+    }
+
+    function ClassNumber(){
+        return dbRoot::fromCache("ExhibitionClass",$this->ExhibitionClassID)->ClassNumber;
+    }
+    
+    function ClassName(){
+        return dbRoot::fromCache("ExhibitionClass",$this->ExhibitionClassID)->ClassName();
+    }
+    
+    function ClassDescription(){
+        return dbRoot::fromCache("ExhibitionClass",$this->ExhibitionClassID)->ClassDescription();
+    }
+    
+    function PrizeName(){
+        return dbRoot::fromCache("Prize",$this->PrizeID)->Name;
+    }
+    
     private function getChildren($child,&$ret,$Exhibitors=false){
         $doC=safe_dataobject_factory($child);
         $doC->ExhibitionClassPrizeID=$this->ID;
@@ -90,5 +110,6 @@ class doExhibitionclassprize extends dbRoot
             dbRoot::importMap($this->__table,$key,$this->ID);
         }
     }
+    
 
 }

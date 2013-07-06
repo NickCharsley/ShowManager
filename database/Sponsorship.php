@@ -23,6 +23,23 @@ class doSponsorship extends dbRoot
     public $fb_linkDisplayLevel=4;
     ###End Formbuilder Code
     
+    function ClassNumber(){
+        return dbRoot::fromCache("ExhibitionClassPrize",$this->ExhibitionClassPrizeID)->ClassNumber();
+    }
+    
+    function ClassName(){
+        return dbRoot::fromCache("ExhibitionClassPrize",$this->ExhibitionClassPrizeID)->ClassName();
+    }
+    
+    function ClassDescription(){
+        return dbRoot::fromCache("ExhibitionClassPrize",$this->ExhibitionClassPrizeID)->ClassDescription();
+    }
+    
+    function PrizeName(){
+        return dbRoot::fromCache("ExhibitionClassPrize",$this->ExhibitionClassPrizeID)->PrizeName();
+    }
+
+    
     function ImportObject($object,$key,$Exhibitors=false){
         if (!isset($this->ID)){
             //Exhibition Class Found by Class Number and Exhibition ID
@@ -56,7 +73,10 @@ class doSponsorship extends dbRoot
     
     function PrintList(){
     	$list=clone($this);
-    	$list->find();
+        $list->query("select * from sponsorship where exhibitionclassprizeid in
+                    (select id from exhibitionclassprize where exhibitionclassid in (
+                        select id from exhibitionclass where exhibitionid=".$this->ExhibitionID."));");
+    	//$list->find();
         print "<table>\n";
 	while ($list->fetch()){
             
@@ -72,16 +92,14 @@ class doSponsorship extends dbRoot
                 print "</td>\n";
             print "</tr>\n";
             //now print components....
-            $doECP=$list->getLink("ExhibitionClassPrizeID");            
-            $doEC=$doECP->getLink("ExhibitionClassID");
-            $doC=$doEC->getLink("ClassID");
-            $doP=$doECP->getLink("PrizeID");
-            
+
             print "<tr><td>&nbsp</td><td colspan=3>";
-            print $doEC->ClassNumber.") ";
-            print $doC->Name;
-            print " (".$doC->Description."): ";
-            print $doP->Name;
+            print $list->ClassNumber().") ";
+            print $list->ClassName();
+            $desc=$list->ClassDescription();
+            if ($desc<>"")
+                print " ($desc): ";
+            print $list->PrizeName();
             print"</td></tr>\n";
         }
 	print "</table>\n";

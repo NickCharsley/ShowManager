@@ -144,7 +144,7 @@ class dbRoot extends DB_DataObject {
                 "    where ec.ID=ecp.ExhibitionClassID ".
                 "    and p.ID=ecp.prizeID ".
                 ");";
-            krumo($sql);
+            //krumo($sql);
             PEARError($db->query($sql));
             //3 Refreshes Prizes with thier values and points
             if ($reset){

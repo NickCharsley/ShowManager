@@ -155,17 +155,18 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 			$prize->ExhibitionExhibitorID=$number->ID;
 			$prize->find();
 			while ($prize->fetch()){
-				$prize->getLinks();
-				if ($prize->ExhibitionClassID) $prize->_ExhibitionClassID->getLinks();
 				print "<tr>\n";
 					print "<td></td><td></td><td>\n";
-						print $prize->_ExhibitionClassID->_ExhibitionSectionID->Name;
+						print $prize->SectionName();
 					print "</td>\n";
 					print "<td>\n";
-						print "Class ".$prize->_ExhibitionClassID->ClassNumber.": ".$prize->_ExhibitionClassID->_ClassID->Name." (".$prize->_ExhibitionClassID->_ClassID->Description.")";
+						print "Class ".$prize->ClassNumber().": ".$prize->ClassName();
+                                                $desc=$prize->ClassDescription();
+                                                if ($desc<>"")
+                                                    print " ($desc)";
 					print "</td>\n";
 					print "<td>\n";
-						print $prize->_PrizeID->Name;
+						print $prize->PrizeName();
 					print "</td>\n";
 				print "</tr>\n";
 			}

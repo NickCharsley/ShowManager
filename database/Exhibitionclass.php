@@ -27,6 +27,20 @@ class doExhibitionclass extends dbRoot
     public $fb_linkDisplayFields=array("ExhibitionID","ExhibitionSectionID","ClassID");
 
     ###End Formbuilder Code
+    
+    function SectionName(){
+        return dbRoot::fromCache("ExhibitionSection", $this->ExhibitionSectionID)->SectionName();
+    }
+      
+    function ClassName(){
+        return dbRoot::fromCache("Class",$this->ClassID)->Name;
+    }
+    
+    function ClassDescription(){
+        return dbRoot::fromCache("Class",$this->ClassID)->Description;
+    }
+    
+    
     function ImportObject($object,$key,$Exhibitors=false){
         if (!isset($this->ID)){
             //Exhibition Class Found by Class Number and Exhibition ID
