@@ -37,16 +37,46 @@ class doResults extends doExhibitionClass {
 		$title.="<td>".$prize->Name."</td>";
 	}
         $list=clone($this);
+        print "<script type='text/javascript'>
+        $(document).ready(function () {
+            
+            var index = $.jqx.cookie.cookie('jqxTabs_jqxWidget');
+            if (undefined == index) index = 0;
+            $('#jqxTabs').jqxTabs({selectedItem: index, width: 900 });
+            // on to the select event.
+            $('#jqxTabs').on('selected', function (event) {
+                // save the index in cookie.
+                $.jqx.cookie.cookie('jqxTabs_jqxWidget', event.args.item);
+            });
+        });
+    </script>";
+        
+        print "<div id='jqxWidget'>";
+        print "<div style='float: left;' id='jqxTabs'>";
+        PEARError($sec_l=DB_DataObject::factory("ExhibitionSection"));
+        $sec_l->ExhibitionID=$list->ExhibitionID;
+	$sec_l->orderBy("SectionNumber*1,SectionNumber");   
+	$sec_l->find();
+        print '<ul>'."\n";
+        while ($sec_l->fetch()){
+            $sec_l->getLinks();
+            print '<li>';
+            print "Section ".$sec_l->SectionNumber.": " ;
+            print $sec_l->_SectionID->Name;
+            print '</li>';
+        }
+        print "</ul>\n";        
         
         PEARError($sec=DB_DataObject::factory("ExhibitionSection"));
 	$sec->ExhibitionID=$list->ExhibitionID;
 	$sec->orderBy("SectionNumber*1,SectionNumber");   
 	$sec->find();
-	print "<table border='1'>\n";
 	while ($sec->fetch()){
+            print '<div>';
+            print "<table border='1' width='100%'>\n";
             $sec->getLinks();
             print "<tr>\n";
-                print "<td colspan='3'>\n";
+                print "<td colspan='2'>\n";
                     print "Section ".$sec->SectionNumber.": " ;
                     print $sec->_SectionID->Name;
                 print "</td>\n";
@@ -60,7 +90,7 @@ class doResults extends doExhibitionClass {
             while ($list->fetch()){
                 $list->getLinks();
                 print "<tr>\n";
-                    print "<td colspan='2' align='right'>\n";
+                    print "<td width='150px'>\n";
                         print "&nbsp;".$list->EditLink();
                     print "</td>\n";
                     print "<td>\n";
@@ -80,38 +110,23 @@ class doResults extends doExhibitionClass {
                     }    
                     
                     foreach($results as $place){
-                        print "<td>$place</td>";
+                        print "<td width='60px'>$place</td>";
                     }
                     print "</tr>\n";
-                    
-                    
             }
+            print "</table>\n";
+            print "</div>\n";
         }
-        print "</table>\n";
+        print "</div>\n";
+        print "</div>\n";
     }
     
 }
 
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 	include_once("ons_common.php");
+        
         dbRoot::showPage("Results");		
 		
-/** /
-				$results=array(1=>"-",2=>"-",3=>"-");
-				PEARError($res=DB_DataObject::factory("ExhibitionClassPrize"));
-				//DB_DataObject::debugLevel(5);
-				$res->ExhibitionClassID=$list->ID;
-				$res->orderBy("PrizeID");
-				$res->find();
-				while ($res->fetch()){
-					$res->getLinks();
-					$results[$res->PrizeID]=$res->_ExhibitionExhibitorID->ExhibitorNumber;
-				}
-		}
-	}
-	print "</table>\n";
-
-	print "<hr/>";
-/**/
 }
 ?>

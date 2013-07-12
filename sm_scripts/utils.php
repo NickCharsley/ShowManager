@@ -14,14 +14,23 @@ if (!defined("__COMMON__"))
 error_log("Enter ".__FILE__);
 
     function PageTitle(){
+        global $root;
         if (!headers_sent())
             header('Content-Type: text/html; charset=utf-8');
         $defs=dbRoot::fromCache("Defaults",1);
-
+        print "<head>\n";
         print "<title>Show Manager";
         if (isset($GLOBALS['TESTMODE'])) print ":".$GLOBALS['TESTMODE'];
         print "</title>";
 
+        print "<link rel='stylesheet' href='$root/jqwidgets/styles/jqx.base.css' type='text/css' />";
+        print "<script type='text/javascript' src='$root/scripts/gettheme.js'></script>";
+        print "<script type='text/javascript' src='$root/scripts/jquery-1.10.1.min.js'></script>";
+        print "<script type='text/javascript' src='$root/jqwidgets/jqxcore.js'></script>";
+        print "<script type='text/javascript' src='$root/jqwidgets/jqxtabs.js'></script>";
+                
+        print "</head>\n";
+                
         if ($defs->ShowName==""){
             include("pages/ShowName.php");
             return false;
