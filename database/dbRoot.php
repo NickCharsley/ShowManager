@@ -185,6 +185,7 @@ class dbRoot extends DB_DataObject {
 	}
 
 	function printList(){}
+        function footer(){}
 
 	static function showPage($type){
 		PEARError($page=safe_DataObject_factory($type));
@@ -196,6 +197,7 @@ class dbRoot extends DB_DataObject {
 			$page->UpdateDefaults();
 			$page->PrintList();
 			$page->PrintForm();
+                        $page->Footer();
 		}
 	}
 

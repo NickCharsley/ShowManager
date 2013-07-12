@@ -12,11 +12,14 @@
  	include_once('ons_common.php');
  error_log("Enter ".__FILE__);
 //************************************************
- if (isset($_GET['backupdb'])){
- 	print_pre(dbRoot::BackupDB());
- 	die;
+ if (isset($_GET['reset'])){
+    include('test/class/LoadDatabase.php');
+    LoadDatabase::testInitaliseDatabase(true);
+    diehere();
  }
 
+ 
+ 
  PageTitle();
 
 

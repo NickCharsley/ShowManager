@@ -37,6 +37,7 @@ class doExhibitiontrophyclass extends dbRoot
                 $map=dbRoot::getImportMap("Trophy", $TrophyID);                    
                 $map['do']->ImportObject($map['data'],$TrophyID,$Exhibitors);
             }                                        
+            $this->TrophyID=dbRoot::importMap("Trophy",$TrophyID);                
             
             $ExhibitionClassID=dbRoot::getObjectValue("ExhibitionClassID", $object);
             if (dbRoot::importMap("ExhibitionClass",$ExhibitionClassID)==0){

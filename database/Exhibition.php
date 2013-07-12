@@ -99,6 +99,32 @@ class doExhibition extends dbRoot
         return $xml;
     }
 
+    function footer(){             
+        global $uploadedFile;
+        $uploadForm = new HTML_QuickForm('upload_form', 'post');
+        $this->uploadedFile =& $uploadForm->addElement('file', 'filename', 'File:');
+        $uploadForm->addRule('filename', 'You must select a file', 'uploadedfile');
+        $uploadForm->addElement('submit', 'btnUpload', 'Upload');
+        if ($uploadForm->validate()) {
+            $uploadForm->process(array($this,'process'), true);
+        }
+        else {
+            $uploadForm->display();
+        }
+    }
+
+    function process($values) {
+        
+        krumo($this->uploadedFile);
+        if ($this->uploadedFile->isUploadedFile()) {
+            $value=$this->uploadedFile->getValue();            
+            dbRoot::Import($value['tmp_name']);
+        }
+        else {
+            print "No file uploaded";
+        }
+    }
+    
     static function Remove($ExhibitionID){
     }
 
@@ -116,9 +142,11 @@ class doExhibition extends dbRoot
             //}
         }
     }
-
-    
 }
+
+        
+
+
 //** Eclipse Debug Code **************************
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 	include_once("ons_common.php");

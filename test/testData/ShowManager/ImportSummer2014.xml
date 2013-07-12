@@ -4672,7 +4672,7 @@
 		<value name='ID'>12</value>
 		<value name='Name'>Flowering Plant 2nd</value>
 		<value name='ExhibitionClassPrizeID'>2</value>
-		<value name='Prize'>£6 Voucher (Bickerdike Garden Centre)</value>
+		<value name='Prize'>£5 Voucher (Bickerdike Garden Centre)</value>
 	</object>
 	<object name='sponsorship'>
 		<value name='ID'>13</value>
@@ -4712,21 +4712,21 @@
 	</object>
 	<object name='sponsorship'>
 		<value name='ID'>19</value>
-		<value name='Name'>Fireworks 1st</value>
+		<value name='Name'>Embroidery 1st</value>
 		<value name='ExhibitionClassPrizeID'>2</value>
-		<value name='Prize'>£6 Voucher (Ruby Tuesday)</value>
+		<value name='Prize'>£5 (Wool-n-Things)</value>
 	</object>
 	<object name='sponsorship'>
 		<value name='ID'>20</value>
-		<value name='Name'>Fireworks 2nd</value>
+		<value name='Name'>Embroidery 2nd</value>
 		<value name='ExhibitionClassPrizeID'>2</value>
-		<value name='Prize'>£4 Voucher (Ruby Tuesday)</value>
+		<value name='Prize'>£3 Voucher (Wool-n-Things)</value>
 	</object>
 	<object name='sponsorship'>
 		<value name='ID'>21</value>
-		<value name='Name'>Fireworks 3rd</value>
+		<value name='Name'>Embroidery 3rd</value>
 		<value name='ExhibitionClassPrizeID'>2</value>
-		<value name='Prize'>£3 Voucher (Ruby Tuesday)</value>
+		<value name='Prize'>£2 Voucher (Wool-n-Things)</value>
 	</object>
 	<object name='sponsorship'>
 		<value name='ID'>22</value>
@@ -4788,7 +4788,93 @@
 		<value name='ExhibitionClassPrizeID'>9</value>
 		<value name='Prize'>£2 (Mrs Gray)</value>
 	</object>
-	<object name='exhibitiontrophyclass'>
+	<object name='sponsorship'>
+		<value name='ID'>25</value>
+		<value name='Name'>Foliage Plant 1st</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>£10 Voucher (Bickerdike Garden Centre)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>26</value>
+		<value name='Name'>Foliage Plant 2nd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>£5 Voucher (Bickerdike Garden Centre)</value>
+	</object>        
+	<object name='sponsorship'>
+		<value name='ID'>27</value>
+		<value name='Name'>Knitting 1st</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>£3 (Mrs J Vallis)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>28</value>
+		<value name='Name'>Knitting 2nd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>£2 (Mrs J Vallis)</value>
+	</object>        
+	<object name='sponsorship'>
+		<value name='ID'>29</value>
+		<value name='Name'>Knitting 3rd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>£1 (Mrs J Vallis)</value>
+	</object>        
+
+	<object name='sponsorship'>
+		<value name='ID'>30</value>
+		<value name='Name'>Garden in a Tray (I) 1st</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>£5 (Mr Spriggs)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>31</value>
+		<value name='Name'>Garden in a Tray (I) 2nd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>£3 (Mr Spriggs)</value>
+	</object>        
+	<object name='sponsorship'>
+		<value name='ID'>32</value>
+		<value name='Name'>Garden in a Tray (I) 3rd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>£2 (Mr Spriggs)</value>
+	</object>        
+	<object name='sponsorship'>
+		<value name='ID'>33</value>
+		<value name='Name'>Garden in a Tray (II) 1st</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>£5 (Mr Spriggs)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>34</value>
+		<value name='Name'>Garden in a Tray (II) 2nd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>£3 (Mr Spriggs)</value>
+	</object>        
+	<object name='sponsorship'>
+		<value name='ID'>35</value>
+		<value name='Name'>Garden in a Tray (II) 3rd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>£2 (Mr Spriggs)</value>
+	</object>        
+	<object name='sponsorship'>
+		<value name='ID'>36</value>
+		<value name='Name'>Garden in a Tray (III) 1st</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>£5 (Mr Spriggs)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>37</value>
+		<value name='Name'>Garden in a Tray (III) 2nd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>£3 (Mr Spriggs)</value>
+	</object>        
+	<object name='sponsorship'>
+		<value name='ID'>38</value>
+		<value name='Name'>Garden in a Tray (III) 3rd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>£2 (Mr Spriggs)</value>
+	</object>        
+
+        <object name='exhibitiontrophyclass'>
 		<value name='ID'>1</value>
 		<value name='TrophyID'>1</value>
 		<value name='ExhibitionClassID'>29</value>

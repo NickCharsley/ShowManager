@@ -73,6 +73,7 @@ class doExhibitionsection extends dbRoot
     
     function PrintList(){
     	$list=clone($this);
+        $list->orderBy("SectionNumber*1,SectionNumber");
     	$list->find();
     	print "<table>\n";
     	while ($list->fetch()){
