@@ -177,8 +177,9 @@ class dbRoot extends DB_DataObject {
 			$form->freeze();
 		}
 
-		print AddButton("New","?action=new");
+		print AddButton("New","?action=new#form");
 		print "<br/><br/><hr/>";
+		
 		$form->display();
 
 		print "<hr/>";
@@ -195,6 +196,7 @@ class dbRoot extends DB_DataObject {
 
 		if (PageTitle()){
 			$page->UpdateDefaults();
+			print AddButton("New","?action=new#form");
 			$page->PrintList();
 			$page->PrintForm();
                         $page->Footer();
