@@ -24,6 +24,57 @@ class doResults extends doExhibitionClass {
 									  "toField"=>"PrizeID"
 									 )
 							   );
+     	function printForm(){
+            $doForm=clone($this);
+
+            if (isset($_GET['action']) and isset($_GET['id'])){
+                    $doForm->get($_GET['id']);
+                    if ($_GET['action']<>'edit')
+                            $doForm=clone($this);
+            }
+
+            $fbForm =&DB_DataObject_FormBuilder::create($doForm);
+            $form =& $fbForm->getForm();
+            $this->form=$fbForm;
+            if ($form->validate()) {
+                    //DB_DataObject::debugLevel(5);
+                    $form->process(array(&$this,'processForm'), false);
+                    $form->freeze();
+            }
+
+            print AddButton("New","?action=new#form");
+            print "<br/><br/><hr/>";
+
+            $form->display();
+
+            print "<hr/>";
+    }
+
+        
+        function processForm($values){
+            //krumo($this);
+            //krumo($values);
+            if (isset($values['__crossLink_exhibitionclassprize_ExhibitionClassID_PrizeID'])){
+                foreach ($values['__crossLink_exhibitionclassprize_ExhibitionClassID_PrizeID'] as $prize){
+                    $doP=dbRoot::fromCache("Prize", $prize);
+                    $ExhibitorID=$values['__crossLink_exhibitionclassprize_ExhibitionClassID_PrizeID__'.$prize.'_ExhibitionExhibitorID_'];
+                    if ($ExhibitorID>0){
+                        $doECP=safe_dataobject_factory("ExhibitionClassPrize");
+
+                        $doECP->ExhibitionClassID=$values['ID'];
+                        $doECP->PrizeID=$prize;
+                        $action=$doECP->find(true)?'update':'insert';
+                        $doECP->ExhibitionExhibitorID=$ExhibitorID;
+                        $doECP->Points=$doP->Points;
+                        $doECP->Prize=$doP->Prize;
+                        $doECP->$action();
+                        //krumo($doECP);
+                    }
+                }
+            }
+            //diehere();
+        }
+        
 	###End Formbuilder Code
 	function EditLink(){
     	return AddButton("Class ".$this->ClassNumber,"?action=edit&id=".$this->ID."#form");
