@@ -13,6 +13,7 @@ class doExhibitionsection extends dbRoot
     public $ID;                              // int(4)  primary_key not_null
     public $ExhibitionID;                    // int(4)  unique_key not_null
     public $SectionNumber;                   // varchar(20)  unique_key not_null
+    public $Description;                     // varchar(255)  unique_key
     public $SectionID;                       // int(4)  unique_key not_null
 
     /* the code above is auto generated do not remove the tag below */
@@ -51,6 +52,7 @@ class doExhibitionsection extends dbRoot
             //Exhibition Section Found by Section Number and Exhibition ID
             $this->SectionNumber=dbRoot::getObjectValue("SectionNumber", $object);
             $this->ExhibitionID=dbRoot::importMap("Exhibition", dbRoot::getObjectValue("ExhibitionID", $object));
+            $this->Description=dbRoot::getObjectValue("Description", $object);
             if ($this->find(true)){
                 //Need to check data
                 diehere();
@@ -61,7 +63,7 @@ class doExhibitionsection extends dbRoot
                     $map=dbRoot::getImportMap("Section", $SectionID);                    
                     $map['do']->ImportObject($map['data'],$SectionID,$Exhibitors);
                 }                                        
-                $this->SectionID=dbRoot::importMap("Section",$SectionID);
+                $this->SectionID=dbRoot::importMap("Section",$SectionID);                
                 
                 $this->insert();
                 $this->find(true);
@@ -71,25 +73,75 @@ class doExhibitionsection extends dbRoot
         }
     }
     
+    function buildList(){
+        global $root;
+        if (!isset($this->ExhibitionID) or $this->ExhibitionID<1 ){
+            if (!headers_sent()) {
+                header("location:$root");
+            }
+            return "Need to Set Default Show.<hr/>";
+        }
+    	$list=clone($this);
+        $list->orderBy("SectionNumber*1,SectionNumber");
+    	$list->find();
+    	$print = "<table>\n";
+    	while ($list->fetch()){
+    		$list->getLinks();
+    		$print.= "<tr>\n";
+    		$print.= "<td>\n";
+    		$print.= "Section ".$list->SectionNumber.": " ;
+    		$print.= $list->_SectionID->Name;
+                if (isset($list->Description)){
+                    $print.=" (".$list->Description.")";
+                }
+    		$print.= "</td>\n";
+    		$print.= "<td>\n";
+    		$print.= $list->EditLink();
+    		$print.= "</td>\n";
+    		$print.= "</tr>\n";
+    	}
+    	$print.= "</table>\n";    
+        return $print;                
+    }
+    
     function PrintList(){
+        if (!isset($this->ExhibitionID)){
+            print "Need to Set Default Show.<hr/>";
+            return;
+        }
     	$list=clone($this);
         $list->orderBy("SectionNumber*1,SectionNumber");
     	$list->find();
     	print "<table>\n";
     	while ($list->fetch()){
-    		$list->getLinks();
-    		//print_pre($list);
-    		print "<tr>\n";
-    		print "<td>\n";
-    		print "Section ".$list->SectionNumber.": " ;
-    		print $list->_SectionID->Name;
-    		print "</td>\n";
-    		print "<td>\n";
-    		print $list->EditLink();
-    		print "</td>\n";
-    		print "</tr>\n";
+            $list->getLinks();
+            //print_pre($list);
+            print "<tr>\n";
+            print "<td>\n";
+            print "Section ".$list->SectionNumber.": " ;
+            print $list->_SectionID->Name;
+            if (isset($list->Description)){
+                print " (".$list->Description.")";
+            }
+            print "</td>\n";
+            print "<td>\n";
+            print $list->EditLink();
+            print "</td>\n";
+            print "</tr>\n";
     	}
     	print "</table>\n";    	 
+    }
+    
+    function buildForm(){
+        return (isset($this->ExhibitionID))
+               ?parent::buildForm()
+               :"";
+    }
+    
+    function printForm(){
+        if (isset($this->ExhibitionID)) {
+            parent::printForm();
+        }
     }
 }
 

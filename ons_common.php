@@ -26,123 +26,148 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
 
 global $web,$root,$root_path,$test_path,$ips,$fps,$db,$mobile,$local,$common_path,$system,$do_ini,$term;
 
-	function loadProperties(){
-		global $show_properties;
-		global $TESTMODE;
+function loadProperties(){
+    global $show_properties;
+    global $TESTMODE;
+    
+    if ($show_properties){
+        print ("<h1>Listing of Expected Property Files</h1>\n");
+    }
+    
+    @$props['Section_OS']=strtolower(PHP_OS);
+    @$props['Section_SERVER']=strtolower($_SERVER["COMPUTERNAME"]);
+    @$props['Section_COMPUTERNAME']=strtolower(getenv("COMPUTERNAME"));
+    @$doms=preg_split("#[.]+#", strtolower($_SERVER["SERVER_NAME"]));
+    if (count($doms)) {
+        $url=$doms[0];
+        $props['section_Domain_0']=$url;
+        for($index=1;$index<count($doms);$index++){
+            $url.=".{$doms[$index]}";
+            $props["section_Domain_$index"]=$url;
+        }
+    }
+    @$props['Section_TERM']=strtolower($_SERVER["TERM"]);
+    @list($props["Section_SERVER_SOFTWARE"])=preg_split("#[./ (]+#", strtolower($_SERVER["SERVER_SOFTWARE"]),2);
 
-		@$props[]=strtolower(PHP_OS);
-		@$props[]=strtolower($_SERVER["COMPUTERNAME"]);
-		@$props[]=strtolower(getenv("COMPUTERNAME"));
-		@$doms=preg_split("#[.]+#", strtolower($_SERVER["SERVER_NAME"]));
-		if (count($doms)){
-			$url=$doms[0];
-			$props[]=$url;
-			for($index=1;$index<count($doms);$index++){
-				$url.=".{$doms[$index]}";
-				$props[]=$url;
-			}
-		}
-		@$props[]=strtolower($_SERVER["TERM"]);
-		@list($props[])=preg_split("#[./ (]+#", strtolower($_SERVER["SERVER_SOFTWARE"]),2);
+    $ini="";
+    $filename=__DIR__."/properties";
+    if (isset($TESTMODE)){
+        $props['Section_TEST']="test";
+        $props['Section_TEST_LOCAL']="local.test";
+    }
 
-		$ini="";
-		$filename=__DIR__."/properties";
-		if (isset($TESTMODE)){
-			$props[]="test";
-			//$filename=dirname($filename);
-		}
+    //Local is last as it has to beable to overwrite other settings
+    $props['Section_LOCAL']="local";        
 
-		//Local is last as it has to beable to overwrite other settings
-		$props[]="local";		
+    foreach($props as $type=>$prop)
+        if ($prop<>"") {
+            if ($show_properties) {
+                print "<h2>$prop.properties</h2><pre>";
+            }
+            if ($type<>""){
+                $ini.="\n$type=$prop";
+            }
+            @$data=file_get_contents("$filename/$prop.properties");
+            $ini.="\n$data";
+            if ($show_properties) {
+                print "$data</pre><hr/>";
+            }
+        }
 
-		foreach($props as $prop)
-			if ($prop<>"")
-				@$ini.="\n".file_get_contents("$filename/$prop.properties");
+    $vars=parse_ini_string($ini);
+    foreach($vars as $var=>$values)
+        $GLOBALS[$var]=$values;
 
-		$vars=parse_ini_string($ini);
-		foreach($vars as $var=>$values)
-			$GLOBALS[$var]=$values;
+    if ($show_properties){
+        print"<h3>Vars</h3>";
+        print ("<pre>\n");
+        print_r($vars);
+        print ("</pre>");
+        print"<h3>Globals</h3>";
+        print ("<pre>\n");
+        print_r($GLOBALS);
+        print ("</pre>");
+        die;
+    }
+    return array_keys($vars);
+}
 
-		if ($show_properties){
-			print ("<pre>\n");
+$root_path=  dirname(__FILE__);
 
-			foreach($props as $prop)
-				if ($prop<>"")
-					print("$prop.properties\n");
-			print($ini);
+loadProperties();
 
-			print_r($vars);
+ini_set('log_errors',"on");
+ini_set('error_log',$error_log);
+//ini_set('display_errors',"on");
+ini_set('max_execution_time',30000);
 
-			print ("Listing of Expected Property Files\n");
-			print ("</pre>");
-		}
-		return array_keys($vars);
-	}
+error_log("Enter ".__FILE__);//Late so it goes to the Error Log :)
+error_log("ShowManager Properties Loaded");
 
-	loadProperties();
+$time_start=microtime(true);
+$debug=isset($_GET['debug']);
 
-	ini_set('log_errors',"on");
-	ini_set('error_log',$root_path."/test/php_error.log");
-	ini_set('max_execution_time',30000);
+if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
 
-	error_log("Enter ".__FILE__);//Late so it goes to the Error Log :)
-	error_log("ShowManager Properties Loaded");
-
-    $time_start=microtime(true);
-    $debug=isset($_GET['debug']);
-
-    if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-
-    ini_set("include_path",ini_get("include_path")
-                            /*Project Code*/
-                            .$ips.$root_path
-                            .$ips.$root_path.$fps."script"
-                            .$ips.$root_path.$fps."class"
-                            .$ips.$root_path.$fps."font"
-                            .$ips.$root_path.$fps."pages"
-                            .$ips.$root_path.$fps."extensions"
-                            .$ips.$root_path.$fps."database"
-                            /*Test Code*/
-                            .(isset($test_path)?$ips.$test_path.$fps."class":"")
-                            /*Common Code*/
-                            .$ips.$common_path
-                            .$ips.$common_path.$fps."script"
-                            .$ips.$common_path.$fps."class"
-                            .$ips.$common_path.$fps."database"
-                            .$ips.$common_path.$fps."font"
-                            .$ips.$common_path.$fps."pages"
-                            .$ips.$common_path.$fps."extensions"
-                            .$ips.$common_path.$fps."googleApi"
-                            .$ips.$common_path.$fps."googleApi".$fps."contrib"
-                            );
-    if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
+ini_set("include_path",ini_get("include_path")
+    /*Project Code*/
+    .$ips.$root_path
+    .$ips.$root_path.$fps."script"
+    .$ips.$root_path.$fps."class"
+    .$ips.$root_path.$fps."font"
+    .$ips.$root_path.$fps."pages"
+    .$ips.$root_path.$fps."extensions"
+    .$ips.$root_path.$fps."database"
+    /*Test Code*/
+    .(isset($test_path)?$ips.$test_path.$fps."class":"")
+    .(isset($test_path)?$ips.$test_path.$fps."Functional":"")
+    /*Common Code*/
+    .$ips.$common_path
+    .$ips.$common_path.$fps."script"
+    .$ips.$common_path.$fps."class"
+    .$ips.$common_path.$fps."database"
+    .$ips.$common_path.$fps."font"
+    .$ips.$common_path.$fps."pages"
+    .$ips.$common_path.$fps."extensions"
+    .$ips.$common_path.$fps."googleApi"
+    .$ips.$common_path.$fps."googleApi".$fps."contrib"
+);
+if ($debug) print(ini_get("include_path"));
+if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
 /************************************************************\
 *   Common Utils
 \************************************************************/
-    if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-    @include_once "script/utils.php";
-    @include_once "sm_scripts/utils.php";
-    @include_once "const.php";
-    if (isset($GLOBALS['test'])) krumo::disable();
-    PEAR::setErrorHandling(PEAR_ERROR_CALLBACK, 'PEAR_ErrorToPEAR_Exception');
+if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
+#if it dies here check sudo pear install -a ezc/eZComponents 
+@include_once "script/utils.php";
+if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
+@include_once "sm_scripts/utils.php";
+if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
+@include_once "const.php";
+if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
+if (isset($GLOBALS['test'])) {
+    krumo::disable();
+}
+if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
+//PEAR::setErrorHandling(PEAR_ERROR_CALLBACK, 'PEAR_ErrorToPEAR_Exception');
 /***********************************************************\
  * Database Connectivity
-\***********************************************************/
-    
+\***********************************************************/    
+if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
+if (file_exists(buildpath($root_path,"database",$do_ini))){
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-    if (file_exists(buildpath($root_path,"database",$do_ini))){
-    	if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-        include_once "database/utils.php";
-        if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
-
-        $db=setupDB($root_path,$do_ini,$debug);
-
-    }
-	else {
-		print("Missing ".buildpath($root_path,"database",$do_ini)."?");
-		dieHere();
-	}
+    #if it dies here it's probably missing pear DB etc
+    include_once "database/utils.php";
     if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
+
+    $db=setupDB($root_path,$do_ini,$debug);
+
+}
+else {
+    print("Missing ".buildpath($root_path,"database",$do_ini)."?");
+    dieHere();
+}
+if ($debug) print(__FILE__."(".__LINE__.")<br/>\n");
 
   //** Eclipse Debug Code **************************
 if (str_replace("/","\\",__FILE__)==str_replace("/","\\",$_SERVER["SCRIPT_FILENAME"])){

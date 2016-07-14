@@ -19,15 +19,17 @@ class ImportSummer2014Test extends PHPUnit_Framework_TestCase
                array("trophy",array(2,36,34),13),//11
                     );
     }                
-    
+    /**
+     * @medium
+     */
     function testResetDatabase(){
-        global $db;
-        $this->assertTrue(LoadDatabase::testInitaliseDatabase(true));
+        $this->assertTrue(LoadDatabase::testInitaliseDatabase(true,"v3"));
     }
     
     /**
      * @depends testResetDatabase
      * @dataProvider DataRowProvider
+     * @medium
      */
     function testPreMinCorrect($table,$pre,$post){
         global $db;
@@ -40,6 +42,7 @@ class ImportSummer2014Test extends PHPUnit_Framework_TestCase
     /**
      * @depends testResetDatabase
      * @dataProvider DataRowProvider
+     * @medium
      */
     function testPreMaxCorrect($table,$pre,$post){
         global $db;
@@ -52,6 +55,7 @@ class ImportSummer2014Test extends PHPUnit_Framework_TestCase
     /**
      * @depends testResetDatabase
      * @dataProvider DataRowProvider
+     * @medium
      */
     function testPreCountCorrect($table,$pre,$post){
         global $db;
@@ -66,6 +70,7 @@ class ImportSummer2014Test extends PHPUnit_Framework_TestCase
      * @depends testPreMinCorrect     
      * @depends testPreMaxCorrect     
      * @depends testPreMaxCorrect     
+     * @large 
      */
     function testLoadImport(){              
         $this->assertTrue(dbRoot::Import(buildPath(__DIR__,'..','testData','ShowManager','ImportSummer2014.xml')));
@@ -73,6 +78,7 @@ class ImportSummer2014Test extends PHPUnit_Framework_TestCase
 
     /**
      * @depends testLoadImport
+     * @large 
      * @dataProvider DataRowProvider
      */
     function testPostMinCorrect($table,$pre,$post){
@@ -85,6 +91,7 @@ class ImportSummer2014Test extends PHPUnit_Framework_TestCase
     
     /**
      * @depends testLoadImport
+     * @large 
      * @dataProvider DataRowProvider
      */
     function testPostMaxCorrect($table,$pre,$post){
@@ -97,6 +104,7 @@ class ImportSummer2014Test extends PHPUnit_Framework_TestCase
     
     /**
      * @depends testLoadImport
+     * @large 
      * @dataProvider DataRowProvider
      */
     function testPostCountCorrect($table,$pre,$post){
@@ -106,7 +114,4 @@ class ImportSummer2014Test extends PHPUnit_Framework_TestCase
         $row = $res->fetchRow();
         $this->assertEquals($post, $row['count']-$pre[2]);
     }
-    
-    
 }
-?>

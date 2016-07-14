@@ -13,7 +13,7 @@ class doDefaultexhibitionexhibitor extends dbRoot
     public $ID;                              // int(4)   not_null
     public $ExhibitionID;                    // int(4)   not_null default_7
     public $ExhibitorNumber;                 // int(4)   not_null
-    public $ExhibitorID;                     // int(4)   not_null
+    public $ExhibitorName;                   // varchar(255)  
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE

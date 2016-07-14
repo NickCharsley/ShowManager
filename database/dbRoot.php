@@ -42,10 +42,23 @@ class dbRoot extends DB_DataObject {
 
 	public $fb_useMutators=true;
 
-	static function clearCache($table){
+	static function clearCache($table=""){
             global $dbTables;
-            if (isset($dbTables[$table]))
-                    unset($dbTables[$table]);
+            if ($table==""){
+/*                foreach(array_keys($dbTables) as $key)
+                {
+                    dbRoot::clearCache($key);
+                }
+*/                unset($dbTables);
+            }
+            else if (isset($dbTables[$table])){
+                //have to free them all
+/*                foreach($dbTables[$table] as $db ){
+                    $db->free();
+                    unset($db);
+                }
+*/                unset($dbTables[$table]);
+            }
 	}
         
         static function addToCache($dataobject){
@@ -160,6 +173,33 @@ class dbRoot extends DB_DataObject {
             }            
         }
         
+        function buildForm(){
+		$doForm=clone($this);
+
+		if (isset($_GET['action']) and isset($_GET['id'])){
+			$doForm->get($_GET['id']);
+			if ($_GET['action']<>'edit')
+				$doForm=clone($this);
+		}
+
+		$fbForm =&DB_DataObject_FormBuilder::create($doForm);
+		$form =& $fbForm->getForm();
+		if ($form->validate()) {
+			//DB_DataObject::debugLevel(5);
+			$form->process(array(&$fbForm,'processForm'), false);
+			$form->freeze();
+		}
+
+		$print = AddButton("New","?action=new#form");
+		$print.= "<br/><br/><hr/>";
+		
+		$print.=$form->toHtml();
+
+		$print.= "<hr/>";
+                return $print;
+	}
+        
+        
 	function printForm(){
 		$doForm=clone($this);
 
@@ -185,22 +225,53 @@ class dbRoot extends DB_DataObject {
 		print "<hr/>";
 	}
 
+        function buildFooter(){
+            return "";
+        }
+        
+        function buildList(){
+            return "";
+        }
+
 	function printList(){}
         function footer(){}
+        function printHeader(){}
 
+        static function buildPage($type){
+            PEARError($page=safe_DataObject_factory($type));
+
+            $defs=dbRoot::fromCache("Defaults",1);
+            $page->ExhibitionID=$defs->ShowID;
+
+            $data=  buildPageTitle();
+            $print=$data[1];
+            if ($data[0]){
+                    $page->UpdateDefaults();
+                    $print.= AddButton("New","?action=new#form");
+                    $print.= $page->buildList();
+                    $print.= $page->buildForm();
+                    $print.= $page->buildFooter();
+            }
+            return $print;
+        }
+        
+        function printPage(){
+            if (PageTitle()){
+                $this->UpdateDefaults();
+                $this->printHeader();
+                print AddButton("New","?action=new#form");
+                $this->PrintList();
+                $this->PrintForm();
+                $this->Footer();
+            }            
+        }
+                
 	static function showPage($type){
-		PEARError($page=safe_DataObject_factory($type));
+            PEARError($page=safe_DataObject_factory($type));
 
-		$defs=dbRoot::fromCache("Defaults",1);
-		$page->ExhibitionID=$defs->ShowID;
-
-		if (PageTitle()){
-			$page->UpdateDefaults();
-			print AddButton("New","?action=new#form");
-			$page->PrintList();
-			$page->PrintForm();
-                        $page->Footer();
-		}
+            $defs=dbRoot::fromCache("Defaults",1);
+            $page->ExhibitionID=$defs->ShowID;
+            $page->printPage();
 	}
 
 	function Fields2Backup(){
@@ -315,6 +386,9 @@ class dbRoot extends DB_DataObject {
                 }
             }
             krumo($importMap);
+            if ($Exhibitors){
+                CalculatePrizeFund(true);
+            }
             return true;
         }
         
@@ -326,7 +400,7 @@ class dbRoot extends DB_DataObject {
 
             foreach($fields as $field){
                 if (isset($this->$field))
-                    $xml.="\t\t<value name='$field'>".htmlentities($this->$field,ENT_COMPAT | ENT_XML1)."</value>\n";
+                    $xml.="\t\t<value name='$field'>".htmlentities(trim($this->$field),ENT_COMPAT | ENT_XML1)."</value>\n";
                 else
                     $xml.="<null/>";
             }

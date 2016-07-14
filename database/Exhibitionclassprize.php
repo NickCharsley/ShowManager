@@ -11,8 +11,8 @@ class doExhibitionclassprize extends dbRoot
 
     public $__table = 'exhibitionclassprize';    // table name
     public $ID;                              // int(4)  primary_key not_null
-    public $ExhibitionClassID;               // int(4)   not_null
-    public $PrizeID;                         // int(4)   not_null
+    public $ExhibitionClassID;               // int(4)  unique_key not_null
+    public $PrizeID;                         // int(4)  unique_key not_null
     public $Prize;                           // decimal(10,2)  
     public $Points;                          // int(4)  
     public $ExhibitionExhibitorID;           // int(4)  
@@ -21,6 +21,7 @@ class doExhibitionclassprize extends dbRoot
     ###END_AUTOCODE
     ###Formbuilder Code
     public $fb_crossLinkExtraFields = array("ExhibitionExhibitorID");
+    public $fb_fieldLabels=array("ExhibitionExhibitorID"=>"Exhibitor Number");
     public $fb_linkDisplayFields=array("ExhibitionClassID","PrizeID");
     public $fb_linkDisplayLevel=2;
     ###End Formbuilder Code
@@ -101,7 +102,7 @@ class doExhibitionclassprize extends dbRoot
                 $this->Prize=dbRoot::getObjectValue("Prize", $object);
                 
                 if ($Exhibitors){
-                    diehere();
+                    $this->ExhibitionExhibitorID=dbRoot::importMap("ExhibitionExhibitor",dbRoot::getObjectValue("ExhibitionExhibitorID", $object));  
                 }                
                 $this->insert();
                 $this->find(true);

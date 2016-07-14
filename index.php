@@ -10,8 +10,11 @@
  */
  if (!defined("__COMMON__"))
  	include_once('ons_common.php');
+ 
  error_log("Enter ".__FILE__);
 //************************************************
+
+ 
  if (isset($_GET['reset'])){
     include('test/class/LoadDatabase.php');
     LoadDatabase::testInitaliseDatabase(true);

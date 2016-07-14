@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<showmanager name='Export Exhibition Summer Show 2015'>
+<object name='exhibition'><value name='ID'>9</value><value name='Name'>Summer Show 2015</value></object>
+<object name='exhibitionclassprize'><value name='ID'>757</value><value name='ExhibitionClassID'>344</value><value name='PrizeID'>1</value></object>
+<object name='exhibitionclassprize'><value name='ID'>758</value><value name='ExhibitionClassID'>344</value><value name='PrizeID'>3</value></object>
+<object name='exhibitionclassprize'><value name='ID'>759</value><value name='ExhibitionClassID'>345</value><value name='PrizeID'>1</value></object>
+<object name='exhibitionclassprize'><value name='ID'>760</value><value name='ExhibitionClassID'>346</value><value name='PrizeID'>1</value></object>
+<object name='exhibitionclassprize'><value name='ID'>761</value><value name='ExhibitionClassID'>346</value><value name='PrizeID'>2</value></object>
+<object name='exhibitionclassprize'><value name='ID'>762</value><value name='ExhibitionClassID'>347</value><value name='PrizeID'>1</value></object>
+<object name='exhibitionclassprize'><value name='ID'>763</value><value name='ExhibitionClassID'>347</value><value name='PrizeID'>2</value></object>
+<object name='exhibitionclassprize'><value name='ID'>764</value><value name='ExhibitionClassID'>347</value><value name='PrizeID'>3</value></object>
+<object name='class'><value name='ID'>1</value><value name='Name'>Sweet Peas</value><value name='Description'>3 x one cultivar</value></object>
+<object name='class'><value name='ID'>2</value><value name='Name'>Sweet Peas</value><value name='Description'>6 x two or more cultivars</value></object>
+<object name='class'><value name='ID'>3</value><value name='Name'>Pansies</value><value name='Description'>4 blooms</value></object>
+<object name='class'><value name='ID'>4</value><value name='Name'>Pinks</value><value name='Description'>4 blooms</value></object>
+<object name='prize'><value name='ID'>1</value><value name='Name'>First</value><value name='Prize'>3.00</value><value name='Points'>3</value></object>
+<object name='prize'><value name='ID'>2</value><value name='Name'>Second</value><value name='Prize'>2.00</value><value name='Points'>2</value></object>
+<object name='prize'><value name='ID'>3</value><value name='Name'>Third</value><value name='Prize'>1.00</value><value name='Points'>1</value></object>
+<object name='exhibitionclass'><value name='ID'>344</value><value name='ExhibitionID'>9</value><value name='ExhibitionSectionID'>35</value><value name='ClassNumber'>1</value><value name='ClassID'>1</value></object>
+<object name='exhibitionclass'><value name='ID'>345</value><value name='ExhibitionID'>9</value><value name='ExhibitionSectionID'>35</value><value name='ClassNumber'>2</value><value name='ClassID'>2</value></object>
+<object name='exhibitionclass'><value name='ID'>346</value><value name='ExhibitionID'>9</value><value name='ExhibitionSectionID'>35</value><value name='ClassNumber'>3</value><value name='ClassID'>3</value></object>
+<object name='exhibitionclass'><value name='ID'>347</value><value name='ExhibitionID'>9</value><value name='ExhibitionSectionID'>35</value><value name='ClassNumber'>4</value><value name='ClassID'>4</value></object>
+<object name='exhibitionsection'><value name='ID'>35</value><value name='ExhibitionID'>9</value><value name='SectionNumber'>1</value><value name='SectionID'>1</value></object>
+<object name='section'><value name='ID'>1</value><value name='Name'>Spring 2015</value></object>
+</showmanager>

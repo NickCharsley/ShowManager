@@ -104,8 +104,14 @@ class doExhibitionclass extends dbRoot
         }
     }
 
-    
-    function PrintList(){
+    function buildList(){
+        global $root;
+        if (!isset($this->ExhibitionID) or $this->ExhibitionID<1 ){
+            if (!headers_sent()) {
+                header("location:$root");
+            }
+            return "Need to Set Default Show.<hr/>";
+        }
     	$list=clone($this);
     	$table=array();
     	 
@@ -119,6 +125,7 @@ class doExhibitionclass extends dbRoot
     		$table[$section->SectionNumber][0]="<tr>\n<td colspan='3'>\n"
     		."Section ".$section->SectionNumber
     		.": ".$section->_SectionID->Name
+                .(isset($section->Description)?" (".$section->Description.")":"")
     		."\n</td>\n</tr>";    	
     	}    	 
     	
@@ -127,12 +134,54 @@ class doExhibitionclass extends dbRoot
     	while ($list->fetch()){    		
     		$list->getLinks();
     		$table[$list->_ExhibitionSectionID->SectionNumber][$list->ClassNumber]="<tr>\n<td>&nbsp;</td>\n<td>\n"
-      																					."Class ".$list->ClassNumber.": "
-    																					.$list->_ClassID->Name
-    																					.(strlen($list->_ClassID->Description)>0?" (".$list->_ClassID->Description.")":"")
-    																					."</td>\n<td>\n"
-																		    			.$list->EditLink()
-																		    			."</td>\n</tr>\n";
+                                                                                        ."Class ".$list->ClassNumber.": "
+                                                                                        .$list->_ClassID->Name
+                                                                                        .(strlen($list->_ClassID->Description)>0?" (".$list->_ClassID->Description.")":"")
+                                                                                        ."</td>\n<td>\n"
+                                                                                        .$list->EditLink()
+                                                                                        ."</td>\n</tr>\n";
+        }
+    	
+    	$print = "<table>\n";
+    	foreach($table as $section)
+    		foreach($section as $row)
+    			$print.= $row;
+    	$print.= "</table>\n";    
+        return $print;
+    }    
+    
+    function PrintList(){
+        if (!isset($this->ExhibitionID) or $this->ExhibitionID<1 ){
+            print "Need to Set Default Show.<hr/>";
+            return;
+        }
+    	$list=clone($this);
+    	$table=array();
+    	 
+    	//Need to add Empty Sections
+    	$section=safe_dataobject_factory("ExhibitionSection");
+    	$section->ExhibitionID=$list->ExhibitionID;
+    	$section->orderBy("SectionNumber*1,SectionNumber");
+    	$section->find();
+    	while ($section->fetch()){
+    		$section->getLinks();
+    		$table[$section->SectionNumber][0]="<tr>\n<td colspan='3'>\n"
+    		."Section ".$section->SectionNumber
+    		.": ".$section->_SectionID->Name
+                .(isset($section->Description)?" (".$section->Description.")":"")
+    		."\n</td>\n</tr>";    	
+    	}    	     	
+    	$list->orderBy("ClassNumber*1,ClassNumber");    	
+    	$list->find();
+    	while ($list->fetch()){    		
+    		$list->getLinks();
+    		$table[$list->_ExhibitionSectionID->SectionNumber][$list->ClassNumber]="<tr>\n<td>&nbsp;</td>\n<td>\n"
+                                                                                        ."Class ".$list->ClassNumber.": "
+                                                                                        .$list->_ClassID->Name
+                                                                                        .(strlen($list->_ClassID->Description)>0?" (".$list->_ClassID->Description.")":"")
+                                                                                        ."</td>\n<td>\n"
+                                                                                        .$list->EditLink()
+                                                                                        ."</td>\n</tr>\n";
     	}
     	
     	print "<table>\n";

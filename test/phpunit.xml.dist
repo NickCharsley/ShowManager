@@ -22,10 +22,10 @@
 	</logging>
 
 	<php>
-		<var name="DB_DSN" value="mysql:host=localhost;dbname=test_showmanager" />
+		<var name="DB_DSN" value="mysql:host=localhost;dbname=test_adhoc_showmanager" />
 		<var name="DB_USER" value="test" />
 		<var name="DB_PASSWD" value="bhSTGCsFY32ApKeF" />
-		<var name="DB_DBNAME" value="test_showmanager" />
+		<var name="DB_DBNAME" value="test_adhoc_showmanager" />
 		<var name="DB_SYNCNAME" value="showmanager" />
 		<var name="DB_DEBUG" value="0"/>
 		<var name="TESTMODE" value="test"/>		

@@ -15,38 +15,22 @@ error_log("Enter ".__FILE__);
 
 class MigrationsTest extends PHPUnit_Framework_TestCase
 {
-    function testDatabaseActivated(){
-        global $db;
-        $this->assertNotNull($db);
+    /**
+     * @medium
+     */
+    function testResetDatabase(){
+        $this->assertTrue(LoadDatabase::testInitaliseDatabase(true,"showmanager_v3"));
     }
     
     /**
-     * @depends testDatabaseActivated
-     */
-    function testRunDBScript(){
-        $dns=SplitDataObjectConfig();
-        $sqlpath=buildpath($dns['class_location'],"sql","showmanager_v3.sql");
-        //$migrationPath=buildpath(dirname(dirname(__FILE__)),"testData","Migrations");
-        
-        $sql=  file_get_contents($sqlpath);
-        
-        $sql="DROP DATABASE IF EXISTS {$dns['database']};\nCREATE DATABASE IF NOT EXISTS {$dns['database']};\nUSE {$dns['database']};\n".$sql;
-        
-        executeScript($sql);
-        
-        $this->assertTrue(true);
-        
-    }
-
-    /**
-     * @depends testRunDBScript
+     * @depends testResetDatabase
+     * @medium
      * @expectedException Exception
      * @expectedExceptionMessage Exit Called: Migration Finished
      */
     function testRunMigration004(){
         $target="test_adhoc";
         $dns=SplitDataObjectConfig();
-        //$sqlpath=buildpath($dns['class_location'],"sql","showmanager_v3.sql");
         $migrationPath=buildpath(dirname(dirname(__FILE__)),"testData","Migrations");
         
         $phpdbmigrate= 
@@ -63,6 +47,7 @@ class MigrationsTest extends PHPUnit_Framework_TestCase
 
     /**
      * @depends testRunMigration004
+     * @medium
      * @expectedException Exception
      * @expectedExceptionMessage Exit Called: Migration Finished
      */
@@ -85,11 +70,39 @@ class MigrationsTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @depends testRunMigration004
      * @depends testRunMigration005
+     * @medium
      * @expectedException Exception
+     * @expectedExceptionMessage Exit Called: Migration Finished
      */
     function testRunMigrationAll(){
+        $target="test_adhoc";
+        $dns=SplitDataObjectConfig();
+        $migrationPath=buildpath(dirname(dirname(__FILE__)),"testData","OldMigrations");
+        
+        $phpdbmigrate= 
+            array(
+                $target => array(
+                    "db" => $dns,
+                    ),
+                "migrations_path" => $migrationPath,
+                "return_type" => "\n",
+                );
+        $lib = new PHPDbMigrate($phpdbmigrate);
+        $lib->run(null,$target);
+    }
+    
+    /**
+     * @depends testRunMigrationAll
+     * @medium
+     * @expectedException Exception
+     * @expectedExceptionMessage Exit Called: Database is currently at version 5
+     */
+    function testRunMigrationAllLatestBase(){
+
+        //Load Latest SQL
+        $this->assertTrue(LoadDatabase::testInitaliseDatabase(true));
+
         $target="test_adhoc";
         $dns=SplitDataObjectConfig();
         $migrationPath=buildpath(dirname(dirname(__FILE__)),"testData","Migrations");
@@ -105,7 +118,8 @@ class MigrationsTest extends PHPUnit_Framework_TestCase
         $lib = new PHPDbMigrate($phpdbmigrate);
         $lib->run(null,$target);
     }
-
+    
+    
     
 }
 

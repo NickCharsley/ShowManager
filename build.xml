@@ -112,6 +112,18 @@
 		<exec executable="${phpcs}">
 			<arg value="--standard=PEAR" />
 			<arg value="--ignore=test" />
+                        <arg value="--extensions=php" />
+			<arg path="${src}" />
+		</exec>
+	</target>
+
+	<target name="phpcbf" description="Fix coding standard violations using PHP_CodeSniffer. Intended for usage on the command line before committing.">
+		<exec executable="${phpcs}">
+			<arg value="--standard=PEAR" />
+			<arg value="--ignore=test" />
+                        <arg value="-v" />
+                        <arg value="-p" />
+                        <arg value="--extensions=php" />
 			<arg path="${src}" />
 		</exec>
 	</target>
@@ -121,6 +133,7 @@
 			<arg value="--report=checkstyle" />
 			<arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
 			<arg value="--standard=PEAR" />
+                        <arg value="--extensions=php" />
 			<arg value="--ignore=test" />
 			<arg path="${src}" />
 		</exec>

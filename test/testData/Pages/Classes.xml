@@ -7,7 +7,6 @@
 		<row>
 			<value>1</value>
 			<value>BHS</value>
-			<value>9</value>
 		</row>					
 	</table>		
 	<table name="Exhibition">
@@ -40,20 +39,7 @@
 		<column>ClassID</column>
 		<row><value>344</value><value>9</value><value>35</value><value>1</value><value>1</value></row>
 		<row><value>345</value><value>9</value><value>35</value><value>2</value><value>2</value></row>
-		<row><value>346</value><value>9</value><value>35</value><value>3</value><value>3</value></row>
-		<row><value>347</value><value>9</value><value>35</value><value>4</value><value>4</value></row>
-		<row><value>348</value><value>9</value><value>35</value><value>5</value><value>5</value></row>
-		<row><value>349</value><value>9</value><value>35</value><value>6</value><value>6</value></row>
-		<row><value>350</value><value>9</value><value>35</value><value>7</value><value>7</value></row>
-		<row><value>351</value><value>9</value><value>35</value><value>8</value><value>8</value></row>
 		<row><value>352</value><value>9</value><value>36</value><value>9</value><value>9</value></row>
-		<row><value>353</value><value>9</value><value>36</value><value>10</value><value>10</value></row>
-		<row><value>354</value><value>9</value><value>36</value><value>11</value><value>11</value></row>
-		<row><value>355</value><value>9</value><value>36</value><value>12</value><value>12</value></row>
-		<row><value>356</value><value>9</value><value>36</value><value>13</value><value>13</value></row>
-		<row><value>357</value><value>9</value><value>36</value><value>14</value><value>14</value></row>
-		<row><value>358</value><value>9</value><value>36</value><value>15</value><value>15</value></row>
-		<row><value>359</value><value>9</value><value>36</value><value>16</value><value>16</value></row>
 	</table>
 	<table name="Class">
 		<column>ID</column>
@@ -61,19 +47,6 @@
 		<column>Description</column>
 		<row><value>1</value><value>Sweet Peas</value><value>3 x one cultivars</value></row>
 		<row><value>2</value><value>Sweet Peas</value><value>6 x two or more cultivars</value></row>
-		<row><value>3</value><value>Pansies</value><value>4 blooms</value></row>
-		<row><value>4</value><value>Pinks</value><value>4 blooms</value></row>
-		<row><value>5</value><value>Small Flowers</value><value>6 blooms (not to sxceed size of ?2 coin)</value></row>
-		<row><value>6</value><value>Clematis</value><value>one bloom</value></row>
-		<row><value>7</value><value>Clematis</value><value>3 blooms</value></row>
-		<row><value>8</value><value>Roses</value><value>3 blooms H.T. of one cultivar</value></row>
 		<row><value>9</value><value>Roses</value><value>3 blooms H.T. of two or more cultivars</value></row>
-		<row><value>10</value><value>Roses</value><value>3 stems floribunda type</value></row>
-		<row><value>11</value><value>Roses</value><value>one specimen type</value></row>
-		<row><value>12</value><value>A vase of annuals</value><value>not to exceed 9 stems</value></row>
-		<row><value>13</value><value>A vase of any other flowers</value><value>not to exceed 9 stems</value></row>
-		<row><value>14</value><value>3 stems Penstemons</value><value>any variety</value></row>
-		<row><value>15</value><value>Flowering Shrub(s)</value><value>vase of 3 stems</value></row>
-		<row><value>16</value><value>Dahlia</value><value>vase of 1 stem</value></row>				
 	</table>					
 </dataset>

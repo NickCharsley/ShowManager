@@ -32,33 +32,49 @@ class doExhibition extends dbRoot
     	else
     		return AddButton("Set as Default","?action=default&id=".$this->ID);
     }
-    
-    function printList(){
+
+    function buildList(){
     	$list=clone($this);
     	$list->find();
-    	print "<table>\n";
+        $print="";
+    	$print.="<table>\n";
     	while ($list->fetch()){
-    		print "<tr>\n";
-    		print "<td>\n";
-    		print $list->Name;
-    		print "</td>\n";
-    		print "<td>\n";
-    		print $list->EditLink();
-    		print "</td>\n";
-    		print "<td>\n";
-    		print $list->DefaultLink();
-    		print "</td>\n";
-    		print "</tr>\n";
+    		$print.="<tr>\n";
+    		$print.="<td>\n";
+    		$print.=$list->Name;
+    		$print.="</td>\n";
+    		$print.="<td>\n";
+    		$print.=$list->EditLink();
+    		$print.="</td>\n";
+    		$print.="<td>\n";
+    		$print.=$list->DefaultLink();
+    		$print.="</td>\n";
+    		$print.="</tr>\n";
     	}
-    	print "</table>\n";    	 
+    	$print.="</table>\n";    	 
+        return $print;
+    }
+    
+    function printList(){
+    	print $this->buildList();    	 
     }    
     
-    private function getChildren($child,&$ret,$Exhibitors=false){
-        $doC=safe_dataobject_factory($child);
+    private function getChildren($child,&$ret,$Exhibitors,$linked=""){
+        $doC=safe_dataobject_factory(($linked=="")?$child:$linked);
         $doC->ExhibitionID=$this->ID;
         $doC->find();
         while ($doC->fetch()){
-            $doC->gatherExportDataObjects($ret,$Exhibitors);
+            if ($linked=="") {
+                $doC->gatherExportDataObjects($ret,$Exhibitors);
+            } else {
+                $doS=safe_dataobject_factory($child);
+                $id=$linked."ID";
+                $doS->$id=$doC->ID;
+                $doS->find();
+                while ($doS->fetch()){
+                    $doS->gatherExportDataObjects($ret,$Exhibitors);
+                }                
+            }            
         }        
     }
     
@@ -68,11 +84,11 @@ class doExhibition extends dbRoot
             //Now Add Children            
             $this->getChildren("Prize", $ret, $Exhibitors);
             //ExhibitionClass
-            $this->getChildren("ExhibitionClass", $ret, $Exhibitors);
             $this->getChildren("ExhibitionSection", $ret, $Exhibitors);
+            $this->getChildren("ExhibitionClass", $ret, $Exhibitors);
             //Not a direct Child!!! $this->getChildren("ExhibitionClassPrize", $ret, $Exhibitors);
             if ($Exhibitors) $this->getChildren("ExhibitionExhibitor", $ret, $Exhibitors);
-            $this->getChildren("ExhibitionTrophyClass", $ret, $Exhibitors);
+            $this->getChildren("ExhibitionTrophyClass", $ret, $Exhibitors,"ExhibitionClass");
        }
     }
     
@@ -82,14 +98,19 @@ class doExhibition extends dbRoot
     }
 
     static function Export($ExhibitionID,$Exhibitors=false){
-        dbRoot::CalculatePrizeFund();
+        if ($Exhibitors) {
+            dbRoot::CalculatePrizeFund();
+        }
         $do=dbRoot::fromCache("Exhibition",$ExhibitionID);
         $objects=array();
         $do->gatherExportDataObjects($objects,$Exhibitors);
         krumo($objects);
         
+        ksort($objects);//Ensures XML will be consistent
+        
         $xml ="<showmanager name='Export Exhibition {$do->Name}'>\n";
         foreach($objects as $type=>$keys)
+            //ksort($keys);//Ensures XML will be consistent
             foreach($keys as $key){
                 $doC=dbRoot::fromCache($type, $key);
                 $xml.=$doC->ExportInstance();
@@ -99,6 +120,20 @@ class doExhibition extends dbRoot
         return $xml;
     }
 
+    function buildfooter() {
+        global $uploadedFile;
+        $uploadForm = new HTML_QuickForm('upload_form', 'post');
+        $this->uploadedFile =& $uploadForm->addElement('file', 'filename', 'File:');
+        $uploadForm->addRule('filename', 'You must select a file', 'uploadedfile');
+        $uploadForm->addElement('submit', 'btnUpload', 'Upload');
+        if ($uploadForm->validate()) {
+            $uploadForm->process(array($this,'process'), true);
+        }
+        else {
+            return $uploadForm->toHtml();
+        }
+    }
+    
     function footer(){             
         global $uploadedFile;
         $uploadForm = new HTML_QuickForm('upload_form', 'post');
@@ -118,7 +153,7 @@ class doExhibition extends dbRoot
         krumo($this->uploadedFile);
         if ($this->uploadedFile->isUploadedFile()) {
             $value=$this->uploadedFile->getValue();            
-            dbRoot::Import($value['tmp_name']);
+            dbRoot::Import($value['tmp_name'],true);
         }
         else {
             print "No file uploaded";

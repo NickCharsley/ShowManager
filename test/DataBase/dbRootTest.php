@@ -10,20 +10,18 @@ class dbRootTest extends PHPUnit_Framework_TestCase {
 
     public $loadDB;
 
-    function testInitaliseDatabase() {
-        LoadDatabase::testInitaliseDatabase();
-        $this->assertTrue(true);
+    function testInitaliseDatabase() {        
+        $this->assertTrue(LoadDatabase::testInitaliseDatabase());
     }
 
     /**
-     * @covers dbRoot::fromCache
      * @depends testInitaliseDatabase
      * 
      */
     public function testFromCache() {
         global $dbTables;
         $defs = dbRoot::fromCache("Defaults", 1);
-        $this->assertGreaterThanOrEqual(1, count($dbTables["Defaults"]));
+        $this->assertNotNull($defs);
         $this->assertEquals("bhs", $defs->ShowName);
     }
 
@@ -39,12 +37,14 @@ class dbRootTest extends PHPUnit_Framework_TestCase {
     
     /**
      * @depends testFromCache
+     * @todo
      */
     function testAddToCache(){
         //Get DB Object
     }
     /**
      * @depends testFromCache
+     * @todo
      */
     function testAddToCacheNoDupe(){
         //Get DB Object
@@ -52,16 +52,15 @@ class dbRootTest extends PHPUnit_Framework_TestCase {
     
     /**
      * @covers dbRoot::clearCache
-     * @depends testFromCache
      */
     public function testClearCache() {
         global $dbTables;
+        $defs1 = dbRoot::fromCache("Defaults", 1);
         dbRoot::clearCache("Defaults");
         $this->assertArrayNotHasKey("Defaults", $dbTables);
     }
-
+        
     /**
-     * @covers dbRoot::getTables
      * @todo   Implement testGetTables().
      */
     public function testGetTables() {
@@ -95,10 +94,11 @@ class dbRootTest extends PHPUnit_Framework_TestCase {
             'trophyresults')
                 , $tables);
     }
-
+    
     /**
-     * @covers dbRoot::BackupDB
      * @depends testInitaliseDatabase
+     * @todo 
+     * @medium
      */
     public function testBackupDB() {
         $temp=buildPath(__DIR__,"backup.xml");
@@ -106,6 +106,54 @@ class dbRootTest extends PHPUnit_Framework_TestCase {
         //$this->assertXmlFileEqualsXmlFile(buildPath(__DIR__,"..","testData","ShowManager","Summer2013.xml"),$temp);
     }
     
+    /**
+     * @depends testInitaliseDatabase
+     */
+    public function testCalculatePrizeFund(){
+        $doPre=safe_dataobject_factory("Exhibitionclassprize");
+        $this->assertEquals(1922,$doPre->find());        
+        dbRoot::CalculatePrizeFund();
+        $doPost=safe_dataobject_factory("Exhibitionclassprize");
+        $this->assertEquals(2043,$doPost->find());
+    }
     
+    
+    
+    
+    /**
+     * @depends testInitaliseDatabase
+     * @todo dbRoot::Import($filename);
+     */
+    
+    /**
+     * @depends testInitaliseDatabase
+     * @todo dbRoot::addToCache($dataobject);
+     */
+    
+    /**
+     * @depends testInitaliseDatabase
+     * @todo dbRoot::buildPage($type);
+     */
+    
+    /**
+     * @depends testInitaliseDatabase
+     * @todo dbRoot::getImportMap($table, $key);
+     */
+    
+    /**
+     * @depends testInitaliseDatabase
+     * @todo dbRoot::getObjectValue($name, $object);
+     */
+    
+    /**
+     * @depends testInitaliseDatabase
+     * @todo dbRoot::importMap($table, $key);
+     */
+    
+    /**
+     * @depends testInitaliseDatabase
+     * @todo dbRoot::showPage($type);
+     */
+
     
 }

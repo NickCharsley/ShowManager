@@ -12,7 +12,7 @@
  	include_once('ons_common.php');
  error_log("Enter", E_USER_NOTICE);
 //************************************************
-include_once("ExhibitionClass.php");
+include_once("Exhibitionclass.php");
 
 class doSummary extends doExhibitionClass {
 	###Formbuilder Code
@@ -45,13 +45,13 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
         dbRoot::CalculatePrizeFund(isset($_GET['calc']));
                 
 	$title="";
-	PEARError($prize=DB_DataObject::factory("Prize"));
+	PEARError($prize=Safe_DataObject_factory("Prize"));
 	$prize->find();
 	while($prize->fetch()){
 		$title.="<td>".$prize->Name."</td>";
 	}
 
-	$trophy=DB_DataObject::factory("Trophy");
+	$trophy=Safe_DataObject_factory("Trophy");
 	$trophy->ExhibitionID=$defs->ShowID;
 	$trophy->find();
 	print "<h3>Trophies</h3>";
@@ -62,7 +62,7 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 				print $trophy->Name;
 			print "</td>\n";
 		print "</tr>\n";
-		$trophyResults=DB_DataObject::factory("TrophyResults");
+		$trophyResults=Safe_DataObject_factory("TrophyResults");
 		$trophyResults->TrophyID=$trophy->ID;
 		$trophyResults->find();
 		$i=0;
@@ -71,7 +71,7 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 			print "<tr>\n";
 				print "<td>&nbsp;</td>\n";
 				print "<td>\n";
-					print $trophyResults->_ExhibitorID->Name;
+					print $trophyResults->ExhibitorName;
 				print "</td>\n";
 				print "<td>\n";
 					print $trophyResults->Points;
@@ -83,7 +83,7 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 	print "<hr/>\n";
 
 
-	PEARError($sec=DB_DataObject::factory("ExhibitionSection"));
+	PEARError($sec=Safe_DataObject_factory("ExhibitionSection"));
 	$sec->ExhibitionID=$defs->ShowID;
 	$sec->orderBy("sectionNumber*1");
 	$sec->find();
@@ -97,7 +97,7 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 			print "</td>";
 			print $title;
 		print "</tr>";
-		PEARError($summary=DB_DataObject::factory("Summary"));
+		PEARError($summary=Safe_DataObject_factory("Summary"));
 		$summary->ExhibitionID=$defs->ShowID;
 		$summary->ExhibitionSectionID=$sec->ID;
 		$summary->orderBy("ClassNumber*1");
@@ -114,17 +114,16 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 						print " (".$summary->_ClassID->Description.")";
 				print "</td>\n";
 				$results=array(1=>"-",2=>"-",3=>"-");
-				PEARError($res=DB_DataObject::factory("ExhibitionClassPrize"));
+				PEARError($res=Safe_DataObject_factory("ExhibitionClassPrize"));
 				//DB_DataObject::debugLevel(5);
 				$res->ExhibitionClassID=$summary->ID;
 				$res->orderBy("PrizeID");
 				$res->find();
 				while ($res->fetch()){
-                                    try {
+                                    if (isset($res->ExhibitionExhibitorID)) {                                        
 					$res->getLinks();
-					$res->_ExhibitionExhibitorID->getLinks();
-					$results[$res->PrizeID]=$res->_ExhibitionExhibitorID->_ExhibitorID->Name;
-                                    } catch (Exception $e){}
+					$results[$res->PrizeID]=$res->_ExhibitionExhibitorID->ExhibitorName;
+                                    }
 				}
 				foreach($results as $place){
 					print "<td>$place</td>";
@@ -135,23 +134,23 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 	print "</table>\n";
 	print "<hr/>\n";
 
-	PEARError($exhibitor=DB_DataObject::factory("DefaultPrizeFund"));
+	PEARError($exhibitor=Safe_DataObject_factory("DefaultPrizeFund"));
 	print "<table border='0'>\n";
 	$exhibitor->find();
 	while ($exhibitor->fetch()){
 		$exhibitor->getLinks();
 		//print "<table border='0' width='100%'>\n";
-		PEARError($number=DB_DataObject::factory("ExhibitionExhibitor"));
-		$number->ExhibitorID=$exhibitor->ID;
+		PEARError($number=Safe_DataObject_factory("ExhibitionExhibitor"));
+		$number->ID=$exhibitor->ID;
 		$number->ExhibitionID=$defs->ShowID;
 		$number->find();
 		while ($number->fetch()){
 			print "<tr>\n";
 				print "<td colspan='5'>\n";
-					print $exhibitor->_ID->Name." (".$number->ExhibitorNumber.")";
+					print $number->Name." (".$number->ExhibitorNumber.")";
 				print "</td>\n";
 			print "</tr>\n";
-			PEARError($prize=DB_DataObject::factory("ExhibitionClassPrize"));
+			PEARError($prize=Safe_DataObject_factory("ExhibitionClassPrize"));
 			$prize->ExhibitionExhibitorID=$number->ID;
 			$prize->find();
 			while ($prize->fetch()){
@@ -171,14 +170,15 @@ if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 				print "</tr>\n";
 			}
 		}
-		print "<tr><td colspan='2'>Prize Money: </td><td>£".$exhibitor->Prize."</td></tr>\n";
+		print "<tr><td colspan='2'>Prize Money: </td><td>£".$exhibitor->Prize."</td>";
+                print "<td colspan='2' align='right'>Points: ".$exhibitor->Points."</td></tr>\n";
 		print "<tr><td colspan='5'><hr/></td></tr>\n";
 //		print "</table>\n";
 	}
 	print "</table>\n";
 	print "<hr/>\n";
 	
-	PEARError($exhibitor=DB_DataObject::factory("DefaultPrizeFund"));
+	PEARError($exhibitor=Safe_DataObject_factory("DefaultPrizeFund"));
 	print "<table border='0'>\n";
 	$exhibitor->orderBy('Points DESC');
 	$exhibitor->find();

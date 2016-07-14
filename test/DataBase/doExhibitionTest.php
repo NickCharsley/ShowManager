@@ -41,7 +41,15 @@ class doExhibitionTest extends DataBaseTables {
     function FileName() {
         return "Tables/Exhibition";
     }
-    
+    /*
+			$page->PrintList();
+			$page->PrintForm();
+                        $page->Footer();
+
+     */
+    function getBuildList(){
+        return "";
+    }
 }
 
 ?>

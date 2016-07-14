@@ -12,7 +12,6 @@ class doSection extends dbRoot
     public $__table = 'section';             // table name
     public $ID;                              // int(4)  primary_key not_null
     public $Name;                            // varchar(255)  unique_key not_null
-    public $Description;                     // varchar(255)  
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
@@ -25,7 +24,6 @@ class doSection extends dbRoot
         if (!isset($this->ID)){
             //if (dbRoot::importMap($this->__table,$key)==0){
                 $this->Name=dbRoot::getObjectValue("Name", $object);
-                $this->Description=dbRoot::getObjectValue("Description", $object);
                 if (!$this->find(true)){
                     //Need to save this as New
                     $this->insert();

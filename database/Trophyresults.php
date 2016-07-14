@@ -11,7 +11,7 @@ class doTrophyresults extends dbRoot
 
     public $__table = 'trophyresults';       // table name
     public $TrophyID;                        // int(4)   not_null
-    public $ExhibitorID;                     // int(4)   not_null
+    public $ExhibitorName;                   // varchar(255)  
     public $Points;                          // decimal(32,0)  
 
     /* the code above is auto generated do not remove the tag below */

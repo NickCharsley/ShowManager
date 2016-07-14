@@ -7,8 +7,8 @@
  *
  * Copyright 2009 ONS
  *
- * /
-if (!defined("__COMMON__"))
+ */
+if (!defined("__COMMON__") && isset($_GET['full']))
  	include_once('ons_common.php');
 /**/
  error_log("Enter ".__FILE__);

@@ -13,7 +13,7 @@ class doExhibitionexhibitor extends dbRoot
     public $ID;                              // int(4)  primary_key not_null
     public $ExhibitionID;                    // int(4)  unique_key not_null default_7
     public $ExhibitorNumber;                 // int(4)  unique_key not_null
-    public $ExhibitorID;                     // int(4)  unique_key not_null
+    public $Name;                            // varchar(255)  
 
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
@@ -23,7 +23,7 @@ class doExhibitionexhibitor extends dbRoot
     public $fb_userEditableFields=array("ID"/*,"ExhibitionID"*/,"ExhibitorNumber","ExhibitorID");
     public $fb_fieldLabels=array("ExhibitionID"=>"Show","ExhibitorID"=>"Competitor","ExhibitorNumber"=>"Number");
     public $fb_linkNewValue=array("ExhibitorID");
-    public $fb_linkDisplayLevel=2;
+    //public $fb_linkDisplayLevel=2;
 
     ###End Formbuilder Code
     function gatherExportDataObjects(&$ret,$Exhibitors=true){
@@ -52,7 +52,7 @@ class doExhibitionexhibitor extends dbRoot
             print "<tr>\n";
             print "<td>\n";
             print "Competitor ".$list->ExhibitorNumber.": " ;
-            print $list->_ExhibitorID->Name;
+            print $list->Name;
             print "</td>\n";
             print "<td>\n";
             print $list->EditLink();
@@ -61,6 +61,25 @@ class doExhibitionexhibitor extends dbRoot
         }
         print "</table>\n";            
     }
+    
+    function ImportObject($object,$key,$Exhibitors=false){
+        if (!$Exhibitors) return;
+        if (!isset($this->ID)){
+            //if (dbRoot::importMap($this->__table,$key)==0){
+                $this->ExhibitorNumber=dbRoot::getObjectValue("ExhibitorNumber", $object);
+                $this->ExhibitionID=dbRoot::importMap("Exhibition", dbRoot::getObjectValue("ExhibitionID", $object));
+                if (!$this->find(true)){
+                    //Need to save this as New
+                    $this->ExhibitorID=dbRoot::importMap("Exhibitor", dbRoot::getObjectValue("ExhibitorID", $object));
+
+                    $this->insert();
+                    $this->find(true);
+                }
+                dbRoot::addToCache($this);
+                dbRoot::importMap($this->__table,$key,$this->ID);
+            //}
+        }
+    }    
 }
 if (str_replace("\\","/",__FILE__)==$_SERVER["SCRIPT_FILENAME"]){
 	include_once("ons_common.php");

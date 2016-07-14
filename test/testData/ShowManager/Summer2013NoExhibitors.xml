@@ -1,0 +1,5635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<showmanager name='Export Exhibition Summer Show 2013'>
+        <object name='section'>
+		<value name='ID'>9</value>
+		<value name='Name'>Needlecraft/Hobbies</value>
+	</object>
+	<object name='section'>
+		<value name='ID'>8</value>
+		<value name='Name'>Art</value>
+	</object>
+	<object name='section'>
+		<value name='ID'>7</value>
+		<value name='Name'>Photography</value>
+	</object>
+	<object name='section'>
+		<value name='ID'>6</value>
+		<value name='Name'>Floral Art</value>
+	</object>
+	<object name='section'>
+		<value name='ID'>5</value>
+		<value name='Name'>Homecraft</value>
+	</object>
+	<object name='section'>
+		<value name='ID'>4</value>
+		<value name='Name'>Fruit</value>
+	</object>
+	<object name='section'>
+		<value name='ID'>3</value>
+		<value name='Name'>Vegetables</value>
+	</object>
+	<object name='section'>
+		<value name='ID'>2</value>
+		<value name='Name'>Pot Plants</value>
+	</object>
+	<object name='section'>
+		<value name='ID'>1</value>
+		<value name='Name'>Flowers</value>
+	</object>
+	<object name='section'>
+		<value name='ID'>10</value>
+		<value name='Name'>Children</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>9</value>
+		<value name='Name'>Roses</value>
+		<value name='Description'>3 blooms H.T. of two or more cultivars</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>8</value>
+		<value name='Name'>Roses</value>
+		<value name='Description'>3 blooms H.T. of one cultivar</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>87</value>
+		<value name='Name'>Hanging basket</value>
+		<value name='Description'>(max size 12\"/30cm)</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>7</value>
+		<value name='Name'>Clematis</value>
+		<value name='Description'>3 blooms</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>79</value>
+		<value name='Name'>A Garden in a Seed Tray</value>
+		<value name='Description'>Max size 38x23cm/15\"x9\"</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>77</value>
+		<value name='Name'>Greetings Card</value>
+		<value name='Description'>Max Size A5</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>76</value>
+		<value name='Name'>Hobby Exhibit</value>
+		<value name='Description'>not included in any other class</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>75</value>
+		<value name='Name'>Any Subject</value>
+		<value name='Description'>Any Medium</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>74</value>
+		<value name='Name'>A Landscape</value>
+		<value name='Description'>Any Medium</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>73</value>
+		<value name='Name'>A Figure</value>
+		<value name='Description'>Any Medium</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>72</value>
+		<value name='Name'>Still Life</value>
+		<value name='Description'>Any Medium</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>6</value>
+		<value name='Name'>Clematis</value>
+		<value name='Description'>1 bloom</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>64</value>
+		<value name='Name'>Savoury Quiche or Flan</value>
+		<value name='Description'>not exceeding 8\"/20cm diameter</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>63</value>
+		<value name='Name'>Fruit Cake (Any Shape)</value>
+		<value name='Description'>not exceeding 9\"/23cm</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>62</value>
+		<value name='Name'>Apple Plate Pie</value>
+		<value name='Description'>not exceeding 9\"/23cm</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>61</value>
+		<value name='Name'>Victoria Jam Sandwich</value>
+		<value name='Description'>7.5\"/19cm diameter approx</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>60</value>
+		<value name='Name'>Scones (plain)</value>
+		<value name='Description'>5</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>5</value>
+		<value name='Name'>Small Flowers</value>
+		<value name='Description'>6 blooms (not to exceed size of Â£2 coin)</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>59</value>
+		<value name='Name'>Biscuits</value>
+		<value name='Description'>5</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>58</value>
+		<value name='Name'>Jar Jam</value>
+		<value name='Description'>1lb/500g jar as specified</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>54</value>
+		<value name='Name'>Any other fruit</value>
+		<value name='Description'>5</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>53</value>
+		<value name='Name'>Strawberries</value>
+		<value name='Description'>6 with calyx</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>52</value>
+		<value name='Name'>Raspberries</value>
+		<value name='Description'>6 with calyx</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>51</value>
+		<value name='Name'>Redcurrants</value>
+		<value name='Description'>3 strings</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>50</value>
+		<value name='Name'>Black currants</value>
+		<value name='Description'>3 strings</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>4</value>
+		<value name='Name'>Pinks</value>
+		<value name='Description'>4 blooms</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>49</value>
+		<value name='Name'>Two different fresh culinary herbs</value>
+		<value name='Description'>1 vase max 3\"/7.5cm diam</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>47</value>
+		<value name='Name'>Any Herb</value>
+		<value name='Description'>in pot max size 5\"</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>46</value>
+		<value name='Name'>Tomatoes</value>
+		<value name='Description'>3 with calyx</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>45</value>
+		<value name='Name'>Rhubarb</value>
+		<value name='Description'>5 sticks minus leaves</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>44</value>
+		<value name='Name'>Any other vegetable</value>
+		<value name='Description'>2</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>43</value>
+		<value name='Name'>Shallots (over 30mm)</value>
+		<value name='Description'>9</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>42</value>
+		<value name='Name'>Shallots (under 30mm)</value>
+		<value name='Description'>9</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>41</value>
+		<value name='Name'>Potatoes</value>
+		<value name='Description'>5 of any variety</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>40</value>
+		<value name='Name'>Peas</value>
+		<value name='Description'>6 pods</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>3</value>
+		<value name='Name'>Pansies</value>
+		<value name='Description'>4 blooms</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>39</value>
+		<value name='Name'>Onions (grown from sets)</value>
+		<value name='Description'>6</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>38</value>
+		<value name='Name'>Spring Onions</value>
+		<value name='Description'>6 untrimmed</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>37</value>
+		<value name='Name'>Lettuce (other)</value>
+		<value name='Description'>2</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>36</value>
+		<value name='Name'>Lettuce (cabbage)</value>
+		<value name='Description'>2</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>35</value>
+		<value name='Name'>Courgette</value>
+		<value name='Description'>2</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>34</value>
+		<value name='Name'>Carrots (long)</value>
+		<value name='Description'>5</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>33</value>
+		<value name='Name'>Carrots (stump rooted)</value>
+		<value name='Description'>5</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>32</value>
+		<value name='Name'>Radishes</value>
+		<value name='Description'>5 untrimmed</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>31</value>
+		<value name='Name'>Cabbages (pointed or round)</value>
+		<value name='Description'>2 x 2/4\" stalk (5/10cm)</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>30</value>
+		<value name='Name'>Beetroot</value>
+		<value name='Description'>3</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>2</value>
+		<value name='Name'>Sweet Peas</value>
+		<value name='Description'>6 x two or more cultivars</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>29</value>
+		<value name='Name'>Dwarf Beans</value>
+		<value name='Description'>6 pods</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>28</value>
+		<value name='Name'>Broad Beans</value>
+		<value name='Description'>6 pods</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>27</value>
+		<value name='Name'>Succulents or cacti</value>
+		<value name='Description'>in any size pot</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>26</value>
+		<value name='Name'>Foliage Plant</value>
+		<value name='Description'>1 any size pot</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>25</value>
+		<value name='Name'>Flowering Plant (not in own class)</value>
+		<value name='Description'>1 any size pot</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>24</value>
+		<value name='Name'>Geranium</value>
+		<value name='Description'>1 any size pot</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>23</value>
+		<value name='Name'>Regal Pelargonium</value>
+		<value name='Description'>1 any size pot</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>22</value>
+		<value name='Name'>Begonias (corm)</value>
+		<value name='Description'>1 any size pot</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>21</value>
+		<value name='Name'>Patio Pot</value>
+		<value name='Description'>in any size pot</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>20</value>
+		<value name='Name'>Fuchsias</value>
+		<value name='Description'>1 bush/shrub type pot max 6\"/15cm</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>1</value>
+		<value name='Name'>Sweet Peas</value>
+		<value name='Description'>3 x one cultivar</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>19</value>
+		<value name='Name'>Fuchsias</value>
+		<value name='Description'>1 bush/shrub type pot max 8\"/20cm</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>199</value>
+		<value name='Name'>Two Different fresh Culinary herbs</value>
+		<value name='Description'>1 vase max 7.5cm/3\" diam</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>197</value>
+		<value name='Name'>Turnips</value>
+		<value name='Description'>2 trimmed to 7.5cm/3\"</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>194</value>
+		<value name='Name'>Carrots</value>
+		<value name='Description'>3 trimmed to 7.5cm/3\"</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>193</value>
+		<value name='Name'>Beetroots</value>
+		<value name='Description'>3 trimmed to 7.5cm/3\"</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>18</value>
+		<value name='Name'>Fuchsias</value>
+		<value name='Description'>1 double any size pot</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>188</value>
+		<value name='Name'>The Four Seasons</value>
+		<value name='Description'>A series of Four photographs</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>187</value>
+		<value name='Name'>White Bread Rolls</value>
+		<value name='Description'>6</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>186</value>
+		<value name='Name'>Jar Chutney</value>
+		<value name='Description'>500g/1lb jar as specified</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>183</value>
+		<value name='Name'>\"Fireworks\"</value>
+		<value name='Description'>an explosion of colour</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>182</value>
+		<value name='Name'>Any Other Vegtable</value>
+		<value name='Description'>2</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>181</value>
+		<value name='Name'>Potatoes</value>
+		<value name='Description'>3 of any one variety</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>180</value>
+		<value name='Name'>Broad Beans</value>
+		<value name='Description'>3 pods</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>17</value>
+		<value name='Name'>Fuchsias</value>
+		<value name='Description'>1 trailing any size pot</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>178</value>
+		<value name='Name'>Onions</value>
+		<value name='Description'>3 grown from sets</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>175</value>
+		<value name='Name'>Plant(s) Grown from Seed</value>
+		<value name='Description'>In any size pot</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>174</value>
+		<value name='Name'>Decorated Small Cakes</value>
+		<value name='Description'>4 (in cases)</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>173</value>
+		<value name='Name'>Collage</value>
+		<value name='Description'>Max Size A5</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>16</value>
+		<value name='Name'>Dahlia</value>
+		<value name='Description'>vase of 1 stem</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>166</value>
+		<value name='Name'>Fairy Cakes </value>
+		<value name='Description'>5 with a dusting of sugar</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>15</value>
+		<value name='Name'>Flowering Shrub(s)</value>
+		<value name='Description'>vase of 3 stems</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>14</value>
+		<value name='Name'>3 Stems Penstemons</value>
+		<value name='Description'>any variety</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>140</value>
+		<value name='Name'>Photo of my Pet</value>
+		<value name='Description'>unmounted</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>13</value>
+		<value name='Name'>A vase of any other flowers</value>
+		<value name='Description'>not to exceed 9 stems</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>12</value>
+		<value name='Name'>A vase of annuals</value>
+		<value name='Description'>not to exceed 9 stems</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>11</value>
+		<value name='Name'>Roses</value>
+		<value name='Description'>1 specimen type</value>
+	</object>
+	<object name='class'>
+		<value name='ID'>10</value>
+		<value name='Name'>Roses</value>
+		<value name='Description'>3 stems floribunda type</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>9</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>37</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>99</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>133</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>98</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>132</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>97</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>131</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>96</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>130</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>95</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>129</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>94</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>128</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>93</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>127</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>92</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>126</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>91</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>125</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>90</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>144</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>8</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>36</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>89</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>143</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>88</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>142</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>87</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>141</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>86</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>140</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>85</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>139</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>84</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>138</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>83</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>137</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>82</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>136</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>81</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>135</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>80</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>134</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>7</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>35</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>79</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>133</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>78</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>132</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>77</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>131</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>76</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>130</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>75</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>129</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>74</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>128</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>73</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>127</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>72</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>126</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>71</value>
+		<value name='TrophyID'>6</value>
+		<value name='ExhibitionClassID'>125</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>70</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>144</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>6</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>34</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>69</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>143</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>68</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>142</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>67</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>141</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>66</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>140</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>65</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>139</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>64</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>138</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>63</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>137</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>62</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>136</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>61</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>135</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>60</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>134</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>5</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>33</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>59</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>133</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>58</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>132</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>57</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>131</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>56</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>130</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>55</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>129</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>54</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>128</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>53</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>127</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>52</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>126</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>51</value>
+		<value name='TrophyID'>3</value>
+		<value name='ExhibitionClassID'>125</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>50</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>28</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>4</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>32</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>49</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>27</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>48</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>26</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>47</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>25</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>46</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>24</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>45</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>23</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>44</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>22</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>43</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>21</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>42</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>20</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>41</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>19</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>40</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>18</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>3</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>31</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>39</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>17</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>38</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>16</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>37</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>15</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>36</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>14</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>35</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>13</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>34</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>12</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>33</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>11</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>339</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>144</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>338</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>143</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>337</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>142</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>336</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>141</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>335</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>140</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>334</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>139</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>333</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>138</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>332</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>137</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>331</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>136</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>330</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>135</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>32</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>10</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>329</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>134</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>328</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>133</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>327</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>132</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>326</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>131</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>325</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>130</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>324</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>129</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>323</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>128</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>322</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>127</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>321</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>126</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>320</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>125</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>31</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>9</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>319</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>124</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>318</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>123</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>317</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>122</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>316</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>121</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>315</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>120</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>314</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>119</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>313</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>118</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>312</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>117</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>311</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>116</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>310</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>115</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>30</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>8</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>309</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>114</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>308</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>113</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>307</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>112</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>306</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>111</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>305</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>110</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>304</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>109</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>303</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>108</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>302</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>107</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>301</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>106</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>300</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>105</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>2</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>30</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>29</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>7</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>299</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>104</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>298</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>103</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>297</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>102</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>296</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>101</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>295</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>100</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>294</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>99</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>293</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>98</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>292</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>97</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>291</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>96</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>290</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>95</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>28</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>6</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>289</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>94</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>288</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>93</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>287</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>92</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>286</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>91</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>285</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>90</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>284</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>89</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>283</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>88</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>282</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>87</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>281</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>86</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>280</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>85</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>27</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>5</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>279</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>84</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>278</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>83</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>277</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>82</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>276</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>81</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>275</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>80</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>274</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>79</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>273</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>78</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>272</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>77</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>271</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>76</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>270</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>75</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>26</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>4</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>269</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>74</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>268</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>73</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>267</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>72</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>266</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>71</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>265</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>70</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>264</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>69</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>263</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>68</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>262</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>67</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>261</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>66</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>260</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>65</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>25</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>3</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>259</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>64</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>258</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>63</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>257</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>62</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>256</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>61</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>255</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>60</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>254</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>59</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>253</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>58</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>252</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>57</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>251</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>56</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>250</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>55</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>24</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>2</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>249</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>54</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>248</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>53</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>247</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>52</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>246</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>51</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>245</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>50</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>244</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>49</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>243</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>48</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>242</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>47</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>241</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>46</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>240</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>45</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>23</value>
+		<value name='TrophyID'>2</value>
+		<value name='ExhibitionClassID'>1</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>239</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>44</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>238</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>43</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>237</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>42</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>236</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>41</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>235</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>40</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>234</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>39</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>233</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>38</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>232</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>37</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>231</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>36</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>230</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>35</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>22</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>50</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>229</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>34</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>228</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>33</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>227</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>32</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>226</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>31</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>225</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>30</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>224</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>29</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>223</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>28</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>222</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>27</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>221</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>26</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>220</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>25</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>21</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>49</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>219</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>24</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>218</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>23</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>217</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>22</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>216</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>21</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>215</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>20</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>214</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>19</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>213</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>18</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>212</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>17</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>211</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>16</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>210</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>15</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>20</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>48</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>209</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>14</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>208</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>13</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>207</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>12</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>206</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>11</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>205</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>10</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>204</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>9</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>203</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>8</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>202</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>7</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>201</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>6</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>200</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>5</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>1</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>29</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>19</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>47</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>199</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>4</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>198</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>3</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>197</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>2</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>196</value>
+		<value name='TrophyID'>12</value>
+		<value name='ExhibitionClassID'>1</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>195</value>
+		<value name='TrophyID'>13</value>
+		<value name='ExhibitionClassID'>11</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>194</value>
+		<value name='TrophyID'>13</value>
+		<value name='ExhibitionClassID'>10</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>193</value>
+		<value name='TrophyID'>13</value>
+		<value name='ExhibitionClassID'>9</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>192</value>
+		<value name='TrophyID'>13</value>
+		<value name='ExhibitionClassID'>8</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>191</value>
+		<value name='TrophyID'>10</value>
+		<value name='ExhibitionClassID'>70</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>190</value>
+		<value name='TrophyID'>10</value>
+		<value name='ExhibitionClassID'>69</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>18</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>46</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>189</value>
+		<value name='TrophyID'>10</value>
+		<value name='ExhibitionClassID'>68</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>188</value>
+		<value name='TrophyID'>10</value>
+		<value name='ExhibitionClassID'>67</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>187</value>
+		<value name='TrophyID'>10</value>
+		<value name='ExhibitionClassID'>66</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>186</value>
+		<value name='TrophyID'>10</value>
+		<value name='ExhibitionClassID'>65</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>185</value>
+		<value name='TrophyID'>10</value>
+		<value name='ExhibitionClassID'>64</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>184</value>
+		<value name='TrophyID'>10</value>
+		<value name='ExhibitionClassID'>63</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>183</value>
+		<value name='TrophyID'>10</value>
+		<value name='ExhibitionClassID'>62</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>182</value>
+		<value name='TrophyID'>10</value>
+		<value name='ExhibitionClassID'>61</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>181</value>
+		<value name='TrophyID'>10</value>
+		<value name='ExhibitionClassID'>60</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>180</value>
+		<value name='TrophyID'>9</value>
+		<value name='ExhibitionClassID'>20</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>17</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>45</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>179</value>
+		<value name='TrophyID'>9</value>
+		<value name='ExhibitionClassID'>19</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>178</value>
+		<value name='TrophyID'>9</value>
+		<value name='ExhibitionClassID'>18</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>177</value>
+		<value name='TrophyID'>9</value>
+		<value name='ExhibitionClassID'>17</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>176</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>124</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>175</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>123</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>174</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>122</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>173</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>121</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>172</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>120</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>171</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>119</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>170</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>118</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>16</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>44</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>169</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>117</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>168</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>116</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>167</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>115</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>166</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>114</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>165</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>113</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>164</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>112</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>163</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>111</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>162</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>110</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>161</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>109</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>160</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>108</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>15</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>43</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>159</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>107</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>158</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>106</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>157</value>
+		<value name='TrophyID'>7</value>
+		<value name='ExhibitionClassID'>105</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>156</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>124</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>155</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>123</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>154</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>122</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>153</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>121</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>152</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>120</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>151</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>119</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>150</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>118</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>14</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>42</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>149</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>117</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>148</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>116</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>147</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>115</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>146</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>114</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>145</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>113</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>144</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>112</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>143</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>111</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>142</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>110</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>141</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>109</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>140</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>108</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>13</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>41</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>139</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>107</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>138</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>106</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>137</value>
+		<value name='TrophyID'>5</value>
+		<value name='ExhibitionClassID'>105</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>136</value>
+		<value name='TrophyID'>4</value>
+		<value name='ExhibitionClassID'>84</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>135</value>
+		<value name='TrophyID'>4</value>
+		<value name='ExhibitionClassID'>83</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>134</value>
+		<value name='TrophyID'>4</value>
+		<value name='ExhibitionClassID'>82</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>133</value>
+		<value name='TrophyID'>4</value>
+		<value name='ExhibitionClassID'>81</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>132</value>
+		<value name='TrophyID'>4</value>
+		<value name='ExhibitionClassID'>80</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>131</value>
+		<value name='TrophyID'>4</value>
+		<value name='ExhibitionClassID'>79</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>130</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>144</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>12</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>40</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>129</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>143</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>128</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>142</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>127</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>141</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>126</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>140</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>125</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>139</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>124</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>138</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>123</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>137</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>122</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>136</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>121</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>135</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>120</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>134</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>11</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>39</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>119</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>133</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>118</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>132</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>117</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>131</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>116</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>130</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>115</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>129</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>114</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>128</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>113</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>127</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>112</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>126</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>111</value>
+		<value name='TrophyID'>11</value>
+		<value name='ExhibitionClassID'>125</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>110</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>144</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>10</value>
+		<value name='TrophyID'>1</value>
+		<value name='ExhibitionClassID'>38</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>109</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>143</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>108</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>142</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>107</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>141</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>106</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>140</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>105</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>139</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>104</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>138</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>103</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>137</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>102</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>136</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>101</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>135</value>
+	</object>
+        <object name='exhibitiontrophyclass'>
+		<value name='ID'>100</value>
+		<value name='TrophyID'>8</value>
+		<value name='ExhibitionClassID'>134</value>
+	</object>
+	<object name='trophy'>
+		<value name='ID'>9</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='Name'>Don Keny Trophy</value>
+		<value name='Member'>0</value>
+	</object>
+	<object name='trophy'>
+		<value name='ID'>8</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='Name'>School Stage 2 Medal</value>
+		<value name='Member'>0</value>
+	</object>
+	<object name='trophy'>
+		<value name='ID'>7</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='Name'>School Key Stage 1 Medal</value>
+		<value name='Member'>0</value>
+	</object>
+	<object name='trophy'>
+		<value name='ID'>6</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='Name'>Individual Stage 2 Medal</value>
+		<value name='Member'>0</value>
+	</object>
+	<object name='trophy'>
+		<value name='ID'>5</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='Name'>Individual Key Stage 1 Medal</value>
+		<value name='Member'>0</value>
+	</object>
+	<object name='trophy'>
+		<value name='ID'>4</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='Name'>Needlecraft/Hobbies Cup</value>
+		<value name='Member'>0</value>
+	</object>
+	<object name='trophy'>
+		<value name='ID'>3</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='Name'>Childrens Section Cup</value>
+		<value name='Member'>0</value>
+	</object>
+	<object name='trophy'>
+		<value name='ID'>2</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='Name'>Flower &amp; Pot Plant Cup</value>
+		<value name='Member'>0</value>
+	</object>
+	<object name='trophy'>
+		<value name='ID'>1</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='Name'>Vegetable Cup</value>
+		<value name='Member'>0</value>
+	</object>
+	<object name='trophy'>
+		<value name='ID'>13</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='Name'>George Ashton Shield</value>
+		<value name='Member'>0</value>
+	</object>
+	<object name='trophy'>
+		<value name='ID'>12</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='Name'>Show Shield</value>
+		<value name='Member'>0</value>
+	</object>
+	<object name='trophy'>
+		<value name='ID'>11</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='Name'>School Shield</value>
+		<value name='Member'>0</value>
+	</object>
+	<object name='trophy'>
+		<value name='ID'>10</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='Name'>Scott Shield</value>
+		<value name='Member'>0</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>9</value>
+		<value name='Name'>Patio Pot 1st</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£7 Voucher (Baldock Hardware)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>8</value>
+		<value name='Name'>Vase of Flowers 3rd</value>
+		<value name='ExhibitionClassPrizeID'>9</value>
+		<value name='Prize'>Â£2 (Mrs Gray)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>7</value>
+		<value name='Name'>Vase of Flowers 2nd</value>
+		<value name='ExhibitionClassPrizeID'>8</value>
+		<value name='Prize'>Â£3 (Mrs Gray)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>6</value>
+		<value name='Name'>Vase of Flowers 1st</value>
+		<value name='ExhibitionClassPrizeID'>7</value>
+		<value name='Prize'>Â£5 (Mrs Gray)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>5</value>
+		<value name='Name'>Roses 3rd</value>
+		<value name='ExhibitionClassPrizeID'>6</value>
+		<value name='Prize'>Â£2 (Bob Smith)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>4</value>
+		<value name='Name'>Roses 2nd</value>
+		<value name='ExhibitionClassPrizeID'>5</value>
+		<value name='Prize'>Â£3 (Bob Smith)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>3</value>
+		<value name='Name'>Roses 1st</value>
+		<value name='ExhibitionClassPrizeID'>4</value>
+		<value name='Prize'>Â£5 (Bob Smith)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>2</value>
+		<value name='Name'>Sweet Peas 2nd</value>
+		<value name='ExhibitionClassPrizeID'>3</value>
+		<value name='Prize'>Unwins Voucher</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>24</value>
+		<value name='Name'>Fruit Cake 3rd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£2 (Days of Ashwell)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>23</value>
+		<value name='Name'>Fruit Cake 2nd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£3 (Days of Ashwell)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>22</value>
+		<value name='Name'>Fruit Cake 1st</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£5 (Days of Ashwell)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>21</value>
+		<value name='Name'>Fireworks 3rd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£3 Voucher (Ruby Tuesday)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>20</value>
+		<value name='Name'>Fireworks 2nd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£4 Voucher (Ruby Tuesday)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>1</value>
+		<value name='Name'>Sweet Peas 1st</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Unwins Voucher</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>19</value>
+		<value name='Name'>Fireworks 1st</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£6 Voucher (Ruby Tuesday)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>18</value>
+		<value name='Name'>Other Fruit 3rd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£2 (Mr M Camp)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>17</value>
+		<value name='Name'>Other Fruit 2nd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£3 (Mr M Camp)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>16</value>
+		<value name='Name'>Other Fruit 1st</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£5 (Mr M Camp)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>15</value>
+		<value name='Name'>Hanging Basket 3rd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£4 Voucher (C Keeble)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>14</value>
+		<value name='Name'>Hanging Basket 2nd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£6 Voucher (C Keeble)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>13</value>
+		<value name='Name'>Hanging Basket 1st</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£8 Voucher (C Keeble)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>12</value>
+		<value name='Name'>Flowering Plant 2nd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£6 Voucher (Bickerdike Garden Centre)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>11</value>
+		<value name='Name'>Flowering Plant 1st</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£10 Voucher (Bickerdike Garden Centre)</value>
+	</object>
+	<object name='sponsorship'>
+		<value name='ID'>10</value>
+		<value name='Name'>Patio Pot 2nd</value>
+		<value name='ExhibitionClassPrizeID'>2</value>
+		<value name='Prize'>Â£3 Voucher (Baldock Hardware)</value>
+	</object>
+	<object name='prize'>
+		<value name='ID'>3</value>
+		<value name='Name'>Third</value>
+		<value name='Prize'>0.50</value>
+		<value name='Points'>1</value>
+	</object>
+	<object name='prize'>
+		<value name='ID'>2</value>
+		<value name='Name'>Second</value>
+		<value name='Prize'>1.00</value>
+		<value name='Points'>2</value>
+	</object>
+	<object name='prize'>
+		<value name='ID'>1</value>
+		<value name='Name'>First</value>
+		<value name='Prize'>1.50</value>
+		<value name='Points'>3</value>
+	</object>
+	<object name='exhibitionsection'>
+		<value name='ID'>9</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='SectionNumber'>9</value>
+		<value name='SectionID'>9</value>
+	</object>
+	<object name='exhibitionsection'>
+		<value name='ID'>8</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='SectionNumber'>8</value>
+		<value name='SectionID'>8</value>
+	</object>
+	<object name='exhibitionsection'>
+		<value name='ID'>7</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='SectionNumber'>7</value>
+		<value name='SectionID'>7</value>
+	</object>
+	<object name='exhibitionsection'>
+		<value name='ID'>6</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='SectionNumber'>6</value>
+		<value name='SectionID'>5</value>
+	</object>
+	<object name='exhibitionsection'>
+		<value name='ID'>5</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='SectionNumber'>5</value>
+		<value name='SectionID'>6</value>
+	</object>
+	<object name='exhibitionsection'>
+		<value name='ID'>4</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='SectionNumber'>4</value>
+		<value name='SectionID'>4</value>
+	</object>
+	<object name='exhibitionsection'>
+		<value name='ID'>3</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='SectionNumber'>3</value>
+		<value name='SectionID'>3</value>
+	</object>
+	<object name='exhibitionsection'>
+		<value name='ID'>2</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='SectionNumber'>2</value>
+		<value name='SectionID'>2</value>
+	</object>
+	<object name='exhibitionsection'>
+		<value name='ID'>1</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='SectionNumber'>1</value>
+		<value name='SectionID'>1</value>
+	</object>
+	<object name='exhibitionsection'>
+		<value name='ID'>10</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='SectionNumber'>10</value>
+		<value name='SectionID'>10</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>9</value>
+		<value name='ExhibitionClassID'>13</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>99</value>
+		<value name='ExhibitionClassID'>33</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>98</value>
+		<value name='ExhibitionClassID'>33</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>97</value>
+		<value name='ExhibitionClassID'>33</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>96</value>
+		<value name='ExhibitionClassID'>32</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>95</value>
+		<value name='ExhibitionClassID'>32</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>94</value>
+		<value name='ExhibitionClassID'>32</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>93</value>
+		<value name='ExhibitionClassID'>31</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>92</value>
+		<value name='ExhibitionClassID'>31</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>91</value>
+		<value name='ExhibitionClassID'>31</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>90</value>
+		<value name='ExhibitionClassID'>30</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>8</value>
+		<value name='ExhibitionClassID'>13</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>89</value>
+		<value name='ExhibitionClassID'>30</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>88</value>
+		<value name='ExhibitionClassID'>30</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>87</value>
+		<value name='ExhibitionClassID'>29</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>86</value>
+		<value name='ExhibitionClassID'>29</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>85</value>
+		<value name='ExhibitionClassID'>29</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>84</value>
+		<value name='ExhibitionClassID'>28</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>83</value>
+		<value name='ExhibitionClassID'>28</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>82</value>
+		<value name='ExhibitionClassID'>28</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>81</value>
+		<value name='ExhibitionClassID'>27</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>80</value>
+		<value name='ExhibitionClassID'>27</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>7</value>
+		<value name='ExhibitionClassID'>13</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>79</value>
+		<value name='ExhibitionClassID'>27</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>78</value>
+		<value name='ExhibitionClassID'>26</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>77</value>
+		<value name='ExhibitionClassID'>26</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>76</value>
+		<value name='ExhibitionClassID'>26</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>75</value>
+		<value name='ExhibitionClassID'>25</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>74</value>
+		<value name='ExhibitionClassID'>25</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>73</value>
+		<value name='ExhibitionClassID'>25</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>72</value>
+		<value name='ExhibitionClassID'>24</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>71</value>
+		<value name='ExhibitionClassID'>24</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>70</value>
+		<value name='ExhibitionClassID'>24</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>6</value>
+		<value name='ExhibitionClassID'>11</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>69</value>
+		<value name='ExhibitionClassID'>23</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>68</value>
+		<value name='ExhibitionClassID'>23</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>67</value>
+		<value name='ExhibitionClassID'>23</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>66</value>
+		<value name='ExhibitionClassID'>22</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>65</value>
+		<value name='ExhibitionClassID'>22</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>64</value>
+		<value name='ExhibitionClassID'>22</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>63</value>
+		<value name='ExhibitionClassID'>21</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>62</value>
+		<value name='ExhibitionClassID'>21</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>61</value>
+		<value name='ExhibitionClassID'>21</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>60</value>
+		<value name='ExhibitionClassID'>20</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>5</value>
+		<value name='ExhibitionClassID'>11</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>59</value>
+		<value name='ExhibitionClassID'>20</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>58</value>
+		<value name='ExhibitionClassID'>20</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>57</value>
+		<value name='ExhibitionClassID'>19</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>56</value>
+		<value name='ExhibitionClassID'>19</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>55</value>
+		<value name='ExhibitionClassID'>19</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>54</value>
+		<value name='ExhibitionClassID'>18</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>53</value>
+		<value name='ExhibitionClassID'>18</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>52</value>
+		<value name='ExhibitionClassID'>18</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>51</value>
+		<value name='ExhibitionClassID'>17</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>50</value>
+		<value name='ExhibitionClassID'>17</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>4</value>
+		<value name='ExhibitionClassID'>11</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>49</value>
+		<value name='ExhibitionClassID'>17</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>48</value>
+		<value name='ExhibitionClassID'>16</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>47</value>
+		<value name='ExhibitionClassID'>16</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>46</value>
+		<value name='ExhibitionClassID'>16</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>45</value>
+		<value name='ExhibitionClassID'>15</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>44</value>
+		<value name='ExhibitionClassID'>15</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>43</value>
+		<value name='ExhibitionClassID'>15</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>432</value>
+		<value name='ExhibitionClassID'>144</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>431</value>
+		<value name='ExhibitionClassID'>144</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>430</value>
+		<value name='ExhibitionClassID'>144</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>42</value>
+		<value name='ExhibitionClassID'>14</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>429</value>
+		<value name='ExhibitionClassID'>143</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>428</value>
+		<value name='ExhibitionClassID'>143</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>427</value>
+		<value name='ExhibitionClassID'>143</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>426</value>
+		<value name='ExhibitionClassID'>142</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>425</value>
+		<value name='ExhibitionClassID'>142</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>424</value>
+		<value name='ExhibitionClassID'>142</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>423</value>
+		<value name='ExhibitionClassID'>141</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>422</value>
+		<value name='ExhibitionClassID'>141</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>421</value>
+		<value name='ExhibitionClassID'>141</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>420</value>
+		<value name='ExhibitionClassID'>140</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>41</value>
+		<value name='ExhibitionClassID'>14</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>419</value>
+		<value name='ExhibitionClassID'>140</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>418</value>
+		<value name='ExhibitionClassID'>140</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>417</value>
+		<value name='ExhibitionClassID'>139</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>416</value>
+		<value name='ExhibitionClassID'>139</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>415</value>
+		<value name='ExhibitionClassID'>139</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>414</value>
+		<value name='ExhibitionClassID'>138</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>413</value>
+		<value name='ExhibitionClassID'>138</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>412</value>
+		<value name='ExhibitionClassID'>138</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>411</value>
+		<value name='ExhibitionClassID'>137</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>410</value>
+		<value name='ExhibitionClassID'>137</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>40</value>
+		<value name='ExhibitionClassID'>14</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>409</value>
+		<value name='ExhibitionClassID'>137</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>408</value>
+		<value name='ExhibitionClassID'>136</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>407</value>
+		<value name='ExhibitionClassID'>136</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>406</value>
+		<value name='ExhibitionClassID'>136</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>405</value>
+		<value name='ExhibitionClassID'>135</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>404</value>
+		<value name='ExhibitionClassID'>135</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>403</value>
+		<value name='ExhibitionClassID'>135</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>402</value>
+		<value name='ExhibitionClassID'>134</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>401</value>
+		<value name='ExhibitionClassID'>134</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>400</value>
+		<value name='ExhibitionClassID'>134</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>3</value>
+		<value name='ExhibitionClassID'>2</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>39</value>
+		<value name='ExhibitionClassID'>12</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>399</value>
+		<value name='ExhibitionClassID'>133</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>398</value>
+		<value name='ExhibitionClassID'>133</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>397</value>
+		<value name='ExhibitionClassID'>133</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>396</value>
+		<value name='ExhibitionClassID'>132</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>395</value>
+		<value name='ExhibitionClassID'>132</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>394</value>
+		<value name='ExhibitionClassID'>132</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>393</value>
+		<value name='ExhibitionClassID'>131</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>392</value>
+		<value name='ExhibitionClassID'>131</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>391</value>
+		<value name='ExhibitionClassID'>131</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>390</value>
+		<value name='ExhibitionClassID'>130</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>38</value>
+		<value name='ExhibitionClassID'>12</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>389</value>
+		<value name='ExhibitionClassID'>130</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>388</value>
+		<value name='ExhibitionClassID'>130</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>387</value>
+		<value name='ExhibitionClassID'>129</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>386</value>
+		<value name='ExhibitionClassID'>129</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>385</value>
+		<value name='ExhibitionClassID'>129</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>384</value>
+		<value name='ExhibitionClassID'>128</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>383</value>
+		<value name='ExhibitionClassID'>128</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>382</value>
+		<value name='ExhibitionClassID'>128</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>381</value>
+		<value name='ExhibitionClassID'>127</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>380</value>
+		<value name='ExhibitionClassID'>127</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>37</value>
+		<value name='ExhibitionClassID'>12</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>379</value>
+		<value name='ExhibitionClassID'>127</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>378</value>
+		<value name='ExhibitionClassID'>126</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>377</value>
+		<value name='ExhibitionClassID'>126</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>376</value>
+		<value name='ExhibitionClassID'>126</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>375</value>
+		<value name='ExhibitionClassID'>125</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>374</value>
+		<value name='ExhibitionClassID'>125</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>373</value>
+		<value name='ExhibitionClassID'>125</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>372</value>
+		<value name='ExhibitionClassID'>124</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>371</value>
+		<value name='ExhibitionClassID'>124</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>370</value>
+		<value name='ExhibitionClassID'>124</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>36</value>
+		<value name='ExhibitionClassID'>10</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>369</value>
+		<value name='ExhibitionClassID'>123</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>368</value>
+		<value name='ExhibitionClassID'>123</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>367</value>
+		<value name='ExhibitionClassID'>123</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>366</value>
+		<value name='ExhibitionClassID'>122</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>365</value>
+		<value name='ExhibitionClassID'>122</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>364</value>
+		<value name='ExhibitionClassID'>122</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>363</value>
+		<value name='ExhibitionClassID'>121</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>362</value>
+		<value name='ExhibitionClassID'>121</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>361</value>
+		<value name='ExhibitionClassID'>121</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>360</value>
+		<value name='ExhibitionClassID'>120</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>35</value>
+		<value name='ExhibitionClassID'>10</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>359</value>
+		<value name='ExhibitionClassID'>120</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>358</value>
+		<value name='ExhibitionClassID'>120</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>357</value>
+		<value name='ExhibitionClassID'>119</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>356</value>
+		<value name='ExhibitionClassID'>119</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>355</value>
+		<value name='ExhibitionClassID'>119</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>354</value>
+		<value name='ExhibitionClassID'>118</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>353</value>
+		<value name='ExhibitionClassID'>118</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>352</value>
+		<value name='ExhibitionClassID'>118</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>351</value>
+		<value name='ExhibitionClassID'>117</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>350</value>
+		<value name='ExhibitionClassID'>117</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>34</value>
+		<value name='ExhibitionClassID'>10</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>349</value>
+		<value name='ExhibitionClassID'>117</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>348</value>
+		<value name='ExhibitionClassID'>116</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>347</value>
+		<value name='ExhibitionClassID'>116</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>346</value>
+		<value name='ExhibitionClassID'>116</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>345</value>
+		<value name='ExhibitionClassID'>115</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>344</value>
+		<value name='ExhibitionClassID'>115</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>343</value>
+		<value name='ExhibitionClassID'>115</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>342</value>
+		<value name='ExhibitionClassID'>114</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>341</value>
+		<value name='ExhibitionClassID'>114</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>340</value>
+		<value name='ExhibitionClassID'>114</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>33</value>
+		<value name='ExhibitionClassID'>9</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>339</value>
+		<value name='ExhibitionClassID'>113</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>338</value>
+		<value name='ExhibitionClassID'>113</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>337</value>
+		<value name='ExhibitionClassID'>113</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>336</value>
+		<value name='ExhibitionClassID'>112</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>335</value>
+		<value name='ExhibitionClassID'>112</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>334</value>
+		<value name='ExhibitionClassID'>112</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>333</value>
+		<value name='ExhibitionClassID'>111</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>332</value>
+		<value name='ExhibitionClassID'>111</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>331</value>
+		<value name='ExhibitionClassID'>111</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>330</value>
+		<value name='ExhibitionClassID'>110</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>32</value>
+		<value name='ExhibitionClassID'>9</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>329</value>
+		<value name='ExhibitionClassID'>110</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>328</value>
+		<value name='ExhibitionClassID'>110</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>327</value>
+		<value name='ExhibitionClassID'>109</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>326</value>
+		<value name='ExhibitionClassID'>109</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>325</value>
+		<value name='ExhibitionClassID'>109</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>324</value>
+		<value name='ExhibitionClassID'>108</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>323</value>
+		<value name='ExhibitionClassID'>108</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>322</value>
+		<value name='ExhibitionClassID'>108</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>321</value>
+		<value name='ExhibitionClassID'>107</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>320</value>
+		<value name='ExhibitionClassID'>107</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>31</value>
+		<value name='ExhibitionClassID'>9</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>319</value>
+		<value name='ExhibitionClassID'>107</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>318</value>
+		<value name='ExhibitionClassID'>106</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>317</value>
+		<value name='ExhibitionClassID'>106</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>316</value>
+		<value name='ExhibitionClassID'>106</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>315</value>
+		<value name='ExhibitionClassID'>105</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>314</value>
+		<value name='ExhibitionClassID'>105</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>313</value>
+		<value name='ExhibitionClassID'>105</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>312</value>
+		<value name='ExhibitionClassID'>104</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>311</value>
+		<value name='ExhibitionClassID'>104</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>310</value>
+		<value name='ExhibitionClassID'>104</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>30</value>
+		<value name='ExhibitionClassID'>8</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>309</value>
+		<value name='ExhibitionClassID'>103</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>308</value>
+		<value name='ExhibitionClassID'>103</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>307</value>
+		<value name='ExhibitionClassID'>103</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>306</value>
+		<value name='ExhibitionClassID'>102</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>305</value>
+		<value name='ExhibitionClassID'>102</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>304</value>
+		<value name='ExhibitionClassID'>102</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>303</value>
+		<value name='ExhibitionClassID'>101</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>302</value>
+		<value name='ExhibitionClassID'>101</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>301</value>
+		<value name='ExhibitionClassID'>101</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>300</value>
+		<value name='ExhibitionClassID'>100</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>2</value>
+		<value name='ExhibitionClassID'>2</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>29</value>
+		<value name='ExhibitionClassID'>8</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>299</value>
+		<value name='ExhibitionClassID'>100</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>298</value>
+		<value name='ExhibitionClassID'>100</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>297</value>
+		<value name='ExhibitionClassID'>99</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>296</value>
+		<value name='ExhibitionClassID'>99</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>295</value>
+		<value name='ExhibitionClassID'>99</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>294</value>
+		<value name='ExhibitionClassID'>98</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>293</value>
+		<value name='ExhibitionClassID'>98</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>292</value>
+		<value name='ExhibitionClassID'>98</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>291</value>
+		<value name='ExhibitionClassID'>97</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>290</value>
+		<value name='ExhibitionClassID'>97</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>28</value>
+		<value name='ExhibitionClassID'>8</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>289</value>
+		<value name='ExhibitionClassID'>97</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>288</value>
+		<value name='ExhibitionClassID'>96</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>287</value>
+		<value name='ExhibitionClassID'>96</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>286</value>
+		<value name='ExhibitionClassID'>96</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>285</value>
+		<value name='ExhibitionClassID'>95</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>284</value>
+		<value name='ExhibitionClassID'>95</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>283</value>
+		<value name='ExhibitionClassID'>95</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>282</value>
+		<value name='ExhibitionClassID'>94</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>281</value>
+		<value name='ExhibitionClassID'>94</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>280</value>
+		<value name='ExhibitionClassID'>94</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>27</value>
+		<value name='ExhibitionClassID'>7</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>279</value>
+		<value name='ExhibitionClassID'>93</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>278</value>
+		<value name='ExhibitionClassID'>93</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>277</value>
+		<value name='ExhibitionClassID'>93</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>276</value>
+		<value name='ExhibitionClassID'>92</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>275</value>
+		<value name='ExhibitionClassID'>92</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>274</value>
+		<value name='ExhibitionClassID'>92</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>273</value>
+		<value name='ExhibitionClassID'>91</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>272</value>
+		<value name='ExhibitionClassID'>91</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>271</value>
+		<value name='ExhibitionClassID'>91</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>270</value>
+		<value name='ExhibitionClassID'>90</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>26</value>
+		<value name='ExhibitionClassID'>7</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>269</value>
+		<value name='ExhibitionClassID'>90</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>268</value>
+		<value name='ExhibitionClassID'>90</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>267</value>
+		<value name='ExhibitionClassID'>89</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>266</value>
+		<value name='ExhibitionClassID'>89</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>265</value>
+		<value name='ExhibitionClassID'>89</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>264</value>
+		<value name='ExhibitionClassID'>88</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>263</value>
+		<value name='ExhibitionClassID'>88</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>262</value>
+		<value name='ExhibitionClassID'>88</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>261</value>
+		<value name='ExhibitionClassID'>87</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>260</value>
+		<value name='ExhibitionClassID'>87</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>25</value>
+		<value name='ExhibitionClassID'>7</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>259</value>
+		<value name='ExhibitionClassID'>87</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>258</value>
+		<value name='ExhibitionClassID'>86</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>257</value>
+		<value name='ExhibitionClassID'>86</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>256</value>
+		<value name='ExhibitionClassID'>86</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>255</value>
+		<value name='ExhibitionClassID'>85</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>254</value>
+		<value name='ExhibitionClassID'>85</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>253</value>
+		<value name='ExhibitionClassID'>85</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>252</value>
+		<value name='ExhibitionClassID'>84</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>251</value>
+		<value name='ExhibitionClassID'>84</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>250</value>
+		<value name='ExhibitionClassID'>84</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>24</value>
+		<value name='ExhibitionClassID'>6</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>249</value>
+		<value name='ExhibitionClassID'>83</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>248</value>
+		<value name='ExhibitionClassID'>83</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>247</value>
+		<value name='ExhibitionClassID'>83</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>246</value>
+		<value name='ExhibitionClassID'>82</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>245</value>
+		<value name='ExhibitionClassID'>82</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>244</value>
+		<value name='ExhibitionClassID'>82</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>243</value>
+		<value name='ExhibitionClassID'>81</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>242</value>
+		<value name='ExhibitionClassID'>81</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>241</value>
+		<value name='ExhibitionClassID'>81</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>240</value>
+		<value name='ExhibitionClassID'>80</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>23</value>
+		<value name='ExhibitionClassID'>6</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>239</value>
+		<value name='ExhibitionClassID'>80</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>238</value>
+		<value name='ExhibitionClassID'>80</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>237</value>
+		<value name='ExhibitionClassID'>79</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>236</value>
+		<value name='ExhibitionClassID'>79</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>235</value>
+		<value name='ExhibitionClassID'>79</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>234</value>
+		<value name='ExhibitionClassID'>78</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>233</value>
+		<value name='ExhibitionClassID'>78</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>232</value>
+		<value name='ExhibitionClassID'>78</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>231</value>
+		<value name='ExhibitionClassID'>77</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>230</value>
+		<value name='ExhibitionClassID'>77</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>22</value>
+		<value name='ExhibitionClassID'>6</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>229</value>
+		<value name='ExhibitionClassID'>77</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>228</value>
+		<value name='ExhibitionClassID'>76</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>227</value>
+		<value name='ExhibitionClassID'>76</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>226</value>
+		<value name='ExhibitionClassID'>76</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>225</value>
+		<value name='ExhibitionClassID'>75</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>224</value>
+		<value name='ExhibitionClassID'>75</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>223</value>
+		<value name='ExhibitionClassID'>75</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>222</value>
+		<value name='ExhibitionClassID'>74</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>221</value>
+		<value name='ExhibitionClassID'>74</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>220</value>
+		<value name='ExhibitionClassID'>74</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>21</value>
+		<value name='ExhibitionClassID'>5</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>219</value>
+		<value name='ExhibitionClassID'>73</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>218</value>
+		<value name='ExhibitionClassID'>73</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>217</value>
+		<value name='ExhibitionClassID'>73</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>216</value>
+		<value name='ExhibitionClassID'>72</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>215</value>
+		<value name='ExhibitionClassID'>72</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>214</value>
+		<value name='ExhibitionClassID'>72</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>213</value>
+		<value name='ExhibitionClassID'>71</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>212</value>
+		<value name='ExhibitionClassID'>71</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>211</value>
+		<value name='ExhibitionClassID'>71</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>210</value>
+		<value name='ExhibitionClassID'>70</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>20</value>
+		<value name='ExhibitionClassID'>5</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>209</value>
+		<value name='ExhibitionClassID'>70</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>208</value>
+		<value name='ExhibitionClassID'>70</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>207</value>
+		<value name='ExhibitionClassID'>69</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>206</value>
+		<value name='ExhibitionClassID'>69</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>205</value>
+		<value name='ExhibitionClassID'>69</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>204</value>
+		<value name='ExhibitionClassID'>68</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>203</value>
+		<value name='ExhibitionClassID'>68</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>202</value>
+		<value name='ExhibitionClassID'>68</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>201</value>
+		<value name='ExhibitionClassID'>67</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>200</value>
+		<value name='ExhibitionClassID'>67</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>1</value>
+		<value name='ExhibitionClassID'>1</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>19</value>
+		<value name='ExhibitionClassID'>5</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>199</value>
+		<value name='ExhibitionClassID'>67</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>198</value>
+		<value name='ExhibitionClassID'>66</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>197</value>
+		<value name='ExhibitionClassID'>66</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>196</value>
+		<value name='ExhibitionClassID'>66</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>195</value>
+		<value name='ExhibitionClassID'>65</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>194</value>
+		<value name='ExhibitionClassID'>65</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>193</value>
+		<value name='ExhibitionClassID'>65</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>192</value>
+		<value name='ExhibitionClassID'>64</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>191</value>
+		<value name='ExhibitionClassID'>64</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>190</value>
+		<value name='ExhibitionClassID'>64</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>18</value>
+		<value name='ExhibitionClassID'>4</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>189</value>
+		<value name='ExhibitionClassID'>63</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>188</value>
+		<value name='ExhibitionClassID'>63</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>187</value>
+		<value name='ExhibitionClassID'>63</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>186</value>
+		<value name='ExhibitionClassID'>62</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>185</value>
+		<value name='ExhibitionClassID'>62</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>184</value>
+		<value name='ExhibitionClassID'>62</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>183</value>
+		<value name='ExhibitionClassID'>61</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>182</value>
+		<value name='ExhibitionClassID'>61</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>181</value>
+		<value name='ExhibitionClassID'>61</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>180</value>
+		<value name='ExhibitionClassID'>60</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>17</value>
+		<value name='ExhibitionClassID'>4</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>179</value>
+		<value name='ExhibitionClassID'>60</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>178</value>
+		<value name='ExhibitionClassID'>60</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>177</value>
+		<value name='ExhibitionClassID'>59</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>176</value>
+		<value name='ExhibitionClassID'>59</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>175</value>
+		<value name='ExhibitionClassID'>59</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>174</value>
+		<value name='ExhibitionClassID'>58</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>173</value>
+		<value name='ExhibitionClassID'>58</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>172</value>
+		<value name='ExhibitionClassID'>58</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>171</value>
+		<value name='ExhibitionClassID'>57</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>170</value>
+		<value name='ExhibitionClassID'>57</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>16</value>
+		<value name='ExhibitionClassID'>4</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>169</value>
+		<value name='ExhibitionClassID'>57</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>168</value>
+		<value name='ExhibitionClassID'>56</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>167</value>
+		<value name='ExhibitionClassID'>56</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>166</value>
+		<value name='ExhibitionClassID'>56</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>165</value>
+		<value name='ExhibitionClassID'>55</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>164</value>
+		<value name='ExhibitionClassID'>55</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>163</value>
+		<value name='ExhibitionClassID'>55</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>162</value>
+		<value name='ExhibitionClassID'>54</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>161</value>
+		<value name='ExhibitionClassID'>54</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>160</value>
+		<value name='ExhibitionClassID'>54</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>15</value>
+		<value name='ExhibitionClassID'>3</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>159</value>
+		<value name='ExhibitionClassID'>53</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>158</value>
+		<value name='ExhibitionClassID'>53</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>157</value>
+		<value name='ExhibitionClassID'>53</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>156</value>
+		<value name='ExhibitionClassID'>52</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>155</value>
+		<value name='ExhibitionClassID'>52</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>154</value>
+		<value name='ExhibitionClassID'>52</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>153</value>
+		<value name='ExhibitionClassID'>51</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>152</value>
+		<value name='ExhibitionClassID'>51</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>151</value>
+		<value name='ExhibitionClassID'>51</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>150</value>
+		<value name='ExhibitionClassID'>50</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>14</value>
+		<value name='ExhibitionClassID'>3</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>149</value>
+		<value name='ExhibitionClassID'>50</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>148</value>
+		<value name='ExhibitionClassID'>50</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>147</value>
+		<value name='ExhibitionClassID'>49</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>146</value>
+		<value name='ExhibitionClassID'>49</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>145</value>
+		<value name='ExhibitionClassID'>49</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>144</value>
+		<value name='ExhibitionClassID'>48</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>143</value>
+		<value name='ExhibitionClassID'>48</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>142</value>
+		<value name='ExhibitionClassID'>48</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>141</value>
+		<value name='ExhibitionClassID'>47</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>140</value>
+		<value name='ExhibitionClassID'>47</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>13</value>
+		<value name='ExhibitionClassID'>3</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>139</value>
+		<value name='ExhibitionClassID'>47</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>138</value>
+		<value name='ExhibitionClassID'>46</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>137</value>
+		<value name='ExhibitionClassID'>46</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>136</value>
+		<value name='ExhibitionClassID'>46</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>135</value>
+		<value name='ExhibitionClassID'>45</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>134</value>
+		<value name='ExhibitionClassID'>45</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>133</value>
+		<value name='ExhibitionClassID'>45</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>132</value>
+		<value name='ExhibitionClassID'>44</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>131</value>
+		<value name='ExhibitionClassID'>44</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>130</value>
+		<value name='ExhibitionClassID'>44</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>12</value>
+		<value name='ExhibitionClassID'>2</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>129</value>
+		<value name='ExhibitionClassID'>43</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>128</value>
+		<value name='ExhibitionClassID'>43</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>127</value>
+		<value name='ExhibitionClassID'>43</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>126</value>
+		<value name='ExhibitionClassID'>42</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>125</value>
+		<value name='ExhibitionClassID'>42</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>124</value>
+		<value name='ExhibitionClassID'>42</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>123</value>
+		<value name='ExhibitionClassID'>41</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>122</value>
+		<value name='ExhibitionClassID'>41</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>121</value>
+		<value name='ExhibitionClassID'>41</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>120</value>
+		<value name='ExhibitionClassID'>40</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>11</value>
+		<value name='ExhibitionClassID'>1</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>119</value>
+		<value name='ExhibitionClassID'>40</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>118</value>
+		<value name='ExhibitionClassID'>40</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>117</value>
+		<value name='ExhibitionClassID'>39</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>116</value>
+		<value name='ExhibitionClassID'>39</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>115</value>
+		<value name='ExhibitionClassID'>39</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>114</value>
+		<value name='ExhibitionClassID'>38</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>113</value>
+		<value name='ExhibitionClassID'>38</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>112</value>
+		<value name='ExhibitionClassID'>38</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>111</value>
+		<value name='ExhibitionClassID'>37</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>110</value>
+		<value name='ExhibitionClassID'>37</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>10</value>
+		<value name='ExhibitionClassID'>1</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>109</value>
+		<value name='ExhibitionClassID'>37</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>108</value>
+		<value name='ExhibitionClassID'>36</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>107</value>
+		<value name='ExhibitionClassID'>36</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>106</value>
+		<value name='ExhibitionClassID'>36</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>105</value>
+		<value name='ExhibitionClassID'>35</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>104</value>
+		<value name='ExhibitionClassID'>35</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>103</value>
+		<value name='ExhibitionClassID'>35</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>102</value>
+		<value name='ExhibitionClassID'>34</value>
+		<value name='PrizeID'>3</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>101</value>
+		<value name='ExhibitionClassID'>34</value>
+		<value name='PrizeID'>2</value>
+	</object>
+	<object name='exhibitionclassprize'>
+		<value name='ID'>100</value>
+		<value name='ExhibitionClassID'>34</value>
+		<value name='PrizeID'>1</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>9</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>9</value>
+		<value name='ClassID'>9</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>99</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>99.I</value>
+		<value name='ClassID'>178</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>98</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>98.I</value>
+		<value name='ClassID'>181</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>97</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>97.I</value>
+		<value name='ClassID'>180</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>96</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>96.I</value>
+		<value name='ClassID'>32</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>95</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>95.I</value>
+		<value name='ClassID'>194</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>94</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>94.I</value>
+		<value name='ClassID'>193</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>93</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>93.I</value>
+		<value name='ClassID'>140</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>92</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>92.I</value>
+		<value name='ClassID'>85</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>91</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>91.I</value>
+		<value name='ClassID'>79</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>90</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>90.I</value>
+		<value name='ClassID'>175</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>8</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>8</value>
+		<value name='ClassID'>8</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>89</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>89.I</value>
+		<value name='ClassID'>174</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>88</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>88.I</value>
+		<value name='ClassID'>173</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>87</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>87.I</value>
+		<value name='ClassID'>134</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>86</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>86.I</value>
+		<value name='ClassID'>133</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>85</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>85.I</value>
+		<value name='ClassID'>77</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>84</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>9</value>
+		<value name='ClassNumber'>84</value>
+		<value name='ClassID'>76</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>83</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>9</value>
+		<value name='ClassNumber'>83</value>
+		<value name='ClassID'>146</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>82</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>9</value>
+		<value name='ClassNumber'>82</value>
+		<value name='ClassID'>145</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>81</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>9</value>
+		<value name='ClassNumber'>81</value>
+		<value name='ClassID'>144</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>80</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>9</value>
+		<value name='ClassNumber'>80</value>
+		<value name='ClassID'>192</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>7</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>7</value>
+		<value name='ClassID'>7</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>79</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>9</value>
+		<value name='ClassNumber'>79</value>
+		<value name='ClassID'>143</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>78</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>8</value>
+		<value name='ClassNumber'>78</value>
+		<value name='ClassID'>75</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>77</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>8</value>
+		<value name='ClassNumber'>77</value>
+		<value name='ClassID'>74</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>76</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>8</value>
+		<value name='ClassNumber'>76</value>
+		<value name='ClassID'>73</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>75</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>8</value>
+		<value name='ClassNumber'>75</value>
+		<value name='ClassID'>72</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>74</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>7</value>
+		<value name='ClassNumber'>74</value>
+		<value name='ClassID'>191</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>73</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>7</value>
+		<value name='ClassNumber'>73</value>
+		<value name='ClassID'>190</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>72</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>7</value>
+		<value name='ClassNumber'>72</value>
+		<value name='ClassID'>189</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>71</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>7</value>
+		<value name='ClassNumber'>71</value>
+		<value name='ClassID'>188</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>70</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>6</value>
+		<value name='ClassNumber'>70</value>
+		<value name='ClassID'>187</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>6</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>6</value>
+		<value name='ClassID'>6</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>69</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>6</value>
+		<value name='ClassNumber'>69</value>
+		<value name='ClassID'>64</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>68</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>6</value>
+		<value name='ClassNumber'>68</value>
+		<value name='ClassID'>63</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>67</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>6</value>
+		<value name='ClassNumber'>67</value>
+		<value name='ClassID'>62</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>66</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>6</value>
+		<value name='ClassNumber'>66</value>
+		<value name='ClassID'>60</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>65</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>6</value>
+		<value name='ClassNumber'>65</value>
+		<value name='ClassID'>61</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>64</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>6</value>
+		<value name='ClassNumber'>64</value>
+		<value name='ClassID'>166</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>63</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>6</value>
+		<value name='ClassNumber'>63</value>
+		<value name='ClassID'>59</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>62</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>6</value>
+		<value name='ClassNumber'>62</value>
+		<value name='ClassID'>186</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>61</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>6</value>
+		<value name='ClassNumber'>61</value>
+		<value name='ClassID'>165</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>60</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>6</value>
+		<value name='ClassNumber'>60</value>
+		<value name='ClassID'>58</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>5</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>5</value>
+		<value name='ClassID'>5</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>59</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>5</value>
+		<value name='ClassNumber'>59</value>
+		<value name='ClassID'>185</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>58</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>5</value>
+		<value name='ClassNumber'>58</value>
+		<value name='ClassID'>184</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>57</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>5</value>
+		<value name='ClassNumber'>57</value>
+		<value name='ClassID'>183</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>56</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>4</value>
+		<value name='ClassNumber'>56</value>
+		<value name='ClassID'>54</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>55</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>4</value>
+		<value name='ClassNumber'>55</value>
+		<value name='ClassID'>147</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>54</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>4</value>
+		<value name='ClassNumber'>54</value>
+		<value name='ClassID'>53</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>53</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>4</value>
+		<value name='ClassNumber'>53</value>
+		<value name='ClassID'>52</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>52</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>4</value>
+		<value name='ClassNumber'>52</value>
+		<value name='ClassID'>51</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>51</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>4</value>
+		<value name='ClassNumber'>51</value>
+		<value name='ClassID'>50</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>50</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>50</value>
+		<value name='ClassID'>49</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>4</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>4</value>
+		<value name='ClassID'>4</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>49</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>49</value>
+		<value name='ClassID'>48</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>48</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>48</value>
+		<value name='ClassID'>47</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>47</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>47</value>
+		<value name='ClassID'>46</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>46</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>46</value>
+		<value name='ClassID'>45</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>45</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>45</value>
+		<value name='ClassID'>44</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>44</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>44</value>
+		<value name='ClassID'>43</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>43</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>43</value>
+		<value name='ClassID'>42</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>42</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>42</value>
+		<value name='ClassID'>41</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>41</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>41</value>
+		<value name='ClassID'>40</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>40</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>40</value>
+		<value name='ClassID'>39</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>3</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>3</value>
+		<value name='ClassID'>3</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>39</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>39</value>
+		<value name='ClassID'>38</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>38</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>38</value>
+		<value name='ClassID'>37</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>37</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>37</value>
+		<value name='ClassID'>36</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>36</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>36</value>
+		<value name='ClassID'>35</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>35</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>35</value>
+		<value name='ClassID'>34</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>34</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>34</value>
+		<value name='ClassID'>33</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>33</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>33</value>
+		<value name='ClassID'>32</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>32</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>32</value>
+		<value name='ClassID'>31</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>31</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>31</value>
+		<value name='ClassID'>30</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>30</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>30</value>
+		<value name='ClassID'>29</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>2</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>2</value>
+		<value name='ClassID'>2</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>29</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>3</value>
+		<value name='ClassNumber'>29</value>
+		<value name='ClassID'>28</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>28</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>2</value>
+		<value name='ClassNumber'>28</value>
+		<value name='ClassID'>87</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>27</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>2</value>
+		<value name='ClassNumber'>27</value>
+		<value name='ClassID'>27</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>26</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>2</value>
+		<value name='ClassNumber'>26</value>
+		<value name='ClassID'>26</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>25</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>2</value>
+		<value name='ClassNumber'>25</value>
+		<value name='ClassID'>25</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>24</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>2</value>
+		<value name='ClassNumber'>24</value>
+		<value name='ClassID'>24</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>23</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>2</value>
+		<value name='ClassNumber'>23</value>
+		<value name='ClassID'>23</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>22</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>2</value>
+		<value name='ClassNumber'>22</value>
+		<value name='ClassID'>22</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>21</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>2</value>
+		<value name='ClassNumber'>21</value>
+		<value name='ClassID'>21</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>20</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>2</value>
+		<value name='ClassNumber'>20</value>
+		<value name='ClassID'>20</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>1</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>1</value>
+		<value name='ClassID'>1</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>19</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>2</value>
+		<value name='ClassNumber'>19</value>
+		<value name='ClassID'>19</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>18</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>2</value>
+		<value name='ClassNumber'>18</value>
+		<value name='ClassID'>18</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>17</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>2</value>
+		<value name='ClassNumber'>17</value>
+		<value name='ClassID'>17</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>16</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>16</value>
+		<value name='ClassID'>16</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>15</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>15</value>
+		<value name='ClassID'>15</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>14</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>14</value>
+		<value name='ClassID'>14</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>144</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>104.III</value>
+		<value name='ClassID'>199</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>143</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>103.III</value>
+		<value name='ClassID'>182</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>142</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>102.III</value>
+		<value name='ClassID'>45</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>141</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>101.III</value>
+		<value name='ClassID'>197</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>140</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>100.III</value>
+		<value name='ClassID'>38</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>13</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>13</value>
+		<value name='ClassID'>13</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>139</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>99.III</value>
+		<value name='ClassID'>178</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>138</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>98.III</value>
+		<value name='ClassID'>181</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>137</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>97.III</value>
+		<value name='ClassID'>180</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>136</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>96.III</value>
+		<value name='ClassID'>32</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>135</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>95.III</value>
+		<value name='ClassID'>194</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>134</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>94.III</value>
+		<value name='ClassID'>193</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>133</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>93.III</value>
+		<value name='ClassID'>140</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>132</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>92.III</value>
+		<value name='ClassID'>85</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>131</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>91.III</value>
+		<value name='ClassID'>79</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>130</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>90.III</value>
+		<value name='ClassID'>175</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>12</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>12</value>
+		<value name='ClassID'>12</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>129</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>89.III</value>
+		<value name='ClassID'>174</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>128</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>88.III</value>
+		<value name='ClassID'>173</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>127</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>87.III</value>
+		<value name='ClassID'>134</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>126</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>86.III</value>
+		<value name='ClassID'>133</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>125</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>85.III</value>
+		<value name='ClassID'>77</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>124</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>104.II</value>
+		<value name='ClassID'>199</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>123</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>103.II</value>
+		<value name='ClassID'>182</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>122</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>102.II</value>
+		<value name='ClassID'>45</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>121</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>101.II</value>
+		<value name='ClassID'>197</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>120</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>100.II</value>
+		<value name='ClassID'>38</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>11</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>11</value>
+		<value name='ClassID'>11</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>119</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>99.II</value>
+		<value name='ClassID'>178</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>118</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>98.II</value>
+		<value name='ClassID'>181</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>117</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>97.II</value>
+		<value name='ClassID'>180</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>116</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>96.II</value>
+		<value name='ClassID'>32</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>115</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>95.II</value>
+		<value name='ClassID'>194</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>114</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>94.II</value>
+		<value name='ClassID'>193</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>113</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>93.II</value>
+		<value name='ClassID'>140</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>112</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>92.II</value>
+		<value name='ClassID'>85</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>111</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>91.II</value>
+		<value name='ClassID'>79</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>110</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>90.II</value>
+		<value name='ClassID'>175</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>10</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>1</value>
+		<value name='ClassNumber'>10</value>
+		<value name='ClassID'>10</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>109</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>89.II</value>
+		<value name='ClassID'>174</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>108</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>88.II</value>
+		<value name='ClassID'>173</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>107</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>87.II</value>
+		<value name='ClassID'>134</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>106</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>86.II</value>
+		<value name='ClassID'>133</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>105</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>85.II</value>
+		<value name='ClassID'>77</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>104</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>104.I</value>
+		<value name='ClassID'>199</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>103</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>103.I</value>
+		<value name='ClassID'>182</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>102</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>102.I</value>
+		<value name='ClassID'>45</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>101</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>101.I</value>
+		<value name='ClassID'>197</value>
+	</object>
+	<object name='exhibitionclass'>
+		<value name='ID'>100</value>
+		<value name='ExhibitionID'>11</value>
+		<value name='ExhibitionSectionID'>10</value>
+		<value name='ClassNumber'>100.I</value>
+		<value name='ClassID'>38</value>
+	</object>
+	<object name='exhibition'>
+		<value name='ID'>11</value>
+		<value name='Name'>Summer Show 2013</value>
+	</object>
+</showmanager>

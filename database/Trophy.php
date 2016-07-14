@@ -38,13 +38,13 @@ class doTrophy extends dbRoot
     	print "<td>".AddButton('Edit',"?action=edit&id=".$this->ID)."</td>";
     }
     ###Formbuilder Code
-	public $fb_crossLinks = array(array('table' => 'DefaultExhibitionTrophyClass',
+	public $fb_crossLinks = array(array('table' => 'Defaultexhibitiontrophyclass',
                                    		'type' => 'select',
 			                            'fromField' => 'TrophyID',
 			                            'toField' => 'ExhibitionClassID'));
 	public $fb_formHeaderText="Trophy";
-	public $fb_fieldLabels=array("ExhibitionID"=>"Show","Name"=>"Trophy Name","__crossLink_DefaultExhibitionTrophyClass_TrophyID_ExhibitionClassID"=>"Components");
-	public $fb_userEditableFields=array("ID","Name","Member","__crossLink_DefaultExhibitionTrophyClass_TrophyID_ExhibitionClassID");
+	public $fb_fieldLabels=array("ExhibitionID"=>"Show","Name"=>"Trophy Name","__crossLink_Defaultexhibitiontrophyclass_TrophyID_ExhibitionClassID"=>"Components");
+	public $fb_userEditableFields=array("ID","Name","Member","__crossLink_Defaultexhibitiontrophyclass_TrophyID_ExhibitionClassID");
 	public $fb_linkDisplayLevel=2;
 	###End Formbuilder Code
 
@@ -54,7 +54,7 @@ class doTrophy extends dbRoot
             print "<table>\n";
             while ($trophy->fetch()){
                 print "<tr>\n";
-                    print "<td colspan='2'><em><b>\n";
+                    print "<td colspan='3'><em><b>\n";
                         print $trophy->Name;
                     print "</b></em></td>\n";
                     print "<td>\n";
@@ -64,6 +64,7 @@ class doTrophy extends dbRoot
                 print "</tr>\n";
                 $doETC=safe_dataobject_factory("ExhibitionTrophyClass");
                 $doETC->TrophyID=$trophy->ID;
+                
                 $cols=0;
                 
                 if ($doETC->find()){
@@ -75,7 +76,7 @@ class doTrophy extends dbRoot
                         }              
                         $doEC=dbRoot::fromCache("ExhibitionClass", $doETC->ExhibitionClassID);
                         $doC=dbRoot::fromCache("Class", $doEC->ClassID);
-                        print "<td>\n".$doEC->ClassNumber.") ".$doC->Name."\n";
+                        print "<td>\n".$doEC->ClassNumber.")</td>\n<td>\n".$doC->Name."\n";
                         if ($doC->Description!=""){
                         //    print "\n (".$doC->Description.")\n";                                                        
                         }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+	<table name="Defaults">
+		<column>ID</column>
+		<column>ShowName</column>
+		<column>ShowID</column>
+		<row>
+			<value>1</value>
+			<value>BHS</value>
+                        <null/>
+		</row>					
+	</table>		
+	<table name="Exhibition">
+		<column>ID</column>
+		<column>Name</column>
+	</table>		
+</dataset>
